@@ -1,0 +1,6 @@
+__pycache__/
+*.wav
+*.spec.pt
+
+logs
+data

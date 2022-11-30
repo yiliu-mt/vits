@@ -12,11 +12,7 @@ from torch.utils.tensorboard import SummaryWriter
 
 import utils
 import commons
-from data_utils import (
-  TextAudioLoader,
-  TextAudioCollate,
-  DistributedBucketSampler
-)
+from dataset.dataset import Dataset
 from models import (
     SynthesizerTrn,
     MultiPeriodDiscriminator,
@@ -46,6 +42,7 @@ def main():
 
     hps = utils.get_hparams()
     mp.spawn(run, nprocs=n_gpus, args=(n_gpus, hps,))
+    # run(0, n_gpus, hps)
 
 
 def run(rank, n_gpus, hps):
@@ -61,29 +58,39 @@ def run(rank, n_gpus, hps):
     torch.manual_seed(hps.train.seed)
     torch.cuda.set_device(rank)
 
-    train_dataset = TextAudioLoader(hps.data.training_files, hps.data)
-    train_sampler = DistributedBucketSampler(
+    # DataLoader
+    hps.data.min_frame_len = hps.train.segment_size // hps.data.hop_length
+    train_dataset = Dataset(
+        hps.data.training_files, hps.data, shuffle=True, partition=True, sort=True
+    )
+    train_data_loader = DataLoader(
         train_dataset,
-        hps.train.batch_size,
-        [32,300,400,500,600,700,800,900,1000],
-        num_replicas=n_gpus,
-        rank=rank,
-        shuffle=True)
-    collate_fn = TextAudioCollate()
-    train_loader = DataLoader(train_dataset, num_workers=8, shuffle=False, pin_memory=True,
-        collate_fn=collate_fn, batch_sampler=train_sampler)
+        batch_size=None,
+        pin_memory=True,
+        num_workers=hps.data.num_workers,
+        prefetch_factor=hps.data.prefetch
+    )
     if rank == 0:
-        eval_dataset = TextAudioLoader(hps.data.validation_files, hps.data)
-        eval_loader = DataLoader(eval_dataset, num_workers=8, shuffle=False,
-            batch_size=hps.train.batch_size, pin_memory=True,
-            drop_last=False, collate_fn=collate_fn)
+        eval_dataset = Dataset(
+            hps.data.validation_files, hps.data, shuffle=False, partition=False, sort=False
+        )
+        eval_data_loader = DataLoader(
+            eval_dataset,
+            batch_size=None,
+            pin_memory=True,
+            num_workers=hps.data.num_workers,
+            prefetch_factor=hps.data.prefetch
+        )
     
+    # Model
     net_g = SynthesizerTrn(
         len(symbols),
         hps.data.filter_length // 2 + 1,
         hps.train.segment_size // hps.data.hop_length,
         **hps.model).cuda(rank)
     net_d = MultiPeriodDiscriminator(hps.model.use_spectral_norm).cuda(rank)
+
+    # Optimizer
     optim_g = torch.optim.AdamW(
         net_g.parameters(), 
         hps.train.learning_rate, 
@@ -100,7 +107,9 @@ def run(rank, n_gpus, hps):
     try:
         _, _, _, epoch_str = utils.load_checkpoint(utils.latest_checkpoint_path(hps.model_dir, "G_*.pth"), net_g, optim_g)
         _, _, _, epoch_str = utils.load_checkpoint(utils.latest_checkpoint_path(hps.model_dir, "D_*.pth"), net_d, optim_d)
-        global_step = (epoch_str - 1) * len(train_loader)
+        # global_step = (epoch_str - 1) * len(train_data_loader)
+        # TODO
+        global_step = 0
     except:
         epoch_str = 1
         global_step = 0
@@ -111,10 +120,11 @@ def run(rank, n_gpus, hps):
     scaler = GradScaler(enabled=hps.train.fp16_run)
 
     for epoch in range(epoch_str, hps.train.epochs + 1):
+        train_dataset.set_epoch(epoch)
         if rank==0:
-            train_and_evaluate(rank, epoch, hps, [net_g, net_d], [optim_g, optim_d], [scheduler_g, scheduler_d], scaler, [train_loader, eval_loader], logger, [writer, writer_eval])
+            train_and_evaluate(rank, epoch, hps, [net_g, net_d], [optim_g, optim_d], [scheduler_g, scheduler_d], scaler, [train_data_loader, eval_data_loader], logger, [writer, writer_eval])
         else:
-            train_and_evaluate(rank, epoch, hps, [net_g, net_d], [optim_g, optim_d], [scheduler_g, scheduler_d], scaler, [train_loader, None], None, None)
+            train_and_evaluate(rank, epoch, hps, [net_g, net_d], [optim_g, optim_d], [scheduler_g, scheduler_d], scaler, [train_data_loader, None], None, None)
         scheduler_g.step()
         scheduler_d.step()
 
@@ -128,7 +138,6 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
     if writers is not None:
       writer, writer_eval = writers
 
-    train_loader.batch_sampler.set_epoch(epoch)
     global global_step
 
     net_g.train()
@@ -200,9 +209,10 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
         if rank==0:
             if global_step % hps.train.log_interval == 0:
                 lr = optim_g.param_groups[0]['lr']
-                logger.info('Train Epoch: {} [{:.0f}%]'.format(
-                    epoch,
-                    100. * batch_idx / len(train_loader)))
+                # logger.info('Train Epoch: {} [{:.0f}%]'.format(
+                #     epoch,
+                #     100. * batch_idx / len(train_loader)))
+                logger.info(f'Train Epoch: {epoch}')
                 logger.info([global_step, lr])
                 logger.info(f'loss_disc={loss_disc:.3f}, loss_gen={loss_gen:.3f}, loss_fm={loss_fm:.3f}')
                 logger.info(f'loss_mel={loss_mel:.3f}, loss_dur={loss_dur:.3f}, loss_kl={loss_kl:.3f}')
@@ -232,6 +242,9 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
                 utils.save_checkpoint(net_d, optim_d, hps.train.learning_rate, epoch, os.path.join(hps.model_dir, "D_{}.pth".format(global_step)))
         global_step += 1
   
+    import logging
+    logging.warning("rank:{}, index: {}".format(rank, batch_idx))
+
     if rank == 0:
         logger.info('====> Epoch: {} (in {} sec)'.format(epoch, time.time() - start_time))
 

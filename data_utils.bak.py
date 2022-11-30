@@ -33,8 +33,8 @@ class TextAudioLoader(torch.utils.data.Dataset):
         self.min_text_len = getattr(hparams, "min_text_len", 1)
         self.max_text_len = getattr(hparams, "max_text_len", 190)
 
-        random.seed(1234)
-        random.shuffle(self.audiopaths_and_text)
+        # random.seed(1234)
+        # random.shuffle(self.audiopaths_and_text)
         self._filter()
 
 

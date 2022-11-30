@@ -1,3 +1,5 @@
+_pad = "_"
+
 _pause = ["sil", "eos", "sp", "#0", "#1", "#2", "#3"]
 
 _initials = [
@@ -68,4 +70,5 @@ _finals = [
     "vn",
 ]
 
-symbols = _pause + _initials + [i + j for i in _finals for j in _tones]
+# TODO(Yi Liu): the symbol should be updated
+symbols = [_pad] + _pause + _initials + [i + j for i in _finals for j in _tones]

@@ -241,6 +241,9 @@ class HParams():
 
   def values(self):
     return self.__dict__.values()
+  
+  def get(self, key, default_value=None):
+    return self.__dict__.get(key, default_value)
 
   def __len__(self):
     return len(self.__dict__)

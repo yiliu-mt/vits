@@ -1,0 +1,1 @@
+docker run --rm --gpus all --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 -v $PWD:/workspace/vits -v /nfs1:/nfs1 -v /nfs2:/nfs2 -it mycrazycracy/wetts:1.0 bash

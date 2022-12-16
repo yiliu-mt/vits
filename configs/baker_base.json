@@ -1,13 +1,13 @@
 {
   "train": {
     "log_interval": 200,
-    "eval_interval": 20000,
+    "eval_interval": 10000,
     "seed": 1234,
     "epochs": 20000,
     "learning_rate": 2e-4,
     "betas": [0.8, 0.99],
     "eps": 1e-9,
-    "batch_size": 4,
+    "batch_size": 64,
     "fp16_run": true,
     "lr_decay": 0.999875,
     "segment_size": 8192,
@@ -17,8 +17,8 @@
     "c_kl": 1.0
   },
   "data": {
-    "training_files":"data/train.txt",
-    "validation_files":"data/valid.txt",
+    "training_files":"filelists/baker_train.txt",
+    "validation_files":"filelists/baker_valid.txt",
     "max_wav_value": 32768.0,
     "sampling_rate": 22050,
     "filter_length": 1024,
@@ -27,15 +27,12 @@
     "n_mel_channels": 80,
     "mel_fmin": 0.0,
     "mel_fmax": null,
-    "batch_size": 16,
     "min_text_len": 1,
     "max_text_len": 300,
-    "shuffle_size": 10000,
-    "sort_size": 1000,
+    "bucket_size": [32,300,400,500,600,700,800,900,1000],
     "num_workers": 8,
-    "prefetch": 100,
-    "add_blank": false,
-    "n_speakers": 0
+    "prefetch": 2,
+    "add_blank": false
   },
   "model": {
     "inter_channels": 192,

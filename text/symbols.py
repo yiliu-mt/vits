@@ -1,6 +1,6 @@
 _pad = "_"
 
-_pause = ["sil", "eos", "sp", "#0", "#1", "#2", "#3"]
+_pause = ["sil", "eos", "sp", "#0", "#1", "#2", "#3", "#4", "sp0", "sp1", "sp2", "sp3"]
 
 _initials = [
     "^",
@@ -68,6 +68,7 @@ _finals = [
     "van",
     "ve",
     "vn",
+    "io",
 ]
 
 # TODO(Yi Liu): the symbol should be updated

@@ -1,6 +1,7 @@
 import time
 import os
 import random
+import logging
 import numpy as np
 import torch
 import torch.utils.data
@@ -52,6 +53,7 @@ class TextAudioLoader(torch.utils.data.Dataset):
                 lengths.append(os.path.getsize(audiopath) // (2 * self.hop_length))
         self.audiopaths_and_text = audiopaths_and_text_new
         self.lengths = lengths
+        logging.warning("We use {} samples in this training".format(len(self.audiopaths_and_text)))
 
     def get_audio_text_pair(self, audiopath_and_text):
         # separate filename and text
@@ -298,7 +300,7 @@ class DistributedBucketSampler(torch.utils.data.distributed.DistributedSampler):
     It removes samples which are not included in the boundaries.
     Ex) boundaries = [b1, b2, b3] -> any x s.t. length(x) <= b1 or length(x) > b3 are discarded.
     """
-    def __init__(self, dataset, batch_size, boundaries, num_replicas=None, rank=None, shuffle=True):
+    def __init__(self, dataset, batch_size, boundaries, num_replicas=None, rank=None, shuffle=True, num_repeats_per_epoch=1):
         super().__init__(dataset, num_replicas=num_replicas, rank=rank, shuffle=shuffle)
         self.lengths = dataset.lengths
         self.batch_size = batch_size
@@ -307,6 +309,7 @@ class DistributedBucketSampler(torch.utils.data.distributed.DistributedSampler):
         self.buckets, self.num_samples_per_bucket = self._create_buckets()
         self.total_size = sum(self.num_samples_per_bucket)
         self.num_samples = self.total_size // self.num_replicas
+        self.num_repeats_per_epoch = num_repeats_per_epoch
   
     def _create_buckets(self):
         buckets = [[] for _ in range(len(self.boundaries) - 1)]
@@ -333,40 +336,43 @@ class DistributedBucketSampler(torch.utils.data.distributed.DistributedSampler):
         # deterministically shuffle based on epoch
         g = torch.Generator()
         g.manual_seed(self.epoch)
+        self.batches = []
   
-        indices = []
-        if self.shuffle:
-            for bucket in self.buckets:
-                indices.append(torch.randperm(len(bucket), generator=g).tolist())
-        else:
-            for bucket in self.buckets:
-                indices.append(list(range(len(bucket))))
+        for _ in range(self.num_repeats_per_epoch):
+            indices = []
+            if self.shuffle:
+                for bucket in self.buckets:
+                    indices.append(torch.randperm(len(bucket), generator=g).tolist())
+            else:
+                for bucket in self.buckets:
+                    indices.append(list(range(len(bucket))))
   
-        batches = []
-        for i in range(len(self.buckets)):
-            bucket = self.buckets[i]
-            len_bucket = len(bucket)
-            ids_bucket = indices[i]
-            num_samples_bucket = self.num_samples_per_bucket[i]
+            batches = []
+            for i in range(len(self.buckets)):
+                bucket = self.buckets[i]
+                len_bucket = len(bucket)
+                ids_bucket = indices[i]
+                num_samples_bucket = self.num_samples_per_bucket[i]
   
-            # add extra samples to make it evenly divisible
-            rem = num_samples_bucket - len_bucket
-            ids_bucket = ids_bucket + ids_bucket * (rem // len_bucket) + ids_bucket[:(rem % len_bucket)]
+                # add extra samples to make it evenly divisible
+                rem = num_samples_bucket - len_bucket
+                ids_bucket = ids_bucket + ids_bucket * (rem // len_bucket) + ids_bucket[:(rem % len_bucket)]
   
-            # subsample
-            ids_bucket = ids_bucket[self.rank::self.num_replicas]
+                # subsample
+                ids_bucket = ids_bucket[self.rank::self.num_replicas]
   
-            # batching
-            for j in range(len(ids_bucket) // self.batch_size):
-                batch = [bucket[idx] for idx in ids_bucket[j*self.batch_size:(j+1)*self.batch_size]]
-                batches.append(batch)
+                # batching
+                for j in range(len(ids_bucket) // self.batch_size):
+                    batch = [bucket[idx] for idx in ids_bucket[j*self.batch_size:(j+1)*self.batch_size]]
+                    batches.append(batch)
   
-        if self.shuffle:
-            batch_ids = torch.randperm(len(batches), generator=g).tolist()
-            batches = [batches[i] for i in batch_ids]
-        self.batches = batches
-  
-        assert len(self.batches) * self.batch_size == self.num_samples
+            if self.shuffle:
+                batch_ids = torch.randperm(len(batches), generator=g).tolist()
+                batches = [batches[i] for i in batch_ids]
+
+            self.batches += batches
+
+        assert len(self.batches) * self.batch_size == self.num_samples * self.num_repeats_per_epoch
         return iter(self.batches)
   
     def _bisect(self, x, lo=0, hi=None):
@@ -385,4 +391,4 @@ class DistributedBucketSampler(torch.utils.data.distributed.DistributedSampler):
           return -1
 
     def __len__(self):
-        return self.num_samples // self.batch_size
+        return self.num_samples // self.batch_size * self.num_repeats_per_epoch

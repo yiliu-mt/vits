@@ -44,8 +44,9 @@ def main():
     os.environ['MASTER_PORT'] = '10000'
 
     hps = utils.get_hparams()
-    mp.spawn(run, nprocs=n_gpus, args=(n_gpus, hps,))
+
     # run(0, 1, hps)
+    mp.spawn(run, nprocs=n_gpus, args=(n_gpus, hps,))
 
 
 def run(rank, n_gpus, hps):
@@ -68,7 +69,8 @@ def run(rank, n_gpus, hps):
         hps.data.bucket_size,
         num_replicas=n_gpus,
         rank=rank,
-        shuffle=True
+        shuffle=True,
+        num_repeats_per_epoch=hps.data.num_repeats
     )
     collate_fn = TextAudioCollate()
     train_loader = DataLoader(
@@ -244,15 +246,16 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
                     images=image_dict,
                     scalars=scalar_dict)
 
-            if global_step % hps.train.eval_interval == 0 and global_step != 0:
+            if global_step % hps.train.eval_interval == 0:
                 evaluate(hps, net_g, eval_loader, writer_eval)
-                utils.save_checkpoint(net_g, optim_g, hps.train.learning_rate, epoch, os.path.join(hps.model_dir, "G_{}.pth".format(global_step)))
-                utils.save_checkpoint(net_d, optim_d, hps.train.learning_rate, epoch, os.path.join(hps.model_dir, "D_{}.pth".format(global_step)))
+                if global_step != 0:
+                    utils.save_checkpoint(net_g, optim_g, hps.train.learning_rate, epoch, os.path.join(hps.model_dir, "G_{}.pth".format(global_step)))
+                    utils.save_checkpoint(net_d, optim_d, hps.train.learning_rate, epoch, os.path.join(hps.model_dir, "D_{}.pth".format(global_step)))
 
         global_step += 1
   
     if rank == 0:
-        logger.info('====> Epoch: {} (in {} sec)'.format(epoch, time.time() - start_time))
+        logger.info('====> Epoch: {} (step {}, in {} sec)'.format(epoch, global_step, time.time() - start_time))
 
 
 def evaluate(hps, generator, eval_loader, writer_eval):

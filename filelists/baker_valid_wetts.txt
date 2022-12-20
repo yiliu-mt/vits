@@ -1,0 +1,103 @@
+./baker_waves/009892.wav|sil j ing3 #0 f ang1 #1 ch a2 #0 x vn2 #0 l e5 #1 u4 #0 l iao4 #1 l ing2 #0 q v3 #1 d an1 #0 j v4 #3 r iii4 #0 q i1 #1 v3 #1 an1 #0 zh uang1 #1 sh iii2 #0 j ian1 #1 x iang1 #0 f u2 #4
+./baker_waves/009893.wav|sil j v4 #0 x i1 #3 zh e4 #0 g e4 #1 l iou2 #0 d ong4 #0 d e5 #1 l uo4 #0 t uo5 #1 zh ao4 #0 x iang4 #0 t an1 #2 b ing4 #0 uei4 #1 b an4 #0 l i3 #1 r en4 #0 h e2 #1 sh ou3 #0 x v4 #4
+./baker_waves/009894.wav|sil t ong2 #0 sh iii2 #3 v4 #0 s uan4 #0 an4 #0 d e5 #1 d ian4 #0 z ii2 #0 b an2 #1 ie3 #0 j iang1 #1 sh ang4 #0 uang3 #3 r en4 #0 h e2 #0 r en2 #1 d ou1 #1 k e2 #0 i3 #1 ch a2 #0 ve4 #4
+./baker_waves/009895.wav|sil q i3 #0 ch u1 #2 h e2 #0 ch eng4 #0 m ing2 #1 l ou3 #0 zh e5 #1 i2 #0 uei4 #1 n v3 #0 x ing4 #1 iou3 #0 r en2 #0 d e5 #1 g e1 #0 b o5 #1 b ian1 #0 z ou3 #1 b ian1 #0 l iao2 #4
+./baker_waves/009896.wav|sil n eng2 #0 b ei4 #1 x van3 #0 z uo4 #1 j i1 #0 x in1 #0 g e2 #1 z ii1 #0 l iao4 #0 d e5 #1 sh ou1 #0 c ang2 #0 zh e3 #3 ie1 #0 l u3 #1 sh en1 #0 g an3 #1 r ong2 #0 x ing4 #4
+./baker_waves/009897.wav|sil zh e4 #0 h e2 #1 g ao1 #0 c eng2 #1 g uan2 #0 l i2 #0 zh e3 #1 j ing1 #0 sh en2 #1 ia1 #0 l i4 #0 d a4 #2 ing4 #0 ch ou2 #0 d uo1 #2 iou2 #1 h en3 #0 d a4 #1 g uan1 #0 x i4 #4
+./baker_waves/009898.wav|sil z an2 #0 m en5 #1 m u4 #0 m in2 #1 q vn2 #0 zh ong4 #1 t e4 #0 b ie2 #1 r e4 #0 x in1 #2 t e4 #0 b ie2 #1 h ao4 #0 k e4 #3 f ei1 #0 ch ang2 #1 sh an4 #0 l iang2 #4
+./baker_waves/009899.wav|sil m ei3 #0 i2 #0 g e4 #1 h uo3 #0 j ian4 #0 g uan1 #1 d ou1 #1 sh uen4 #0 l i4 #0 d e5 #1 sh eng1 #0 sh ang4 #1 q v4 #0 l e5 #3 r an2 #0 r an3 #1 r uo4 #0 x ing1 #0 g uang1 #4
+./baker_waves/009900.wav|sil m ei3 #0 t ian1 #1 b a3 #1 l ao2 #0 s ao1 #1 n a2 #0 ch u1 #0 l ai2 #1 sh ai4 #0 sh ai5 #1 t ai4 #0 iang5 #3 x in1 #0 q ing2 #1 j iou4 #1 b u2 #0 h uei4 #1 q ve1 #0 g ai4 #4
+./baker_waves/009901.wav|sil z uo2 #0 r iii4 #3 zh e4 #0 m ing2 #1 sh ang1 #0 zh e2 #1 v3 #1 i1 #0 sh eng1 #1 q van2 #0 b u4 #0 b ei4 #1 j ing3 #0 f ang1 #1 i1 #0 f a3 #1 x ing2 #0 sh iii4 #1 j v1 #0 l iou2 #4
+./baker_waves/009902.wav|sil q ian2 #0 uei3 #0 ch ang2 #2 x iang3 #0 d ao4 #1 sh ang4 #0 h ai3 #1 l ai2 #0 b an4 #1 x ve2 #0 x iao4 #2 sh iii4 #1 j ing1 #0 g uo4 #1 sh en1 #0 s ii1 #1 sh u2 #0 l v4 #0 d e5 #4
+./baker_waves/009903.wav|sil t a1 #1 j ian4 #0 uo3 #1 i2 #0 j in4 #0 m en2 #1 j iou4 #0 m a4 #3 ch iii1 #0 f an4 #0 sh iii2 #1 ie3 #0 m a4 #3 m a4 #0 d e5 #0 uo3 #1 t ai2 #0 b u4 #0 q i3 #1 t ou2 #4
+./baker_waves/009904.wav|sil l i3 #0 sh u4 #0 d e2 #1 z ai4 #1 l i2 #0 k ai1 #1 zh iii1 #0 q ian2 #2 zh iii3 #0 sh uo1 #0 l e5 #1 i2 #0 j v4 #3 zh u4 #0 t uo2 #1 sh a1 #1 f u4 #0 q in5 #0 l e5 #4
+./baker_waves/009905.wav|sil zh e4 #0 zh ong3 #1 ch e1 #0 p iao4 #1 h e2 #1 b ao2 #0 x ian3 #0 d an1 #1 k uen2 #0 b ang3 #1 ch u1 #0 sh ou4 #2 sh u3 #0 v2 #1 ch ong2 #0 f u4 #0 x ing4 #1 g ou4 #0 m ai3 #4
+./baker_waves/009906.wav|sil d ai4 #0 p ei4 #0 n i1 #0 d e5 #1 n an2 #0 iou3 #1 x i1 #0 m i3 #0 l u4 #2 j ie1 #0 ch ang4 #1 q ing2 #0 g e1 #3 r ang4 #0 t a1 #1 f ei1 #0 ch ang2 #1 k ai1 #0 x in1 #4
+./baker_waves/009907.wav|sil g uan1 #0 d a4 #0 sh iii4 #1 m ou2 #0 d a4 #0 j v2 #1 ch u1 #0 d a4 #0 c e4 #3 sh iii3 #0 zh ong1 #1 sh iii4 #1 g ai1 #0 van4 #0 d e5 #1 b an4 #0 van4 #1 f ang1 #0 zh en1 #4
+./baker_waves/009908.wav|sil t a1 #0 m en5 #1 q i2 #0 zh e5 #1 m o2 #0 t uo1 #1 h uei2 #0 j ia1 #3 zh eng4 #0 h ao3 #1 uei4 #0 n ong2 #0 m ang2 #1 sh iii2 #0 d e5 #1 f u4 #0 m u3 #1 b ang1 #0 m ang2 #4
+./baker_waves/009909.wav|sil d an4 #0 sh iii4 #1 in1 #0 uei4 #2 h ai2 #0 m ei2 #0 d ao4 #1 t uei4 #0 x iou1 #1 n ian2 #0 l ing2 #3 zh iii3 #0 n eng2 #1 b ai1 #0 zh e5 #1 zh iii3 #0 t ou5 #1 ai2 #0 r iii4 #0 z ii5 #4
+./baker_waves/009910.wav|sil zh e4 #0 j i3 #0 t ian1 #1 v2 #0 sh uei3 #1 b u2 #0 d uan4 #3 r en2 #0 m en5 #1 h en4 #0 b u4 #0 d e2 #1 d ai1 #0 z ai4 #1 j ia1 #0 l i3 #1 b u4 #0 ch u1 #0 m en2 #4
+./baker_waves/009911.wav|sil m ei2 #0 x iang3 #0 d ao4 #1 x v2 #0 vn1 #2 zh ang1 #0 h ai3 #0 x iang2 #1 l iang3 #0 r en2 #2 j iou4 #0 c ii3 #1 uan2 #0 q i3 #0 l e5 #1 r en2 #0 j ian1 #1 zh eng1 #0 f a1 #4
+./baker_waves/009912.wav|sil t eng2 #0 c uen1 #1 c ii3 #0 f an1 #1 f a1 #0 ian2 #2 k e3 #0 n eng2 #0 sh iii4 #1 uei4 #0 l e5 #1 t u1 #0 x ian2 #1 ie3 #0 t ian2 #0 d e5 #1 l ing2 #0 d ao3 #1 n eng2 #0 l i4 #4
+./baker_waves/009913.wav|sil ch eng2 #0 ch ang2 #0 g eng1 #2 sh eng1 #0 z ai4 #1 q ing1 #0 uang2 #0 ch ao2 #1 j ia1 #0 q ing4 #1 n ian2 #0 j ian1 #3 an1 #0 h uei1 #0 d e5 #1 q ian2 #0 sh an1 #1 x iao3 #0 x ian4 #4
+./baker_waves/009914.wav|sil n an2 #0 h ai2 #1 h ai3 #0 v4 #1 z ong1 #0 h e2 #1 b u2 #0 j i3 #1 j i1 #0 d i4 #1 m a3 #0 t ou2 #1 x iang4 #0 m u4 #2 zh eng4 #0 z ai4 #1 l uen4 #0 zh eng4 #0 zh ong1 #4
+./baker_waves/009915.wav|sil ie3 #0 j iou4 #0 sh iii4 #0 sh uo1 #3 j in1 #0 uan3 #1 ch eng2 #0 d u1 #1 sh iii4 #0 m in2 #1 j i2 #0 iou2 #1 k e3 #0 n eng2 #1 z ai4 #0 c ii4 #1 k an4 #0 d ao4 #1 p iao1 #0 x ve3 #4
+./baker_waves/009916.wav|sil s uei2 #0 zh e5 #1 t ian1 #0 q i4 #1 zh uan3 #0 r e4 #3 g e4 #0 d i4 #0 d e5 #1 iou2 #0 iong3 #1 ch ang2 #0 s uo3 #1 k ai1 #0 sh iii3 #1 r en2 #0 t ou2 #1 c uan2 #0 d ong4 #4
+./baker_waves/009917.wav|sil g eng4 #0 r ang4 #1 x v2 #0 x ian1 #0 sh eng5 #1 n a4 #0 m en4 #0 d e5 #0 sh iii4 #3 f ang2 #0 k e4 #0 d e5 #1 sh ou3 #0 j i1 #1 ie2 #1 d a3 #0 b u4 #1 t ong1 #0 l e5 #4
+./baker_waves/009918.wav|sil v4 #0 d ao4 #1 d ian1 #0 b o3 #0 sh iii2 #3 ing1 #1 t ing1 #0 c ong2 #1 ch eng2 #0 u4 #0 van2 #0 d e5 #1 an1 #0 q van2 #1 zh iii3 #0 l ing4 #3 h uei2 #0 z uo4 #0 uei4 #1 z uo4 #0 h ao3 #4
+./baker_waves/009919.wav|sil t a1 #0 z ai4 #1 h ou4 #0 m ian4 #1 d ai1 #0 g uan4 #0 l e5 #3 p a4 #1 z ii4 #0 j i3 #1 i4 #0 ch a1 #2 sh en1 #0 h ou4 #0 d e5 #0 r en2 #1 h uei4 #0 b u4 #0 m an3 #3 b u4 #0 g an3 #1 p ai2 #0 j in4 #0 q v4 #4
+./baker_waves/009920.wav|sil b ang4 #0 uan3 #2 q i1 #0 g e5 #1 x iao3 #0 r en2 #1 h uei2 #0 l ai5 #0 l e5 #3 b ai2 #0 x ve3 #1 g ong1 #0 zh u3 #0 sh uo1 #3 n i3 #0 m en5 #1 j iou4 #0 sh iii4 #1 uo3 #1 m ing4 #0 zh ong4 #0 d e5 #1 q i1 #0 g e5 #1 x iao2 #0 ai3 #0 r en2 #0 b a5 #4
+./baker_waves/009921.wav|sil t a1 #1 b en2 #0 x iang3 #0 sh uo1 #3 j iao4 #0 v4 #0 j v2 #1 g uan3 #1 zh e4 #0 g e4 #3 t a1 #0 m en5 #1 sh iii4 #1 i2 #0 l u4 #0 d e5 #3 zh e4 #0 iang4 #1 i4 #0 g uan3 #2 q i3 #0 b u2 #0 sh iii4 #2 j i4 #0 n v2 #1 q i3 #0 p iao2 #0 k e4 #4
+./baker_waves/009922.wav|sil i4 #0 zh ong2 #2 b iao3 #0 sh iii4 #1 sh ang1 #0 p in3 #1 s uo2 #0 iou3 #0 q van2 #0 d e5 #1 c ai2 #0 u4 #1 zh eng4 #0 q van4 #3 ie3 #0 ch eng1 #1 sh ang1 #0 p in3 #1 zh eng4 #0 q van4 #3 r u2 #1 t i2 #0 h uo4 #0 d an1 #2 j iao1 #0 h uo4 #0 d an1 #4
+./baker_waves/009923.wav|sil h uei4 #0 iou2 #1 h en3 #1 f eng1 #0 f u4 #0 d e5 #1 d ong1 #0 x i5 #1 l iou2 #0 x ia4 #0 l ai2 #3 sh uo1 #0 d ou1 #1 sh uo1 #0 b u4 #0 uan2 #4
+./baker_waves/009924.wav|sil zh e4 #0 j v4 #0 h ua4 #1 x iang4 #1 c ong2 #0 t ian1 #1 er2 #0 j iang4 #3 x ia4 #0 d e5 #1 s ii4 #0 zh ou1 #1 i2 #0 p ian4 #1 j i4 #0 j ing4 #4
+./baker_waves/009925.wav|sil j i4 #0 zh e2 #1 s uo3 #0 z ai4 #0 d e5 #1 sh iii4 #1 sh ou4 #0 h ai4 #0 r en2 #1 j ia1 #0 sh u2 #1 s uo3 #0 z ai4 #0 d e5 #1 iou4 #0 q v1 #4
+./baker_waves/009926.wav|sil b u4 #0 g uan3 #1 h a1 #0 d a4 #0 ie2 #1 q v4 #0 n a3 #3 t a1 #0 d ou1 #1 i2 #0 b u4 #1 b u4 #0 l i2 #0 d e5 #1 g en1 #0 zh e5 #4
+./baker_waves/009927.wav|sil d a4 #0 j ia1 #1 t ai2 #0 t ou2 #1 uang4 #0 q v4 #3 i4 #0 zh iii1 #1 l ao2 #0 sh u3 #2 zh eng4 #1 p a1 #0 z ai4 #1 d iao4 #0 d ing3 #0 sh ang4 #4
+./baker_waves/009928.wav|sil uo3 #0 j ve2 #0 d ing4 #2 g uo4 #0 n ian2 #1 j iou4 #1 c ii2 #0 zh iii2 #3 j ie1 #0 sh ou2 #1 uo3 #0 b a4 #0 d e5 #1 f ei4 #0 p in3 #0 zh an4 #4
+./baker_waves/009929.wav|sil z uei4 #0 zh ong1 #3 zh ong1 #0 g uo2 #1 n an2 #0 z ii3 #1 p ing1 #0 p ang1 #0 q iou2 #0 d uei4 #2 h uo4 #0 d e2 #1 c ii2 #0 j iang3 #0 x iang4 #4
+./baker_waves/009930.wav|sil f ang2 #0 x vn4 #1 k ang4 #0 h an4 #1 l iang2 #0 sh ou3 #0 zh ua1 #3 k ang4 #0 h an4 #2 x iang1 #0 d uei4 #1 zh ua1 #0 d e5 #1 b u2 #0 g ou4 #4
+./baker_waves/009931.wav|sil t u2 #0 m en2 #0 j iang1 #1 x ia4 #0 iou2 #1 d i4 #0 q v1 #2 k ai1 #0 f a1 #1 k ai1 #0 f ang4 #0 d e5 #1 j in4 #0 zh an3 #1 r u2 #0 h e2 #4
+./baker_waves/009932.wav|sil zh e4 #1 iao1 #0 q iou2 #2 zh ong1 #0 g uo2 #1 b i4 #0 x v1 #1 iou3 #0 i2 #0 g e4 #1 j ian1 #0 q iang2 #0 d e5 #1 zh eng4 #0 d ang3 #1 l ing2 #0 d ao3 #4
+./baker_waves/009933.wav|sil z ai4 #0 sh uo1 #3 g uan1 #0 v2 #1 l i4 #0 i4 #1 sh ang4 #0 d e5 #0 sh iii4 #2 an2 #0 l ia3 #1 d ou1 #1 b u4 #0 h ao3 #1 k ai1 #0 k ou3 #4
+./baker_waves/009934.wav|sil m ing2 #0 d ai4 #1 ua3 #0 l a4 #2 d a2 #0 d a2 #1 r u4 #0 q in1 #1 m ing2 #0 j ing4 #3 ie3 #0 sh iii4 #1 t ong1 #0 g uo4 #1 c ii3 #0 d i4 #4
+./baker_waves/009935.wav|sil m i1 #0 m i1 #1 t ian3 #0 zh e5 #1 h ai2 #0 z ii5 #3 b a3 #0 t a1 #1 sh en1 #0 sh ang4 #0 d e5 #1 m ao2 #1 t ian3 #0 g an1 #0 j ing4 #4
+./baker_waves/009936.wav|sil sh iii4 #0 f ou3 #1 zh e4 #0 c ii4 #0 d e5 #1 g uo2 #0 b iao1 #1 x iou1 #0 d ing4 #2 b ei4 #1 d a4 #0 q i3 #0 ie4 #1 b ang3 #0 j ia4 #0 l e5 #4
+./baker_waves/009937.wav|sil p an4 #0 j ve2 #0 h ou4 #3 iao2 #0 m ou3 #1 q i1 #0 z ii3 #1 h u2 #0 m ou3 #1 b u4 #0 f u2 #2 t i2 #0 q i3 #1 sh ang4 #0 s u4 #4
+./baker_waves/009938.wav|sil iou2 #0 c ii3 #1 k e2 #0 i3 #1 k an4 #0 ch u1 #3 h an2 #0 g ang1 #0 d e5 #1 j ing1 #0 j i4 #1 x iao4 #0 i4 #2 l ai2 #0 z ii4 #1 h e2 #0 ch u4 #4
+./baker_waves/009939.wav|sil l in2 #0 d a2 #0 sh uo1 #3 sh iii4 #1 v2 #0 j ia1 #1 g ai3 #0 b ian4 #0 l e5 #1 t a1 #0 h e2 #1 m a3 #0 er2 #0 d e5 #1 sh eng1 #0 h uo2 #4
+./baker_waves/009940.wav|sil l ou2 #0 x ia4 #0 d e5 #1 b ao3 #0 an1 #1 g ao4 #0 s u4 #1 j i4 #0 zh e3 #3 zh e4 #0 l i3 #1 b u4 #0 z u1 #1 ie3 #1 b u2 #0 m ai4 #4
+./baker_waves/009941.wav|sil x i2 #0 j in4 #0 p ing2 #1 sh uo1 #3 zh ong1 #0 s ii1 #1 l iang3 #0 g uo2 #1 r en2 #0 m in2 #1 ch uan2 #0 t ong2 #1 iou3 #0 i4 #1 sh en1 #0 h ou4 #4
+./baker_waves/009943.wav|sil uo3 #1 n u4 #0 h ou3 #1 i4 #0 sh eng1 #1 ch ong1 #0 sh ang4 #0 q v4 #3 j v2 #0 q i3 #1 zh uan1 #0 t ou5 #1 z a2 #0 l e5 #1 g uo4 #0 q v4 #4
+./baker_waves/009944.wav|sil uo3 #1 x ian4 #0 z ai4 #1 h ai2 #0 b u2 #0 h uei4 #3 zh e4 #0 j iou4 #1 h uei2 #0 q v4 #1 uen4 #0 uen4 #1 f a1 #0 m ing2 #1 uo3 #0 d e5 #0 r en2 #4
+./baker_waves/009945.wav|sil x ian3 #0 r an2 #3 l uo4 #0 iang2 #1 x ing4 #0 n u2 #0 an4 #2 b u2 #0 j v4 #0 b ei4 #1 sh ang4 #0 sh u4 #1 l iang3 #0 g e5 #1 q ian2 #0 t i2 #4
+./baker_waves/009946.wav|sil l ing4 #0 uai4 #3 j ie2 #0 k e4 #0 x vn4 #2 iou3 #1 uen2 #0 ch uen2 #0 x ian4 #2 ian3 #0 x ian4 #2 m ei2 #0 m ao5 #0 d e5 #1 d ong4 #0 z uo4 #4
+./baker_waves/009947.wav|sil z uo2 #0 uan3 #3 h ua2 #0 x i1 #1 d u1 #0 sh iii4 #0 b ao4 #1 j i4 #0 zh e3 #1 d ian4 #0 h ua4 #1 c ai2 #0 f ang3 #0 l e5 #1 in3 #0 q i2 #4
+./baker_waves/009948.wav|sil n ie4 #0 l a1 #1 j i4 #0 k e1 #2 uei4 #0 t ou4 #0 l u4 #1 zh e4 #0 x ie1 #1 h ang2 #0 k ong1 #1 g ong1 #0 s ii1 #0 d e5 #1 m ing2 #0 ch eng1 #4
+./baker_waves/009949.wav|sil c ong2 #1 vn4 #0 x ing2 #1 g uei3 #0 j i4 #0 sh ang4 #1 l ai2 #0 sh uo1 #3 t a1 #0 ie3 #1 b u4 #0 k e3 #0 n eng2 #1 sh iii4 #1 x ing1 #0 x ing5 #4
+./baker_waves/009950.wav|sil m u4 #0 q ian2 #0 k an4 #3 r u2 #0 g uo3 #1 j i4 #0 x v4 #1 j ia1 #0 x i1 #2 ie3 #1 c uen2 #0 z ai4 #1 l iang3 #0 n an2 #1 uen4 #0 t i2 #4
+./baker_waves/009951.wav|sil z eng1 #0 b ao3 #0 i2 #2 z ai4 #1 j ie2 #0 m u4 #1 l u4 #0 zh iii4 #1 x ian4 #0 ch ang3 #2 d a4 #0 b ao4 #1 g uan1 #0 zh ong4 #1 q iou3 #0 sh iii4 #4
+./baker_waves/009952.wav|sil d an4 #1 r en4 #0 p ing2 #1 zh ou1 #0 m ou2 #1 z en3 #0 m e5 #0 j iao4 #3 n an2 #0 z ii3 #1 r eng2 #1 h an1 #0 sh uei4 #1 b u4 #0 x ing3 #4
+./baker_waves/009953.wav|sil l ao3 #0 d a4 #0 ie5 #0 sh uo1 #3 x iao3 #0 z ii5 #2 n i3 #0 d ang2 #0 uo3 #1 c ai2 #0 l u4 #0 l e5 #2 zh iii1 #0 d ao4 #0 b u5 #4
+./baker_waves/009954.wav|sil m ei2 #0 l iao4 #0 d ao4 #3 ch uang3 #0 x ia4 #1 d a4 #0 t ou2 #0 f o2 #0 d e5 #1 a1 #0 uei3 #2 h ai2 #0 b u4 #0 zh iii1 #1 h uei2 #0 g ai3 #4
+./baker_waves/009955.wav|sil k a3 #0 zh a1 #0 f ei1 #1 b u4 #0 l uo4 #0 sh iii4 #1 t ong3 #0 zh iii4 #2 i3 #1 z ao1 #0 v4 #1 b u4 #0 l uo4 #1 n ei4 #0 h ong4 #4
+./baker_waves/009956.wav|sil zh e4 #0 g e4 #1 h ai2 #0 z ii5 #0 d e5 #1 sh eng1 #0 m ing4 #3 i2 #0 b an4 #1 l ai2 #0 van2 #0 v2 #1 l ing4 #0 i2 #0 uei4 #1 n v3 #0 sh iii4 #1 j van1 #0 z eng4 #0 d e5 #1 l eng3 #0 d ong4 #1 l uan2 #0 z ii3 #4
+./baker_waves/009957.wav|sil ch u1 #0 x ian4 #1 zh e4 #0 zh ong3 #1 n i2 #0 q iou5 #1 n ei4 #0 g e2 #0 d e5 #1 j v2 #0 m ian4 #3 j i4 #0 sh iii4 #1 ie3 #0 t ian2 #1 iou3 #0 i4 #1 uei2 #0 zh iii1 #3 ie3 #1 sh iii2 #0 sh u3 #1 u2 #0 n ai4 #4
+./baker_waves/009958.wav|sil j i3 #0 q ing1 #1 g ao1 #0 s u4 #2 j i3 #0 n an2 #2 h ua4 #0 sh an1 #2 zh ang1 #0 q iou1 #2 z ou1 #0 p ing2 #2 zh ou1 #0 c uen1 #2 z ii1 #0 b o2 #2 l in2 #0 z ii1 #0 zh an4 #4
+./baker_waves/009959.wav|sil zh ao4 #0 l ing2 #0 f ei1 #0 d e5 #0 h ua4 #3 f an3 #0 ing4 #0 l e5 #1 sh en3 #0 iang2 #1 s ai4 #0 q v1 #1 s uo2 #0 iou3 #1 ao4 #0 vn4 #1 zh iii4 #0 van4 #0 zh e3 #0 d e5 #1 g ong4 #0 t ong2 #1 x in1 #0 sh eng1 #4
+./baker_waves/009960.wav|sil in1 #0 uei4 #3 uo3 #0 m en5 #1 s uo3 #1 f a1 #0 ch u1 #0 d e5 #1 l i4 #0 l iang4 #2 b i4 #0 h uei4 #0 in1 #1 n an2 #0 d u4 #1 j ia1 #0 d a4 #1 er2 #1 j ian3 #0 r uo4 #4
+./baker_waves/009961.wav|sil f a1 #0 sh eng1 #1 sh iii4 #0 g u4 #0 d e5 #1 l ou2 #0 t i1 #1 g uai2 #0 j iao3 #0 ch u4 #2 r eng2 #0 k e3 #1 k an4 #0 d ao4 #1 x ve4 #0 j i4 #4
+./baker_waves/009963.wav|sil l u4 #0 sh ang4 #1 g uan1 #0 q ia2 #1 h en3 #0 d uo1 #3 uei4 #0 l e5 #1 f ang1 #0 b ian4 #1 ch e4 #0 l i2 #3 zh iii2 #0 h ao3 #1 q ing1 #0 zh uang1 #1 q ian2 #0 j in4 #4
+./baker_waves/009964.wav|sil van2 #0 l ai2 #2 b i2 #0 er3 #1 g ai4 #0 c ii2 #1 j iou4 #0 sh iii4 #1 m ei3 #0 g uo2 #1 uei1 #0 r uan3 #1 g ong1 #0 s ii1 #1 l ian2 #0 h e2 #1 ch uang4 #0 sh iii3 #0 r en2 #0 ia5 #4
+./baker_waves/009965.wav|sil zh iii1 #0 h ou4 #3 t a1 #0 m en5 #1 i4 #0 j ia1 #1 s an1 #0 k ou3 #1 j iang1 #0 v3 #1 sh uang1 #0 f ang1 #1 f u4 #0 m u3 #3 uang3 #1 k e4 #0 l i2 #0 d ao3 #1 l v3 #0 iou2 #4
+./baker_waves/009966.wav|sil x ie4 #0 x ie5 #1 z ong2 #0 l i3 #3 ie2 #1 g an3 #0 x ie4 #1 g uang3 #0 d a4 #1 uang2 #0 iou3 #0 d e5 #1 c an1 #0 v4 #2 uo3 #0 m en5 #1 m ing2 #0 n ian2 #1 z ai4 #0 j ian4 #4
+./baker_waves/009967.wav|sil sh iii4 #0 sh iii2 #0 sh ang4 #1 sh iii4 #3 c ong2 #0 l ai2 #1 m ei2 #0 iou3 #1 i2 #0 g e4 #1 q i1 #0 sh an4 #1 p a4 #0 e4 #0 d e5 #0 r en2 #2 n eng2 #1 z uo4 #0 ch u1 #0 g uo4 #1 sh ao1 #0 d a4 #1 i4 #0 d ian3 #0 d e5 #1 ch eng2 #0 j iou4 #4
+./baker_waves/009968.wav|sil uo3 #0 h uei4 #1 d a3 #0 k ai1 #1 iou2 #0 j ian4 #3 n i3 #1 k e2 #0 i3 #1 c ong2 #1 n a4 #0 l i3 #1 j i4 #0 x v4 #4
+./baker_waves/009969.wav|sil m ei3 #0 f ang1 #1 d uei4 #1 j in4 #0 q i1 #1 d ong1 #0 h ai3 #1 j v2 #0 sh iii4 #1 b iao3 #0 sh iii4 #1 g uan1 #0 q ie4 #4
+./baker_waves/009970.wav|sil j v4 #0 x i1 #3 ao4 #0 b a1 #0 m a3 #1 i4 #0 j ia1 #0 r en2 #2 d uei4 #1 zh e4 #0 z uo4 #1 d ong1 #0 j i4 #1 b ai2 #0 g ong1 #2 j i2 #0 uei2 #1 m an3 #0 i4 #4
+./baker_waves/009971.wav|sil d a2 #0 s ao3 #0 uan2 #2 n i3 #0 h uei4 #1 h en2 #0 iou3 #1 ch eng2 #0 j iou4 #0 g an3 #0 d e5 #3 sh iii4 #0 i2 #0 sh iii4 #1 n i3 #0 j iou4 #1 x in4 #0 l e5 #4
+./baker_waves/009972.wav|sil n uo4 #0 m an4 #2 zh an4 #0 z ai4 #1 h ua2 #0 b an3 #1 ch e1 #0 sh ang4 #3 g e4 #0 j iou4 #1 g e4 #0 uei4 #3 zh uen3 #0 b ei4 #1 ch u1 #0 f a1 #0 l a5 #4
+./baker_waves/009973.wav|sil t a3 #0 h e2 #0 d e5 #1 h an2 #0 ie4 #3 q i4 #0 uen1 #1 j iang4 #0 d ao4 #0 l e5 #1 l ing2 #0 x ia4 #1 s an1 #0 sh iii5 #0 d uo1 #1 sh e4 #0 sh iii4 #0 d u4 #4
+./baker_waves/009974.wav|sil q i2 #0 j ian1 #3 l ian2 #0 p o4 #1 l iou4 #0 d ian3 #0 l iou4 #2 l iou4 #0 d ian2 #1 u3 #3 l iou4 #0 d ian3 #1 s ii4 #3 l iou4 #0 d ian3 #1 s an1 #0 u2 #1 d eng3 #1 d uo1 #0 g e4 #1 zh ong4 #0 iao4 #1 g uan1 #0 k ou3 #4
+./baker_waves/009975.wav|sil s uan4 #0 m ing4 #3 q i2 #0 sh iii2 #1 zh iii3 #0 sh iii4 #1 r en2 #0 m en5 #0 d e5 #1 i4 #0 zh ong3 #1 z ii4 #0 uo3 #1 an1 #0 uei4 #1 h e2 #1 z ii4 #0 uo3 #1 an4 #0 sh iii4 #1 er2 #0 i3 #3 uo3 #0 m en5 #1 h ai2 #0 sh iii4 #0 iao4 #1 x iang1 #0 x in4 #1 k e1 #0 x ve2 #1 c ai2 #0 h ao3 #4
+./baker_waves/009976.wav|sil zh e4 #0 i2 #0 q ie4 #1 d ou1 #0 l ing4 #0 r en2 #1 h uan1 #0 x in1 #1 g u2 #0 u3 #3 a1 #0 n e4 #0 x i1 #2 m ei2 #0 l i3 #0 iou2 #2 b u4 #0 j ian1 #0 ch iii2 #1 d ao4 #1 z uei4 #0 h ou4 #4
+./baker_waves/009977.wav|sil zh iii2 #0 zh iii4 #1 g ong1 #0 van2 #0 q ian2 #1 i2 #0 uan4 #1 i4 #0 q ian1 #0 n ian2 #2 t a1 #0 iou4 #1 z ai4 #0 c ii4 #1 ch u1 #0 x ian4 #4
+./baker_waves/009978.wav|sil j in3 #0 l iang4 #1 sh ao3 #0 uan2 #1 d ian4 #0 n ao3 #2 sh ao3 #0 k an4 #1 d ian4 #0 sh iii4 #2 sh ao2 #0 d a3 #1 iou2 #0 x i4 #4
+./baker_waves/009979.wav|sil c ong2 #0 u3 #1 d ao4 #0 q i1 #3 q ian2 #0 h ou4 #2 ie3 #0 j iou4 #0 sh iii4 #1 l iou4 #0 g e5 #1 ve4 #0 d e5 #1 sh iii2 #0 j ian1 #4
+./baker_waves/009980.wav|sil i2 #0 j in4 #1 k a1 #0 f ei1 #0 d ian4 #3 t a1 #0 j iou4 #1 v4 #0 j ian4 #1 i4 #0 zh ang1 #1 sh u2 #0 x i5 #0 d e5 #0 l ian3 #4
+./baker_waves/009981.wav|sil h ao3 #0 z ai4 #1 zh ong4 #0 d i4 #0 x iong5 #2 k an4 #0 d ao4 #0 l e5 #1 b a3 #0 t a1 #1 zh uei1 #0 l e5 #1 h uei2 #0 l ai2 #4
+./baker_waves/009983.wav|sil t ong3 #0 l e5 #0 t a1 #1 i3 #0 h ou4 #3 m o2 #0 h u1 #1 j i4 #0 d e5 #1 t a1 #0 m ei2 #0 z a3 #1 d ong4 #0 l e5 #4
+./baker_waves/009984.wav|sil c ong2 #0 x iao3 #1 d ao4 #0 d a4 #3 g e2 #0 q i3 #0 i4 #2 m ei2 #0 iou3 #1 sh ou1 #0 d ao4 #0 g uo4 #1 ia1 #0 s uei4 #0 q ian2 #4
+./baker_waves/009985.wav|sil u3 #0 t ai2 #1 x ia4 #0 d e5 #1 n i3 #2 h uei4 #0 d uei4 #1 u3 #0 t ai2 #1 sh ang4 #0 d e5 #1 n i3 #1 sh uo1 #0 sh en2 #0 m e5 #4
+./baker_waves/009986.wav|sil d an4 #1 k ao3 #0 sh eng1 #1 p u3 #0 b ian4 #1 r en4 #0 uei2 #3 sh iii4 #0 t i2 #0 d e5 #1 g uai4 #2 d uo1 #0 g uo4 #0 n an2 #4
+./baker_waves/009987.wav|sil uo3 #1 x i1 #0 uang4 #2 m ei3 #0 g e4 #0 r en2 #1 d ou1 #0 n eng2 #0 g ou4 #1 z uen1 #0 zh ong4 #1 uo3 #0 m en5 #0 d e5 #1 in3 #0 s ii1 #4
+./baker_waves/009988.wav|sil m an4 #0 t ian1 #0 d e5 #1 h ong2 #0 x ia2 #2 sh iii3 #0 j in4 #0 g ei2 #1 l iang3 #0 r en2 #1 z eng1 #0 t ian1 #1 q i4 #0 f en1 #4
+./baker_waves/009989.wav|sil uan3 #0 sh ang4 #1 j ia1 #0 uan2 #0 b an1 #1 k ai1 #0 ch e1 #1 h uei2 #0 j ia1 #2 t ai4 #0 l ei4 #0 l e5 #3 m i2 #0 m i5 #1 h u1 #0 h u1 #1 k ai1 #0 zh e5 #0 ch e1 #3 z ou3 #1 i2 #0 b an4 #0 d e5 #1 sh iii2 #0 h ou4 #3 d ang1 #1 i4 #0 sh eng1 #4
+./baker_waves/009990.wav|sil g ai1 #0 ch e1 #1 j iang1 #1 s an1 #0 r en2 #1 zh uang4 #0 d ao3 #0 h ou4 #3 z ai4 #1 d a4 #0 u4 #0 zh ong1 #1 t ao2 #0 c uan4 #4
+./baker_waves/009991.wav|sil zh e4 #0 r en2 #1 i4 #0 d uo1 #0 s uo5 #3 f ang1 #0 x iang4 #0 p an2 #1 ie2 #1 b a3 #0 b u4 #1 uen3 #0 l e5 #3 ch a4 #0 d ian3 #1 zh uang4 #0 sh ang4 #0 l e5 #1 g ao1 #0 s u4 #1 b ian1 #0 d ao4 #1 h u4 #0 l an2 #4
+./baker_waves/009993.wav|sil x iao3 #0 m ing2 #1 iao2 #0 iao2 #0 t ou2 #0 sh uo1 #3 b u2 #0 sh iii4 #3 uo2 #1 zh iii3 #0 sh iii4 #1 m ei2 #0 n v3 #1 k an4 #0 d uo1 #0 l e5 #3 x iang3 #1 h uan4 #0 g e5 #1 k ou3 #0 uei4 #1 er2 #0 i3 #4
+./baker_waves/009994.wav|sil j ie1 #0 x ia4 #0 l ai2 #3 h ong2 #0 n iang2 #1 iao1 #0 q iou2 #1 j i4 #0 zh e3 #1 j iao1 #0 f ei4 #3 j i4 #0 zh e2 #1 b iao3 #0 sh iii4 #3 b u4 #0 zh iii1 #1 b iao2 #0 j ie3 #1 sh en1 #0 f en4 #0 zh eng4 #1 h ao4 #0 m a3 #4
+./baker_waves/009996.wav|sil l ing4 #0 i4 #1 n an2 #0 z ii3 #1 p u1 #0 l e5 #1 sh ang4 #0 l ai5 #3 sh ou2 #0 l i3 #1 n a2 #0 zh e5 #1 m ing2 #0 h uang4 #0 h uang4 #0 d e5 #1 ch ang2 #0 d ao1 #3 x iang4 #0 t a1 #1 x iong1 #0 k ou3 #1 zh iii2 #0 c ii4 #4
+./baker_waves/009997.wav|sil j in1 #0 t ian1 #3 k uai4 #0 d i4 #0 van2 #1 n a2 #0 zh e5 #1 i2 #0 g e4 #1 k uai4 #0 d i4 #1 z ai4 #1 b an4 #0 g ong1 #0 sh iii4 #1 h an3 #3 q in2 #0 uang2 #1 sh iii4 #1 n a3 #0 g e4 #3 iou3 #0 t a1 #1 k uai4 #0 d i4 #4
+./baker_waves/009998.wav|sil zh e4 #0 ch ang3 #1 k ang4 #0 i4 #1 h uo2 #0 d ong4 #3 j iou1 #0 j ing4 #0 sh iii4 #1 r u2 #0 h e2 #1 f a1 #0 zh an2 #1 ian3 #0 b ian4 #0 d e5 #3 iou4 #1 j iou1 #0 j ing4 #2 sh iii4 #0 sh uei2 #1 sh ang1 #0 h ai4 #0 l e5 #0 sh uei2 #4
+./baker_waves/009999.wav|sil in1 #1 h ua4 #0 g uo2 #0 f eng1 #1 x iao4 #0 j i1 #3 m u4 #0 d i4 #1 sh e4 #0 j i4 #2 g en1 #0 j v4 #1 q i2 #1 sh u3 #0 x iang4 #1 sh e4 #0 j i4 #4

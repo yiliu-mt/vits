@@ -1,9 +1,12 @@
 import argparse
 import os
+import yaml
+import librosa
 import tgt
 import pandas as pd
-from collections import defaultdict, OrderedDict
+from collections import defaultdict
 import numpy as np
+from scipy.io import wavfile
 
 
 sil_phones = ["sil", "sp", "spn", "sp1", "sp2", "sp3", "sp0", "spb"]
@@ -40,7 +43,7 @@ def stats_sil_phones_from_path(path):
     return spk2sos_durations, spk2eos_durations, spk2sil_durations
 
 
-def get_phones(between_words, spk2pause_stats, sampling_rate, hop_length, tg_name):
+def get_phones(between_words, preprocess_config, spk2pause_stats, tg_name):
     textgrid = tgt.io.read_textgrid(tg_name, include_empty_intervals=True)
 
     # map the words and the corresponding phones
@@ -75,7 +78,6 @@ def get_phones(between_words, spk2pause_stats, sampling_rate, hop_length, tg_nam
             if p == "" or p in sil_phones:
                 is_silence = True
                 duration = e - s
-
                 if duration < sp1_threshold:
                     p = "sp0"
                 elif duration < sp2_threshold:
@@ -101,12 +103,17 @@ def get_phones(between_words, spk2pause_stats, sampling_rate, hop_length, tg_nam
                 # For silent phones
                 phones.append(p)
 
-            # durations.append(
-            #     int(
-            #         np.round(e * sampling_rate / hop_length)
-            #         - np.round(s * sampling_rate / hop_length)
-            #     )
-            # )
+            durations.append(
+                int(
+                    np.round(
+                        e * preprocess_config["preprocessing"]["audio"]["sampling_rate"] /
+                        preprocess_config["preprocessing"]["stft"]["hop_length"])
+                    - np.round(
+                        s * preprocess_config["preprocessing"]["audio"]["sampling_rate"] /
+                        preprocess_config["preprocessing"]["stft"]["hop_length"])
+                )
+            )
+
         if between_words:
             if word_index == 0 and is_silence:
                 continue
@@ -117,11 +124,10 @@ def get_phones(between_words, spk2pause_stats, sampling_rate, hop_length, tg_nam
 
     # Trim tailing silences
     phones = phones[:end_idx]
-    # durations = durations[:end_idx]
+    durations = durations[:end_idx]
 
     assert word2phones[0][1][0][-1] == "" and word2phones[-1][1][0][-1] == ""
-    phones = ['sil'] + phones + ['sil']
-    return phones # , durations, start_time, end_time
+    return phones, durations, start_time, end_time
 
 
 def output_phones(out, input_file, output_file):
@@ -130,7 +136,7 @@ def output_phones(out, input_file, output_file):
             name = line.strip().split("|")[0]
             if name not in out:
                 print(f"Skip {name} since it is not found in the TextGrid")
-            fp_out.write('{}|{}\n'.format(name, ' '.join(out[name])))
+            fp_out.write('{}|{}\n'.format(out[name][0], ' '.join(out[name][1])))
                 
 
 def main():
@@ -139,58 +145,83 @@ def main():
     parser.add_argument("--train_txt_fpath", type=str, default="train.txt")
     parser.add_argument("--val_txt_fpath", type=str, default="val.txt")
     parser.add_argument("--test_txt_fpath", type=str, default="test.txt")
-    parser.add_argument("--sampling_rate", type=int, default=22050)
-    parser.add_argument("--hop_length", type=int, default=256)
-    parser.add_argument("preprocessed_path")
+    parser.add_argument(
+        "--remove_silence",
+        type=lambda x: (str(x).lower() == 'true'),
+        default=True,
+        help="To remove the heading and tailing silence"
+    )
+    parser.add_argument("-p", "--preprocess_config", type=str)
+    parser.add_argument("-o", "--output_dir", type=str)
     args = parser.parse_args()
 
-    sos_sil_stat, eos_sil_stat, sil_stat = stats_sil_phones_from_path(args.preprocessed_path)
+    preprocess_config = yaml.load(
+        open(args.preprocess_config, "r"), Loader=yaml.FullLoader
+    )
+    raw_path = preprocess_config["path"]["raw_path"]
+    preprocessed_path = preprocess_config["path"]["preprocessed_path"]
+
+    spk_dirs = [
+        speaker for speaker in os.listdir(os.path.join(preprocessed_path, "TextGrid"))
+        if os.path.isdir(os.path.join(preprocessed_path, "TextGrid", speaker))
+    ]
+    print("all spks {}".format(spk_dirs))
+
+    sos_sil_stat, eos_sil_stat, sil_stat = stats_sil_phones_from_path(preprocess_config["path"]["preprocessed_path"])
     spk2pause_stats = dict()
     for spk in sos_sil_stat.keys():
         print("====={}".format(spk))
-        # print("\t====={} SOS".format(spk))
-        # print(pd.Series(sos_sil_stat[spk]).describe(percentiles=[.3, .6, .8, .99]))
-        # print("\t====={} EOS".format(spk))
-        # print(pd.Series(eos_sil_stat[spk]).describe(percentiles=[.3, .6, .8, .99]))
-        # print("\t====={}".format(spk))
         pos_stats = pd.Series(sil_stat[spk]).describe(percentiles=[.3, .6, .8, .99])
-        # print(pos_stats)
         spk2pause_stats[spk] = [pos_stats["30%"], pos_stats["60%"], pos_stats["80%"]]
 
-    spk_dirs = [
-        speaker for speaker in os.listdir(os.path.join(args.preprocessed_path, "TextGrid"))
-        if os.path.isdir(os.path.join(args.preprocessed_path, "TextGrid", speaker))
-    ]
-    print("all spks {}".format(spk_dirs))
     out = {}
     for speaker in spk_dirs:
-        for tg_name in os.listdir(os.path.join(args.preprocessed_path, "TextGrid", speaker)):
+        for tg_name in os.listdir(os.path.join(preprocessed_path, "TextGrid", speaker)):
             if ".TextGrid" not in tg_name:
                 continue
             basename = tg_name.split(".")[0]
-            phones = get_phones(
+            wav_path = os.path.join(raw_path, speaker, "{}.wav".format(basename))
+
+            phones, duration, start, end = get_phones(
                 args.words,
+                preprocess_config,
                 spk2pause_stats[speaker],
-                args.sampling_rate,
-                args.hop_length,
-                os.path.join(args.preprocessed_path, "TextGrid", speaker, tg_name)
+                os.path.join(preprocessed_path, "TextGrid", speaker, tg_name)
             )
-            out[basename] = phones
+
+            sr, wav = wavfile.read(wav_path)
+            assert sr == preprocess_config["preprocessing"]["audio"]["sampling_rate"]
+
+            if args.remove_silence:
+                # trim wav
+                wav = wav[
+                    int(preprocess_config["preprocessing"]["audio"]["sampling_rate"] * start):
+                        int(preprocess_config["preprocessing"]["audio"]["sampling_rate"] * end)
+                ]
+            else:
+                # add silence to the label
+                phones = ['sil'] + phones + ['sil']
+                
+            # write wave
+            os.makedirs(os.path.join(args.output_dir, "Wave", speaker), exist_ok=True)
+            out_wav_path = os.path.join(args.output_dir, "Wave", speaker, "{}.wav".format(basename))
+            wavfile.write(out_wav_path, sr, wav.astype(np.int16))
+            out[basename] = [out_wav_path, phones]
     
     output_phones(
         out,
-        os.path.join(args.preprocessed_path, args.train_txt_fpath),
-        os.path.join(args.preprocessed_path, args.train_txt_fpath+".vits")
+        os.path.join(preprocessed_path, args.train_txt_fpath),
+        os.path.join(args.output_dir, args.train_txt_fpath)
     )
     output_phones(
         out,
-        os.path.join(args.preprocessed_path, args.val_txt_fpath),
-        os.path.join(args.preprocessed_path, args.val_txt_fpath+".vits")
+        os.path.join(preprocessed_path, args.val_txt_fpath),
+        os.path.join(args.output_dir, args.val_txt_fpath)
     )
     output_phones(
         out,
-        os.path.join(args.preprocessed_path, args.test_txt_fpath),
-        os.path.join(args.preprocessed_path, args.test_txt_fpath+".vits")
+        os.path.join(preprocessed_path, args.test_txt_fpath),
+        os.path.join(args.output_dir, args.test_txt_fpath)
     )
 
 

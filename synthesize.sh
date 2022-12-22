@@ -1,8 +1,8 @@
 #!/bin/bash
 
-config=configs/baker_wetts.json
-test_file=filelists/baker_valid_wetts.txt
-model=logs/baker_wetts/G_240000.pth
-output_dir=baker_wetts
+config=configs/baker_inhouse.json
+test_file=filelists/baker_valid_inhouse_blank.txt
+model=logs/baker_inhouse/G_200000.pth
+output_dir=baker_inhouse
 
 python inference.py -c $config -t $test_file -m $model -o $output_dir

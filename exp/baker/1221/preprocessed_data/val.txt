@@ -1,0 +1,103 @@
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009892.wav|j ing3 f ang1 ch a2 x vn2 l e5 ^ u4 l iao4 l ing2 q v3 d an1 j v4 sp3 r iii4 q i1 ^ v3 ^ an1 zh uang1 sh iii2 j ian1 x iang1 f u2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009893.wav|j v4 x i1 sp3 zh e4 g e4 l iou2 d ong4 d e5 l uo4 t uo5 zh ao4 x iang4 t an1 sp2 b ing4 ^ uei4 b an4 l i3 r en4 h e2 sh ou3 x v4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009894.wav|t ong2 sh iii2 sp3 ^ v4 s uan4 ^ an4 d e5 d ian4 z ii2 b an2 ^ ie3 j iang1 sh ang4 ^ uang3 sp2 r en4 h e2 r en2 d ou1 k e2 ^ i3 ch a2 ^ ve4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009895.wav|q i3 ch u1 sp0 h e2 ch eng4 m ing2 l ou3 zh e5 ^ i2 ^ uei4 n v3 x ing4 ^ iou3 r en2 d e5 g e1 b o5 b ian1 z ou3 b ian1 l iao2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009896.wav|n eng2 b ei4 x van3 z uo4 j i1 x in1 g e2 z ii1 l iao4 d e5 sh ou1 c ang2 zh e3 sp3 ^ ie1 l u3 sh en1 g an3 r ong2 x ing4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009897.wav|zh e4 h e2 g ao1 c eng2 g uan2 l i2 zh e3 j ing1 sh en2 ^ ia1 l i4 d a4 sp0 ^ ing4 ch ou2 d uo1 ^ iou2 h en3 d a4 g uan1 x i4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009898.wav|z an2 m en5 m u4 m in2 q vn2 zh ong4 t e4 b ie2 r e4 x in1 t e4 b ie2 h ao4 k e4 sp0 f ei1 ch ang2 sh an4 l iang2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009899.wav|m ei3 ^ i2 g e4 h uo3 j ian4 g uan1 sp1 d ou1 sh uen4 l i4 d e5 sh eng1 sh ang4 q v4 l e5 sp2 r an2 r an3 r uo4 x ing1 g uang1
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009900.wav|m ei3 t ian1 b a3 l ao2 s ao1 n a2 ch u1 l ai2 sh ai4 sh ai5 t ai4 ^ iang5 sp3 x in1 q ing2 j iou4 b u2 h uei4 q ve1 g ai4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009901.wav|z uo2 r iii4 sp2 zh e4 m ing2 sh ang1 zh e2 ^ v3 ^ i1 sh eng1 q van2 b u4 b ei4 j ing3 f ang1 ^ i1 f a3 x ing2 sh iii4 j v1 l iou2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009902.wav|q ian2 ^ uei3 ch ang2 x iang3 d ao4 sh ang4 h ai3 l ai2 b an4 x ve2 x iao4 sp0 sh iii4 j ing1 g uo4 sh en1 s ii1 sh u2 l v4 d e5
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009903.wav|t a1 j ian4 ^ uo3 ^ i2 j in4 m en2 j iou4 m a4 sp2 ch iii1 f an4 sh iii2 ^ ie3 m a4 sp1 m a4 d e5 ^ uo3 t ai2 b u4 q i3 t ou2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009904.wav|l i3 sh u4 d e2 z ai4 l i2 k ai1 zh iii1 q ian2 sp1 zh iii3 sh uo1 l e5 ^ i2 j v4 sp3 zh u4 t uo2 sh a1 f u4 q in5 l e5
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009905.wav|zh e4 zh ong3 ch e1 p iao4 h e2 b ao2 x ian3 d an1 k uen2 b ang3 ch u1 sh ou4 sp1 sh u3 ^ v2 ch ong2 f u4 x ing4 g ou4 m ai3
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009906.wav|d ai4 p ei4 n i1 d e5 n an2 ^ iou3 x i1 m i3 l u4 sp1 j ie1 ch ang4 q ing2 g e1 sp0 r ang4 t a1 f ei1 ch ang2 k ai1 x in1
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009907.wav|g uan1 d a4 sh iii4 m ou2 d a4 j v2 sp0 ch u1 d a4 c e4 sp2 sh iii3 zh ong1 sh iii4 g ai1 ^ van4 d e5 b an4 ^ van4 f ang1 zh en1
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009908.wav|t a1 m en5 q i2 zh e5 m o2 t uo1 h uei2 j ia1 sp3 zh eng4 h ao3 ^ uei4 n ong2 m ang2 sh iii2 d e5 f u4 m u3 b ang1 m ang2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009909.wav|d an4 sh iii4 ^ in1 ^ uei4 h ai2 m ei2 d ao4 t uei4 x iou1 n ian2 l ing2 sp3 zh iii3 n eng2 b ai1 zh e5 zh iii3 t ou5 ^ ai2 r iii4 z ii5
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009910.wav|zh e4 j i3 t ian1 ^ v2 sh uei3 b u2 d uan4 sp3 r en2 m en5 h en4 b u4 d e2 d ai1 z ai4 j ia1 l i3 b u4 ch u1 m en2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009911.wav|m ei2 x iang3 d ao4 x v2 ^ vn1 sp0 zh ang1 h ai3 x iang2 l iang3 r en2 sp0 j iou4 c ii3 ^ uan2 q i3 l e5 r en2 j ian1 zh eng1 f a1
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009912.wav|t eng2 c uen1 c ii3 f an1 f a1 ^ ian2 sp1 k e3 n eng2 sh iii4 ^ uei4 l e5 t u1 x ian2 ^ ie3 t ian2 d e5 l ing2 d ao3 n eng2 l i4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009913.wav|ch eng2 ch ang2 g eng1 sp1 sh eng1 z ai4 q ing1 ^ uang2 ch ao2 j ia1 q ing4 n ian2 j ian1 sp3 ^ an1 h uei1 d e5 q ian2 sh an1 x iao3 x ian4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009914.wav|n an2 h ai2 h ai3 ^ v4 z ong1 h e2 b u2 j i3 j i1 d i4 m a3 t ou2 x iang4 m u4 zh eng4 z ai4 l uen4 zh eng4 zh ong1
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009915.wav|^ ie3 j iou4 sh iii4 sh uo1 sp2 j in1 ^ uan3 ch eng2 d u1 sh iii4 m in2 j i2 ^ iou2 k e3 n eng2 z ai4 c ii4 k an4 d ao4 p iao1 x ve3
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009916.wav|s uei2 zh e5 t ian1 q i4 zh uan3 r e4 sp2 g e4 d i4 d e5 ^ iou2 ^ iong3 ch ang2 s uo3 k ai1 sh iii3 r en2 t ou2 c uan2 d ong4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009917.wav|g eng4 r ang4 x v2 x ian1 sh eng5 n a4 m en4 d e5 sh iii4 sp3 f ang2 k e4 d e5 sh ou3 j i1 ^ ie2 d a3 b u4 t ong1 l e5
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009918.wav|^ v4 d ao4 d ian1 b o3 sh iii2 sp2 ^ ing1 t ing1 c ong2 ch eng2 ^ u4 ^ van2 d e5 ^ an1 q van2 zh iii3 l ing4 sp2 h uei2 z uo4 ^ uei4 z uo4 h ao3
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009919.wav|t a1 z ai4 h ou4 m ian4 d ai1 g uan4 l e5 sp3 p a4 z ii4 j i3 ^ i4 ch a1 sp0 sh en1 h ou4 d e5 r en2 h uei4 b u4 m an3 sp2 b u4 g an3 p ai2 j in4 q v4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009920.wav|b ang4 ^ uan3 sp1 q i1 g e5 x iao3 r en2 h uei2 l ai5 l e5 sp3 b ai2 x ve3 g ong1 zh u3 sh uo1 sp3 n i3 m en5 j iou4 sh iii4 ^ uo3 m ing4 zh ong4 d e5 q i1 g e5 x iao2 ^ ai3 r en2 b a5
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009921.wav|t a1 b en2 x iang3 sh uo1 sp3 j iao4 ^ v4 j v2 g uan3 zh e4 g e4 sp3 t a1 m en5 sh iii4 ^ i2 l u4 d e5 sp3 zh e4 ^ iang4 ^ i4 g uan3 sp0 q i3 b u2 sh iii4 j i4 n v2 q i3 p iao2 k e4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009922.wav|^ i4 zh ong2 b iao3 sh iii4 sh ang1 p in3 s uo2 ^ iou3 q van2 d e5 c ai2 ^ u4 zh eng4 q van4 sp2 ^ ie3 ch eng1 sh ang1 p in3 zh eng4 q van4 sp3 r u2 t i2 h uo4 d an1 sp0 j iao1 h uo4 d an1
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009923.wav|h uei4 ^ iou2 h en3 f eng1 f u4 d e5 d ong1 x i5 l iou2 x ia4 l ai2 sp2 sh uo1 d ou1 sh uo1 b u4 ^ uan2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009924.wav|zh e4 j v4 h ua4 x iang4 c ong2 t ian1 ^ er2 j iang4 sp3 x ia4 d e5 s ii4 zh ou1 ^ i2 p ian4 j i4 j ing4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009925.wav|j i4 zh e2 s uo3 z ai4 d e5 sh iii4 sh ou4 h ai4 r en2 j ia1 sh u2 s uo3 z ai4 d e5 ^ iou4 q v1
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009926.wav|b u4 g uan3 h a1 d a4 ^ ie2 q v4 n a3 sp2 t a1 d ou1 ^ i2 b u4 b u4 l i2 d e5 g en1 zh e5
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009927.wav|d a4 j ia1 t ai2 t ou2 ^ uang4 q v4 sp2 ^ i4 zh iii1 l ao2 sh u3 zh eng4 p a1 z ai4 d iao4 d ing3 sh ang4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009928.wav|^ uo3 j ve2 d ing4 g uo4 n ian2 j iou4 c ii2 zh iii2 sp2 j ie1 sh ou2 ^ uo3 b a4 d e5 f ei4 p in3 zh an4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009929.wav|z uei4 zh ong1 sp1 zh ong1 g uo2 n an2 z ii3 p ing1 p ang1 q iou2 d uei4 sp1 h uo4 d e2 c ii2 j iang3 x iang4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009930.wav|f ang2 x vn4 k ang4 h an4 l iang2 sh ou3 zh ua1 sp3 k ang4 h an4 sp1 x iang1 d uei4 zh ua1 d e5 b u2 g ou4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009931.wav|t u2 m en2 j iang1 x ia4 ^ iou2 d i4 q v1 sp0 k ai1 f a1 k ai1 f ang4 d e5 j in4 zh an3 r u2 h e2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009932.wav|zh e4 ^ iao1 q iou2 sp1 zh ong1 g uo2 b i4 x v1 ^ iou3 ^ i2 g e4 j ian1 q iang2 d e5 zh eng4 d ang3 l ing2 d ao3
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009933.wav|z ai4 sh uo1 sp2 g uan1 ^ v2 l i4 ^ i4 sh ang4 d e5 sh iii4 sp1 ^ an2 l ia3 d ou1 b u4 h ao3 k ai1 k ou3
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009934.wav|m ing2 d ai4 ^ ua3 l a4 sp1 d a2 d a2 r u4 q in1 m ing2 j ing4 sp1 ^ ie3 sh iii4 t ong1 g uo4 c ii3 d i4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009935.wav|m i1 m i1 t ian3 zh e5 h ai2 z ii5 sp3 b a3 t a1 sh en1 sh ang4 d e5 m ao2 t ian3 g an1 j ing4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009936.wav|sh iii4 f ou3 zh e4 c ii4 d e5 g uo2 b iao1 x iou1 d ing4 sp0 b ei4 d a4 q i3 ^ ie4 b ang3 j ia4 l e5
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009937.wav|p an4 j ve2 h ou4 sp2 ^ iao2 m ou3 q i1 z ii3 h u2 m ou3 b u4 f u2 sp1 t i2 q i3 sh ang4 s u4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009938.wav|^ iou2 c ii3 k e2 ^ i3 k an4 ch u1 sp2 h an2 g ang1 d e5 j ing1 j i4 x iao4 ^ i4 l ai2 z ii4 h e2 ch u4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009939.wav|l in2 d a2 sh uo1 sp2 sh iii4 ^ v2 j ia1 g ai3 b ian4 l e5 t a1 h e2 m a3 ^ er2 d e5 sh eng1 h uo2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009940.wav|l ou2 x ia4 d e5 b ao3 ^ an1 g ao4 s u4 j i4 zh e3 sp2 zh e4 l i3 b u4 z u1 ^ ie3 b u2 m ai4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009941.wav|x i2 j in4 p ing2 sh uo1 sp3 zh ong1 s ii1 l iang3 g uo2 r en2 m in2 sp0 ch uan2 t ong2 ^ iou3 ^ i4 sh en1 h ou4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009943.wav|^ uo3 n u4 h ou3 ^ i4 sh eng1 ch ong1 sh ang4 q v4 sp2 j v2 q i3 zh uan1 t ou5 z a2 l e5 g uo4 q v4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009944.wav|^ uo3 x ian4 z ai4 h ai2 b u2 h uei4 sp3 zh e4 j iou4 h uei2 q v4 ^ uen4 ^ uen4 f a1 m ing2 ^ uo3 d e5 r en2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009945.wav|x ian3 r an2 sp2 l uo4 ^ iang2 x ing4 n u2 ^ an4 sp0 b u2 j v4 b ei4 sh ang4 sh u4 l iang3 g e5 q ian2 t i2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009946.wav|l ing4 ^ uai4 sp2 j ie2 k e4 x vn4 ^ iou3 ^ uen2 ch uen2 x ian4 sp1 ^ ian3 x ian4 sp1 m ei2 m ao5 d e5 d ong4 z uo4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009947.wav|z uo2 ^ uan3 sp1 h ua2 x i1 d u1 sh iii4 b ao4 j i4 zh e3 sp1 d ian4 h ua4 c ai2 f ang3 l e5 ^ in3 q i2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009948.wav|n ie4 l a1 j i4 k e1 ^ uei4 t ou4 l u4 zh e4 x ie1 h ang2 k ong1 g ong1 s ii1 d e5 m ing2 ch eng1
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009949.wav|c ong2 ^ vn4 x ing2 g uei3 j i4 sh ang4 l ai2 sh uo1 sp3 t a1 ^ ie3 b u4 k e3 n eng2 sh iii4 x ing1 x ing5
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009950.wav|m u4 q ian2 k an4 sp2 r u2 g uo3 j i4 x v4 j ia1 x i1 sp0 ^ ie3 c uen2 z ai4 l iang3 n an2 ^ uen4 t i2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009951.wav|z eng1 b ao3 ^ i2 z ai4 j ie2 m u4 l u4 zh iii4 x ian4 ch ang3 sp1 d a4 b ao4 g uan1 zh ong4 q iou3 sh iii4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009952.wav|d an4 r en4 p ing2 zh ou1 m ou2 z en3 m e5 j iao4 sp3 n an2 z ii3 r eng2 h an1 sh uei4 b u4 x ing3
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009953.wav|l ao3 d a4 ^ ie5 sh uo1 sp2 x iao3 z ii5 sp1 n i3 d ang2 ^ uo3 c ai2 l u4 l e5 sp1 zh iii1 d ao4 b u5
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009954.wav|m ei2 l iao4 d ao4 sp2 ch uang3 x ia4 d a4 t ou2 f o2 d e5 ^ a1 ^ uei3 sp0 h ai2 b u4 zh iii1 h uei2 g ai3
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009955.wav|k a3 zh a1 f ei1 b u4 l uo4 sh iii4 t ong3 zh iii4 sp0 ^ i3 z ao1 ^ v4 b u4 l uo4 n ei4 h ong4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009956.wav|zh e4 g e4 h ai2 z ii5 d e5 sh eng1 m ing4 sp2 ^ i2 b an4 l ai2 ^ van2 ^ v2 l ing4 ^ i2 ^ uei4 n v3 sh iii4 j van1 z eng4 d e5 l eng3 d ong4 l uan2 z ii3
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009957.wav|ch u1 x ian4 zh e4 zh ong3 n i2 q iou5 n ei4 g e2 d e5 j v2 m ian4 sp3 j i4 sh iii4 ^ ie3 t ian2 ^ iou3 ^ i4 ^ uei2 zh iii1 sp1 ^ ie3 sh iii2 sh u3 ^ u2 n ai4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009958.wav|j i3 q ing1 g ao1 s u4 sp1 j i3 n an2 sp0 h ua4 sh an1 sp1 zh ang1 q iou1 sp0 z ou1 p ing2 sp1 zh ou1 c uen1 sp0 z ii1 b o2 sp0 l in2 z ii1 zh an4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009959.wav|zh ao4 l ing2 f ei1 d e5 h ua4 sp2 f an3 ^ ing4 l e5 sh en3 ^ iang2 s ai4 q v1 s uo2 ^ iou3 ^ ao4 ^ vn4 zh iii4 ^ van4 zh e3 d e5 g ong4 t ong2 x in1 sh eng1
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009960.wav|^ in1 ^ uei4 sp1 ^ uo3 m en5 s uo3 f a1 ch u1 d e5 l i4 l iang4 sp1 b i4 h uei4 ^ in1 n an2 d u4 j ia1 d a4 ^ er2 j ian3 r uo4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009961.wav|f a1 sh eng1 sh iii4 g u4 d e5 l ou2 t i1 g uai2 j iao3 ch u4 sp0 r eng2 k e3 k an4 d ao4 x ve4 j i4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009963.wav|l u4 sh ang4 g uan1 q ia2 h en3 d uo1 sp2 ^ uei4 l e5 f ang1 b ian4 ch e4 l i2 sp1 zh iii2 h ao3 q ing1 zh uang1 q ian2 j in4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009964.wav|^ van2 l ai2 sp1 b i2 ^ er3 g ai4 c ii2 j iou4 sh iii4 m ei3 g uo2 ^ uei1 r uan3 g ong1 s ii1 l ian2 h e2 ch uang4 sh iii3 r en2 ^ ia5
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009965.wav|zh iii1 h ou4 sp2 t a1 m en5 ^ i4 j ia1 s an1 k ou3 j iang1 ^ v3 sh uang1 f ang1 f u4 m u3 sp1 ^ uang3 k e4 l i2 d ao3 l v3 ^ iou2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009966.wav|x ie4 x ie5 z ong2 l i3 sp1 ^ ie2 g an3 x ie4 g uang3 d a4 ^ uang2 ^ iou3 d e5 c an1 ^ v4 sp1 ^ uo3 m en5 m ing2 n ian2 z ai4 j ian4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009967.wav|sh iii4 sh iii2 sh ang4 sh iii4 sp3 c ong2 l ai2 m ei2 ^ iou3 ^ i2 g e4 q i1 sh an4 p a4 ^ e4 d e5 r en2 sp0 n eng2 z uo4 ch u1 g uo4 sh ao1 d a4 ^ i4 d ian3 d e5 ch eng2 j iou4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009968.wav|^ uo3 h uei4 d a3 k ai1 ^ iou2 j ian4 sp2 n i3 k e2 ^ i3 c ong2 n a4 l i3 j i4 x v4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009969.wav|m ei3 f ang1 d uei4 j in4 q i1 d ong1 h ai3 j v2 sh iii4 b iao3 sh iii4 g uan1 q ie4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009970.wav|j v4 x i1 sp2 ^ ao4 b a1 m a3 ^ i4 j ia1 r en2 sp0 d uei4 zh e4 z uo4 d ong1 j i4 b ai2 g ong1 j i2 ^ uei2 m an3 ^ i4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009971.wav|d a2 s ao3 ^ uan2 sp1 n i3 h uei4 h en2 ^ iou3 ch eng2 j iou4 g an3 d e5 sp2 sh iii4 ^ i2 sh iii4 n i3 j iou4 x in4 l e5
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009972.wav|n uo4 m an4 zh an4 z ai4 h ua2 b an3 ch e1 sh ang4 sp2 g e4 j iou4 g e4 ^ uei4 sp1 zh uen3 b ei4 ch u1 f a1 l a5
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009973.wav|t a3 h e2 d e5 h an2 ^ ie4 sp3 q i4 ^ uen1 j iang4 d ao4 l e5 l ing2 x ia4 s an1 sh iii5 d uo1 sh e4 sh iii4 d u4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009974.wav|q i2 j ian1 sp2 l ian2 p o4 l iou4 d ian3 l iou4 sp1 l iou4 d ian2 ^ u3 sp1 l iou4 d ian3 s ii4 sp2 l iou4 d ian3 s an1 ^ u2 d eng3 d uo1 g e4 zh ong4 ^ iao4 g uan1 k ou3
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009975.wav|s uan4 m ing4 sp2 q i2 sh iii2 zh iii3 sh iii4 r en2 m en5 d e5 ^ i4 zh ong3 z ii4 ^ uo3 ^ an1 ^ uei4 h e2 z ii4 ^ uo3 ^ an4 sh iii4 ^ er2 ^ i3 sp3 ^ uo3 m en5 h ai2 sh iii4 ^ iao4 x iang1 x in4 k e1 x ve2 c ai2 h ao3
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009976.wav|zh e4 ^ i2 q ie4 d ou1 l ing4 r en2 h uan1 x in1 g u2 ^ u3 sp2 ^ a1 n e4 x i1 m ei2 l i3 ^ iou2 b u4 j ian1 ch iii2 d ao4 z uei4 h ou4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009977.wav|zh iii2 zh iii4 g ong1 ^ van2 q ian2 ^ i2 ^ uan4 ^ i4 q ian1 n ian2 sp0 t a1 ^ iou4 z ai4 c ii4 ch u1 x ian4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009978.wav|j in3 l iang4 sh ao3 ^ uan2 d ian4 n ao3 sp0 sh ao3 k an4 d ian4 sh iii4 sp0 sh ao2 d a3 ^ iou2 x i4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009979.wav|c ong2 ^ u3 d ao4 q i1 sp1 q ian2 h ou4 ^ ie3 j iou4 sh iii4 l iou4 g e5 ^ ve4 d e5 sh iii2 j ian1
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009980.wav|^ i2 j in4 k a1 f ei1 d ian4 sp1 t a1 j iou4 ^ v4 j ian4 ^ i4 zh ang1 sh u2 x i5 d e5 l ian3
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009981.wav|h ao3 z ai4 zh ong4 d i4 x iong5 k an4 d ao4 l e5 b a3 t a1 zh uei1 l e5 h uei2 l ai2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009983.wav|t ong3 l e5 t a1 ^ i3 h ou4 sp3 m o2 h u1 j i4 d e5 t a1 m ei2 z a3 d ong4 l e5
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009984.wav|c ong2 x iao3 d ao4 d a4 sp3 g e2 q i3 ^ i4 sp0 m ei2 ^ iou3 sh ou1 d ao4 g uo4 ^ ia1 s uei4 q ian2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009985.wav|^ u3 t ai2 x ia4 d e5 n i3 sp0 h uei4 d uei4 ^ u3 t ai2 sh ang4 d e5 n i3 sh uo1 sh en2 m e5
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009986.wav|d an4 k ao3 sh eng1 p u3 b ian4 r en4 ^ uei2 sp3 sh iii4 t i2 d e5 g uai4 sp1 d uo1 g uo4 n an2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009987.wav|^ uo3 x i1 ^ uang4 sp1 m ei3 g e4 r en2 d ou1 n eng2 g ou4 z uen1 zh ong4 ^ uo3 m en5 d e5 ^ in3 s ii1
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009988.wav|m an4 t ian1 d e5 h ong2 x ia2 sp0 sh iii3 j in4 g ei2 l iang3 r en2 z eng1 t ian1 q i4 f en1
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009989.wav|^ uan3 sh ang4 j ia1 ^ uan2 b an1 k ai1 ch e1 h uei2 j ia1 sp1 t ai4 l ei4 l e5 sp3 m i2 m i5 h u1 h u1 k ai1 zh e5 ch e1 sp3 z ou3 ^ i2 b an4 d e5 sh iii2 h ou4 sp3 d ang1 ^ i4 sh eng1
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009990.wav|g ai1 ch e1 j iang1 s an1 r en2 zh uang4 d ao3 h ou4 sp1 z ai4 d a4 ^ u4 zh ong1 t ao2 c uan4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009991.wav|zh e4 r en2 ^ i4 d uo1 s uo5 sp1 f ang1 x iang4 p an2 ^ ie2 b a3 b u4 ^ uen3 l e5 sp3 ch a4 d ian3 zh uang4 sh ang4 l e5 g ao1 s u4 b ian1 d ao4 h u4 l an2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009993.wav|x iao3 m ing2 ^ iao2 ^ iao2 t ou2 sh uo1 sp3 b u2 sh iii4 sp3 ^ uo2 zh iii3 sh iii4 m ei2 n v3 k an4 d uo1 l e5 sp1 x iang3 h uan4 g e5 k ou3 ^ uei4 ^ er2 ^ i3
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009994.wav|j ie1 x ia4 l ai2 sp2 h ong2 n iang2 ^ iao1 q iou2 j i4 zh e3 j iao1 f ei4 sp3 j i4 zh e2 b iao3 sh iii4 sp2 b u4 zh iii1 b iao2 j ie3 sh en1 f en4 zh eng4 h ao4 m a3
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009996.wav|l ing4 ^ i4 n an2 z ii3 p u1 l e5 sh ang4 l ai5 sp2 sh ou2 l i3 n a2 zh e5 m ing2 h uang4 h uang4 d e5 ch ang2 d ao1 sp2 x iang4 t a1 x iong1 k ou3 zh iii2 c ii4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009997.wav|j in1 t ian1 sp3 k uai4 d i4 ^ van2 n a2 zh e5 ^ i2 g e4 k uai4 d i4 z ai4 b an4 g ong1 sh iii4 h an3 sp3 q in2 ^ uang2 sh iii4 n a3 g e4 sp1 ^ iou3 t a1 k uai4 d i4
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009998.wav|zh e4 ch ang3 k ang4 ^ i4 h uo2 d ong4 sp2 j iou1 j ing4 sh iii4 r u2 h e2 f a1 zh an2 ^ ian3 b ian4 d e5 sp3 ^ iou4 j iou1 j ing4 sh iii4 sh uei2 sh ang1 h ai4 l e5 sh uei2
+exp/baker/1221/preprocessed_data/Wave/SSB3000/SSB3000009999.wav|^ in1 h ua4 g uo2 f eng1 x iao4 j i1 sp3 m u4 d i4 sh e4 j i4 sp0 g en1 j v4 q i2 sh u3 x iang4 sh e4 j i4

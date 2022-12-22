@@ -308,8 +308,10 @@ class DistributedBucketSampler(torch.utils.data.distributed.DistributedSampler):
   
         self.buckets, self.num_samples_per_bucket = self._create_buckets()
         self.total_size = sum(self.num_samples_per_bucket)
+
         self.num_samples = self.total_size // self.num_replicas
         self.num_repeats_per_epoch = num_repeats_per_epoch
+        logging.warning(f"We use {self.total_size} samples in the buckets")
   
     def _create_buckets(self):
         buckets = [[] for _ in range(len(self.boundaries) - 1)]

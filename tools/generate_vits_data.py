@@ -1,5 +1,6 @@
 import argparse
 import os
+import json
 import yaml
 import librosa
 import tgt
@@ -242,6 +243,10 @@ def main():
             os.path.join(preprocessed_path, args.test_txt_fpath),
             os.path.join(args.output_dir, args.test_txt_fpath)
         )
+
+    if args.use_sid:
+        with open(os.path.join(args.output_dir, "speakers.json"), 'w') as f:
+            json.dump(spk2id, f)
 
 
 if __name__ == '__main__':

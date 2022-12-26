@@ -14,22 +14,19 @@ def load_filepaths(filelist, split="|"):
 
 
 def do_spectrogram(hps, audiopaths):
-    import pdb
-    pdb.set_trace()
     for audiopath in audiopaths:
         audio, sampling_rate = load_wav_to_torch(audiopath)
-        if sampling_rate != hps.sampling_rate:
+        if sampling_rate != hps.data.sampling_rate:
             raise ValueError("{} {} SR doesn't match target {} SR".format(
-                sampling_rate, hps.sampling_rate))
-        audio_norm = audio / hps.max_wav_value
+                sampling_rate, hps.data.sampling_rate))
+        audio_norm = audio / hps.data.max_wav_value
         audio_norm = audio_norm.unsqueeze(0)
         spec_filename = audiopath.replace(".wav", ".spec.pt")
-        if not os.path.exists(spec_filename):
-            spec = spectrogram_torch(audio_norm, hps.filter_length,
-                hps.sampling_rate, hps.hop_length, hps.win_length,
-                center=False)
-            spec = torch.squeeze(spec, 0)
-            torch.save(spec, spec_filename)
+        spec = spectrogram_torch(audio_norm, hps.data.filter_length,
+            hps.data.sampling_rate, hps.data.hop_length, hps.data.win_length,
+            center=False)
+        spec = torch.squeeze(spec, 0)
+        torch.save(spec, spec_filename)
 
 
 def prepare_spec(nj, hps, filelist):
@@ -37,9 +34,6 @@ def prepare_spec(nj, hps, filelist):
     split_list = [[] for _ in range(nj)]
     for i, audiopath in enumerate(audiopaths):
         split_list[i % nj].append(audiopath)
-
-    i = 0
-    do_spectrogram(hps, split_list[i])
 
     processes = [Process(
         target=do_spectrogram, args=(hps, split_list[i])

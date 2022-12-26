@@ -164,16 +164,14 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
         self.filter_length  = hparams.filter_length
         self.hop_length     = hparams.hop_length
         self.win_length     = hparams.win_length
-        self.sampling_rate  = hparams.sampling_rate
-
-        self.cleaned_text = getattr(hparams, "cleaned_text", False)
+        # self.cleaned_text = getattr(hparams, "cleaned_text", False)
 
         self.add_blank = hparams.add_blank
         self.min_text_len = getattr(hparams, "min_text_len", 1)
         self.max_text_len = getattr(hparams, "max_text_len", 190)
 
-        random.seed(1234)
-        random.shuffle(self.audiopaths_sid_text)
+        # random.seed(1234)
+        # random.shuffle(self.audiopaths_sid_text)
         self._filter()
 
     def _filter(self):
@@ -192,6 +190,7 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
                 lengths.append(os.path.getsize(audiopath) // (2 * self.hop_length))
         self.audiopaths_sid_text = audiopaths_sid_text_new
         self.lengths = lengths
+        logging.warning("We use {} samples in this training".format(len(self.audiopaths_sid_text)))
 
     def get_audio_text_speaker_pair(self, audiopath_sid_text):
         # separate filename, speaker_id and text
@@ -212,13 +211,18 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
         if os.path.exists(spec_filename):
             spec = torch.load(spec_filename)
         else:
-            spec = spectrogram_torch(audio_norm, self.filter_length,
-                self.sampling_rate, self.hop_length, self.win_length,
-                center=False)
+            spec = spectrogram_torch(
+                audio_norm,
+                self.filter_length,
+                self.sampling_rate,
+                self.hop_length,
+                self.win_length,
+                center=False
+            )
             spec = torch.squeeze(spec, 0)
             torch.save(spec, spec_filename)
         return spec, audio_norm
-
+    
     def get_text(self, text):
         text_norm = cleaned_text_to_sequence(text)
         if self.add_blank:

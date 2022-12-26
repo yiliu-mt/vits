@@ -126,7 +126,9 @@ def get_phones(between_words, preprocess_config, spk2pause_stats, tg_name):
     phones = phones[:end_idx]
     durations = durations[:end_idx]
 
-    assert word2phones[0][1][0][-1] == "" and word2phones[-1][1][0][-1] == ""
+    # if not (word2phones[0][1][0][-1] == "" and word2phones[-1][1][0][-1] == ""):
+    #     import pdb
+    #     pdb.set_trace()
     return phones, durations, start_time, end_time
 
 
@@ -136,15 +138,22 @@ def output_phones(out, input_file, output_file):
             name = line.strip().split("|")[0]
             if name not in out:
                 print(f"Skip {name} since it is not found in the TextGrid")
-            fp_out.write('{}|{}\n'.format(out[name][0], ' '.join(out[name][1])))
+
+            if len(out[name]) == 2:
+                # without sid
+                fp_out.write('{}|{}\n'.format(out[name][0], ' '.join(out[name][1])))
+            else:
+                # with sid
+                fp_out.write('{}|{}|{}\n'.format(out[name][0], out[name][2], ' '.join(out[name][1])))
                 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-w", "--words", action="store_true", help="add #0 between words")
     parser.add_argument("--train_txt_fpath", type=str, default="train.txt")
-    parser.add_argument("--val_txt_fpath", type=str, default="val.txt")
-    parser.add_argument("--test_txt_fpath", type=str, default="test.txt")
+    parser.add_argument("--val_txt_fpath", type=str, default=None)
+    parser.add_argument("--test_txt_fpath", type=str, default=None)
+    parser.add_argument("--use_sid", action="store_true", help="add speaker id to the labels")
     parser.add_argument(
         "--remove_silence",
         type=lambda x: (str(x).lower() == 'true'),
@@ -166,6 +175,11 @@ def main():
         if os.path.isdir(os.path.join(preprocessed_path, "TextGrid", speaker))
     ]
     print("all spks {}".format(spk_dirs))
+
+    if args.use_sid:
+        spk2id = {}
+        for sid, speaker in enumerate(spk_dirs):
+            spk2id[speaker] = sid
 
     sos_sil_stat, eos_sil_stat, sil_stat = stats_sil_phones_from_path(preprocess_config["path"]["preprocessed_path"])
     spk2pause_stats = dict()
@@ -195,7 +209,7 @@ def main():
             if args.remove_silence:
                 # trim wav
                 wav = wav[
-                    int(preprocess_config["preprocessing"]["audio"]["sampling_rate"] * start):
+                    max(int(preprocess_config["preprocessing"]["audio"]["sampling_rate"] * start), 0) :
                         int(preprocess_config["preprocessing"]["audio"]["sampling_rate"] * end)
                 ]
             else:
@@ -206,23 +220,28 @@ def main():
             os.makedirs(os.path.join(args.output_dir, "Wave", speaker), exist_ok=True)
             out_wav_path = os.path.join(args.output_dir, "Wave", speaker, "{}.wav".format(basename))
             wavfile.write(out_wav_path, sr, wav.astype(np.int16))
-            out[basename] = [out_wav_path, phones]
+            if args.use_sid:
+                out[basename] = [out_wav_path, phones, spk2id[speaker]]
+            else:
+                out[basename] = [out_wav_path, phones]
     
     output_phones(
         out,
         os.path.join(preprocessed_path, args.train_txt_fpath),
         os.path.join(args.output_dir, args.train_txt_fpath)
     )
-    output_phones(
-        out,
-        os.path.join(preprocessed_path, args.val_txt_fpath),
-        os.path.join(args.output_dir, args.val_txt_fpath)
-    )
-    output_phones(
-        out,
-        os.path.join(preprocessed_path, args.test_txt_fpath),
-        os.path.join(args.output_dir, args.test_txt_fpath)
-    )
+    if args.val_txt_fpath is not None:
+        output_phones(
+            out,
+            os.path.join(preprocessed_path, args.val_txt_fpath),
+            os.path.join(args.output_dir, args.val_txt_fpath)
+        )
+    if args.test_txt_fpath is not None:
+        output_phones(
+            out,
+            os.path.join(preprocessed_path, args.test_txt_fpath),
+            os.path.join(args.output_dir, args.test_txt_fpath)
+        )
 
 
 if __name__ == '__main__':

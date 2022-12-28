@@ -25,6 +25,10 @@ _initials = [
     "x",
     "z",
     "zh",
+    # from aishell3
+    "y",
+    "w",
+    "rr",
 ]
 
 _tones = ["1", "2", "3", "4", "5"]

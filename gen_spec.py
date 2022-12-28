@@ -47,7 +47,7 @@ def prepare_spec(nj, hps, filelist):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--nj", type=int, default=16, help="num of workers")
+    parser.add_argument("--nj", type=int, default=32, help="num of workers")
     parser.add_argument("config")
     args = parser.parse_args()
 

@@ -175,13 +175,17 @@ def main():
         speaker for speaker in os.listdir(os.path.join(preprocessed_path, "TextGrid"))
         if os.path.isdir(os.path.join(preprocessed_path, "TextGrid", speaker))
     ]
+    # Sort the speakers by the names
+    spk_dirs = sorted(spk_dirs)
     print("all spks {}".format(spk_dirs))
+    print("Total num of spks: {}".format(len(spk_dirs)))
 
     if args.use_sid:
         spk2id = {}
         for sid, speaker in enumerate(spk_dirs):
             spk2id[speaker] = sid
 
+    print(spk2id)
     sos_sil_stat, eos_sil_stat, sil_stat = stats_sil_phones_from_path(preprocess_config["path"]["preprocessed_path"])
     spk2pause_stats = dict()
     for spk in sos_sil_stat.keys():

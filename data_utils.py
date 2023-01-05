@@ -19,7 +19,7 @@ class TextAudioLoader(torch.utils.data.Dataset):
         2) normalizes text and converts them to sequences of integers
         3) computes spectrograms from audio files.
     """
-    def __init__(self, audiopaths_and_text, hparams):
+    def __init__(self, audiopaths_and_text, hparams, rank=0):
         self.audiopaths_and_text = load_filepaths_and_text(audiopaths_and_text)
         self.max_wav_value  = hparams.max_wav_value
         self.sampling_rate  = hparams.sampling_rate
@@ -31,6 +31,7 @@ class TextAudioLoader(torch.utils.data.Dataset):
         self.add_blank = hparams.add_blank
         self.min_text_len = getattr(hparams, "min_text_len", 1)
         self.max_text_len = getattr(hparams, "max_text_len", 190)
+        self.rank = rank
 
         # No need to shuffle. Shuffle is done in the batch sampler
         # random.seed(1234)
@@ -47,13 +48,19 @@ class TextAudioLoader(torch.utils.data.Dataset):
 
         audiopaths_and_text_new = []
         lengths = []
+        exclude_paths = []
         for audiopath, text in self.audiopaths_and_text:
             if self.min_text_len <= len(text) and len(text) <= self.max_text_len:
                 audiopaths_and_text_new.append([audiopath, text])
                 lengths.append(os.path.getsize(audiopath) // (2 * self.hop_length))
+            else:
+                exclude_paths.append(audiopath.rsplit("/", 1)[1].rsplit(".", 1)[0])
         self.audiopaths_and_text = audiopaths_and_text_new
         self.lengths = lengths
-        logging.warning("We use {} samples in this training".format(len(self.audiopaths_and_text)))
+        if self.rank == 0:
+            logging.warning(sorted(exclude_paths))
+            logging.warning("Dataloader excludes {} files".format(len(exclude_paths)))
+            logging.warning("We use {} samples in this training".format(len(self.audiopaths_and_text)))
 
     def get_audio_text_pair(self, audiopath_and_text):
         # separate filename and text
@@ -157,7 +164,7 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
         2) normalizes text and converts them to sequences of integers
         3) computes spectrograms from audio files.
     """
-    def __init__(self, audiopaths_sid_text, hparams):
+    def __init__(self, audiopaths_sid_text, hparams, rank=0):
         self.audiopaths_sid_text = load_filepaths_and_text(audiopaths_sid_text)
         self.max_wav_value = hparams.max_wav_value
         self.sampling_rate = hparams.sampling_rate
@@ -169,6 +176,7 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
         self.add_blank = hparams.add_blank
         self.min_text_len = getattr(hparams, "min_text_len", 1)
         self.max_text_len = getattr(hparams, "max_text_len", 190)
+        self.rank=rank
 
         # random.seed(1234)
         # random.shuffle(self.audiopaths_sid_text)
@@ -184,13 +192,19 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
 
         audiopaths_sid_text_new = []
         lengths = []
+        exclude_paths = []
         for audiopath, sid, text in self.audiopaths_sid_text:
             if self.min_text_len <= len(text) and len(text) <= self.max_text_len:
                 audiopaths_sid_text_new.append([audiopath, sid, text])
                 lengths.append(os.path.getsize(audiopath) // (2 * self.hop_length))
+            else:
+                exclude_paths.append(audiopath.rsplit("/", 1)[1].rsplit(".", 1)[0])
         self.audiopaths_sid_text = audiopaths_sid_text_new
         self.lengths = lengths
-        logging.warning("We use {} samples in this training".format(len(self.audiopaths_sid_text)))
+        if self.rank == 0:
+            logging.warning(sorted(exclude_paths))
+            logging.warning("Dataloader excludes {} files".format(len(exclude_paths)))
+            logging.warning("We use {} samples in this training".format(len(self.audiopaths_sid_text)))
 
     def get_audio_text_speaker_pair(self, audiopath_sid_text):
         # separate filename, speaker_id and text
@@ -315,15 +329,21 @@ class DistributedBucketSampler(torch.utils.data.distributed.DistributedSampler):
 
         self.num_samples = self.total_size // self.num_replicas
         self.num_repeats_per_epoch = num_repeats_per_epoch
-        logging.warning(f"We use {self.total_size} samples in the buckets")
+        if self.rank == 0:
+            logging.warning(f"We use {self.total_size} samples in the buckets")
   
     def _create_buckets(self):
         buckets = [[] for _ in range(len(self.boundaries) - 1)]
+        exclude_samples = 0
         for i in range(len(self.lengths)):
             length = self.lengths[i]
             idx_bucket = self._bisect(length)
             if idx_bucket != -1:
                 buckets[idx_bucket].append(i)
+            else:
+                exclude_samples += 1
+        if self.rank == 0:
+            logging.warning(f"Bucketing excludes {exclude_samples} samples")
   
         for i in range(len(buckets) - 1, 0, -1):
             if len(buckets[i]) == 0:

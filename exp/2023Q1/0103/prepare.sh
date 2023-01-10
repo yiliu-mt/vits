@@ -27,8 +27,33 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python train_ms.py -c exp/2023Q1/0103/configs/Baker
 
 
 # finetune model
-CUDA_VISIBLE_DEVICES=0,1 python train_ms.py -c exp/2023Q1/0103/configs/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022.json -m Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/tuning_mita_bc_chatbot10 -p Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022
-CUDA_VISIBLE_DEVICES=2,3 python train_ms.py -c exp/2023Q1/0103/configs/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022.json -m Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/tuning_jams_rx -p Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022
+# prepare lists
+# musha
+python tools/make_list_from_id.py -r exp/2023Q1/0103/lists/musha/train_musha_mt10.txt -i exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/train_val.txt -o exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/train_musha_mt10.txt
+python tools/make_list_from_id.py -r exp/2023Q1/0103/lists/musha/musha_test.txt -i exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/all.txt -o exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/test_musha.txt
 
-CUDA_VISIBLE_DEVICES=4,5 python train_ms.py -c exp/2023Q1/0103/configs/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022.json -m Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/tuning_mita_bc_chatbot10 -p Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228
-CUDA_VISIBLE_DEVICES=6,7 python train_ms.py -c exp/2023Q1/0103/configs/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022.json -m Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/tuning_jams_rx -p Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228
+python tools/make_list_from_id.py -r exp/2023Q1/0103/lists/musha/train_musha_mt10.txt -i exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/train_val.txt -o exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/train_musha_mt10.txt
+python tools/make_list_from_id.py -r exp/2023Q1/0103/lists/musha/musha_test.txt -i exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/all.txt -o exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/test_musha.txt
+
+# mita
+python tools/make_list_from_id.py -r exp/2023Q1/0103/lists/mita/train_chatbot10.txt -i exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/train_val.txt -o exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/train_mita_chatbot10.txt
+python tools/make_list_from_id.py -r exp/2023Q1/0103/lists/mita/test.txt -i exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/all.txt -o exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/test_mita.txt
+
+python tools/make_list_from_id.py -r exp/2023Q1/0103/lists/mita/train_chatbot10.txt -i exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/train_val.txt -o exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/train_mita_chatbot10.txt
+python tools/make_list_from_id.py -r exp/2023Q1/0103/lists/mita/test.txt -i exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/all.txt -o exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/test_mita.txt
+
+# jams
+python tools/make_list_from_id.py -r exp/2023Q1/0103/lists/jams/train_all.txt -i exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/train_val.txt -o exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/train_jams.txt
+python tools/make_list_from_id.py -r exp/2023Q1/0103/lists/jams/val.txt -i exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/train_val.txt -o exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/test_jams.txt
+
+python tools/make_list_from_id.py -r exp/2023Q1/0103/lists/jams/train_all.txt -i exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/train_val.txt -o exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/train_jams.txt
+python tools/make_list_from_id.py -r exp/2023Q1/0103/lists/jams/val.txt -i exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/train_val.txt -o exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/test_jams.txt
+
+# train models
+CUDA_VISIBLE_DEVICES=0,1 python train_ms.py -c exp/2023Q1/0103/configs/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/tuning_mita_bc_chatbot10.json -m Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/tuning_mita_bc_chatbot10 -p Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022
+CUDA_VISIBLE_DEVICES=2,3 python train_ms.py -c exp/2023Q1/0103/configs/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/tuning_musha_mt10.json -m Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/tuning_musha_mt10 -p Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022
+# CUDA_VISIBLE_DEVICES=2,3 python train_ms.py -c exp/2023Q1/0103/configs/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/tuning_jams_rx.json -m Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/tuning_jams_rx -p Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022
+
+CUDA_VISIBLE_DEVICES=4,5 python train_ms.py -c exp/2023Q1/0103/configs/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/tuning_mita_bc_chatbot10.json -m Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/tuning_mita_bc_chatbot10 -p Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228
+CUDA_VISIBLE_DEVICES=6,7 python train_ms.py -c exp/2023Q1/0103/configs/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/tuning_musha_mt10.json -m Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/tuning_musha_mt10 -p Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228
+# CUDA_VISIBLE_DEVICES=6,7 python train_ms.py -c exp/2023Q1/0103/configs/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/tuning_jams_rx.json -m Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/tuning_jams_rx -p Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228

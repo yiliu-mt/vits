@@ -115,6 +115,8 @@ def run(rank, n_gpus, hps):
     net_g = DDP(net_g, device_ids=[rank])
     net_d = DDP(net_d, device_ids=[rank])
 
+    # First try to load the model from the training dir
+    # If this is failed, we try to load the model from the pretrained dir
     try:
         _, _, _, epoch_str = utils.load_checkpoint(utils.latest_checkpoint_path(hps.model_dir, "G_*.pth"), net_g, optim_g)
         _, _, _, epoch_str = utils.load_checkpoint(utils.latest_checkpoint_path(hps.model_dir, "D_*.pth"), net_d, optim_d)
@@ -123,6 +125,15 @@ def run(rank, n_gpus, hps):
     except:
         epoch_str = 1
         global_step = 0
+
+    if global_step == 0 and hps.pretrain_dir is not None:
+        try:
+            # when loading from pretrained model, we only load the weights rather than the optimizers
+            # keep the epoch_str and global_step unchanged
+            utils.load_checkpoint(utils.latest_checkpoint_path(hps.pretrain_dir, "G_*.pth"), net_g, None)
+            utils.load_checkpoint(utils.latest_checkpoint_path(hps.pretrain_dir, "D_*.pth"), net_d, None)
+        except:
+            raise IOError(f"Cannot find pretrained model in {hps.pretrain_dir}")
 
     scheduler_g = torch.optim.lr_scheduler.ExponentialLR(optim_g, gamma=hps.train.lr_decay, last_epoch=epoch_str-2)
     scheduler_d = torch.optim.lr_scheduler.ExponentialLR(optim_d, gamma=hps.train.lr_decay, last_epoch=epoch_str-2)

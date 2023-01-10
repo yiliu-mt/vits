@@ -19,6 +19,7 @@
   "data": {
     "training_files":"exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/train_val.txt",
     "validation_files":"exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022_Jams1228/val.txt",
+    "symbol_version": "v2.1",
     "num_repeats": 1,
     "max_wav_value": 32768.0,
     "sampling_rate": 22050,

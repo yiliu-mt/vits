@@ -32,6 +32,7 @@ class TextAudioLoader(torch.utils.data.Dataset):
         self.min_text_len = getattr(hparams, "min_text_len", 1)
         self.max_text_len = getattr(hparams, "max_text_len", 190)
         self.rank = rank
+        self.symbol_version = hparams.get("symbol_version", "default")
 
         # No need to shuffle. Shuffle is done in the batch sampler
         # random.seed(1234)
@@ -93,7 +94,7 @@ class TextAudioLoader(torch.utils.data.Dataset):
         return spec, audio_norm
 
     def get_text(self, text):
-        text_norm = cleaned_text_to_sequence(text)
+        text_norm = cleaned_text_to_sequence(text, symbol_version=self.symbol_version)
         if self.add_blank:
             text_norm = commons.intersperse(text_norm, 0)
         text_norm = torch.LongTensor(text_norm)
@@ -177,6 +178,7 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
         self.min_text_len = getattr(hparams, "min_text_len", 1)
         self.max_text_len = getattr(hparams, "max_text_len", 190)
         self.rank=rank
+        self.symbol_version = hparams.get("symbol_version", "default")
 
         # random.seed(1234)
         # random.shuffle(self.audiopaths_sid_text)
@@ -238,7 +240,7 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
         return spec, audio_norm
     
     def get_text(self, text):
-        text_norm = cleaned_text_to_sequence(text)
+        text_norm = cleaned_text_to_sequence(text, symbol_version=self.symbol_version)
         if self.add_blank:
             text_norm = commons.intersperse(text_norm, 0)
         text_norm = torch.LongTensor(text_norm)

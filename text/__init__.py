@@ -1,37 +1,34 @@
-from text.symbols import symbols
+from text.symbols import get_symbols, get_symbol_to_id, get_id_to_symbol
 
 
-# Mappings from symbol to numeric ID and vice versa:
-_symbol_to_id = {s: i for i, s in enumerate(symbols)}
-_id_to_symbol = {i: s for i, s in enumerate(symbols)}
 
-
-def text_to_symbol(text, symbol_type=None):
+def text_to_symbol(text, symbol_version="default"):
   '''Converts a string of text to a sequence of IDs corresponding to the symbols in the text.
     Args:
       text: string to convert to a sequence
     Returns:
       List of integers corresponding to the symbols in the text
   '''
-  if symbol_type is not None:
-    raise NotImplementedError("Not implemented for symbol_type={symbol_type}".format(symbol_type))
+  _symbol_to_id = get_symbol_to_id(symbol_version)
   sequence = [_symbol_to_id[symbol] for symbol in text.split()]
   return sequence
 
 
-def cleaned_text_to_sequence(cleaned_text):
+def cleaned_text_to_sequence(cleaned_text, symbol_version="default"):
   '''Converts a string of text to a sequence of IDs corresponding to the symbols in the text.
     Args:
       text: string to convert to a sequence
     Returns:
       List of integers corresponding to the symbols in the text
   '''
+  _symbol_to_id = get_symbol_to_id(symbol_version)
   sequence = [_symbol_to_id[symbol] for symbol in cleaned_text.split()]
   return sequence
 
 
-def sequence_to_text(sequence):
+def sequence_to_text(sequence, symbol_version="default"):
   '''Converts a sequence of IDs back to a string'''
+  _id_to_symbol = get_id_to_symbol(symbol_version)
   result = ''
   for symbol_id in sequence:
     s = _id_to_symbol[symbol_id]

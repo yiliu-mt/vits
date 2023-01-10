@@ -7,7 +7,7 @@ from scipy.io import wavfile
 import commons
 import utils
 from models import SynthesizerTrn
-from text.symbols import symbols
+from text.symbols import get_symbols
 from text import cleaned_text_to_sequence
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -25,7 +25,7 @@ def main():
     os.makedirs(args.output_dir, exist_ok=True)
 
     net_g = SynthesizerTrn(
-        len(symbols),
+        len(get_symbols(hps.data.get("symbol_version", "default"))),
         hps.data.filter_length // 2 + 1,
         hps.train.segment_size // hps.data.hop_length,
         n_speakers=hps.data.n_speakers,
@@ -38,7 +38,7 @@ def main():
     with torch.no_grad():
         for audiopath, sid, text in audiopaths_sid_text:
             print(audiopath)
-            text_norm = cleaned_text_to_sequence(text)
+            text_norm = cleaned_text_to_sequence(text, hps.data.get("symbol_version", "default"))
             if hps.data.add_blank:
                 text_norm = commons.intersperse(text_norm, 0)
             text_padded = torch.LongTensor(text_norm)

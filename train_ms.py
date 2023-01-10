@@ -27,7 +27,7 @@ from losses import (
   kl_loss
 )
 from mel_processing import mel_spectrogram_torch, spec_to_mel_torch
-from text.symbols import symbols
+from text.symbols import get_symbols
 
 
 torch.backends.cudnn.benchmark = True
@@ -94,7 +94,7 @@ def run(rank, n_gpus, hps):
 
     # Model
     net_g = SynthesizerTrn(
-        len(symbols),
+        len(get_symbols(hps.data.get("symbol_version", "default"))),
         hps.data.filter_length // 2 + 1,
         hps.train.segment_size // hps.data.hop_length,
         n_speakers=hps.data.n_speakers,

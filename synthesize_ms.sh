@@ -1,8 +1,8 @@
 #!/bin/bash
 
-config=exp/aishell3/1226/configs/aishell3_trim.json
-test_file=exp/aishell3/1226/preprocessed_data/val.txt
-model=logs/aishell3_trim/G_200000.pth
-output_dir=aishell3_trim
+config=exp/2023Q1/0103/configs/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022.json
+test_file=exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/test.txt
+model=logs/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/G_380000.pth
+output_dir=Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022
 
-python inference_ms.py -c $config -t $test_file -m $model -o $output_dir
+CUDA_VISIBLE_DEVICES=4 python inference_ms.py -c $config -t $test_file -m $model -o $output_dir

@@ -1,6 +1,7 @@
 import argparse
 import os
 import torch
+import musa_torch_extension
 import numpy as np
 from scipy.io import wavfile
 
@@ -10,7 +11,11 @@ from models import SynthesizerTrn
 from text.symbols import get_symbols
 from text import cleaned_text_to_sequence
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+#from perfmax.benchmark import run_benchmark
+#from perfmax.benchmark.pytorch_benchmark import PyTorchCustomBenchmark
+#from perfmax.data import BenchmarkConfig
+
+device = torch.device("mtgpu")
 
 
 def main():
@@ -55,4 +60,16 @@ def main():
 
 
 if __name__ == "__main__":
+    #config = BenchmarkConfig(
+    #    device=device,
+    #    framework="pytorch",
+    #    enable_profiler=True,
+    #    collect_op_counts=True
+    #)
+    #run_benchmark(
+    #    PyTorchCustomBenchmark,
+    #    config,
+    #    function=main,
+    #)
     main()
+    print("success")

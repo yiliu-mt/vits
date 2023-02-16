@@ -1,4 +1,4 @@
-docker run --rm --gpus all --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 -v $PWD:/workspace/vits -v /nfs1:/nfs1 -v /nfs2:/nfs2 -v /data:/data -it mycrazycracy/wetts:1.0 bash
+docker run --rm --gpus all --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 -v $PWD:/workspace/vits -v /nfs1:/nfs1 -v /nfs2:/nfs2 -v /data:/data -it sh-harbor.mthreads.com/mt-ai/vits:v1.0 bash
 
 # with jams
 python tools/generate_vits_data.py \

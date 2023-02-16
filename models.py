@@ -727,8 +727,13 @@ class SynthesizerTrn(nn.Module):
     o = self.dec(z_slice, g=g)
     return o, l_length, attn, ids_slice, x_mask, y_mask, (z, z_p, m_p, logs_p, m_q, logs_q)
 
-  def infer(self, x, x_lengths, sid=None, noise_scale=1, length_scale=1, noise_scale_w=1., max_len=None):
+  def infer(self, x, x_lengths, sid=None, noise_scale=1, length_scale=1, noise_scale_w=1., max_len=None, prefix=None):
     x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
+    import numpy as np
+    np.save(f'{prefix}_enc_x', x.to('cpu').numpy())
+    np.save(f'{prefix}_enc_m_p', m_p.to('cpu').numpy())
+    np.save(f'{prefix}_enc_logs_p', logs_p.to('cpu').numpy())
+
     if self.n_speakers > 0:
       g = self.emb_g(sid).unsqueeze(-1) # [b, h, 1]
     else:
@@ -744,13 +749,25 @@ class SynthesizerTrn(nn.Module):
     y_mask = torch.unsqueeze(commons.sequence_mask(y_lengths, None), 1).to(x_mask.dtype)
     attn_mask = torch.unsqueeze(x_mask, 2) * torch.unsqueeze(y_mask, -1)
     attn = commons.generate_path(w_ceil, attn_mask)
+    np.save(f'{prefix}_g', g.to('cpu').numpy())
+    np.save(f'{prefix}_dp_logw', logw.to('cpu').numpy())
+    np.save(f'{prefix}_dp_w', w.to('cpu').numpy())
+    np.save(f'{prefix}_dp_attn', attn.to('cpu').numpy())
 
     m_p = torch.matmul(attn.squeeze(1), m_p.transpose(1, 2)).transpose(1, 2) # [b, t', t], [b, t, d] -> [b, d, t']
     logs_p = torch.matmul(attn.squeeze(1), logs_p.transpose(1, 2)).transpose(1, 2) # [b, t', t], [b, t, d] -> [b, d, t']
 
-    z_p = m_p + torch.randn_like(m_p) * torch.exp(logs_p) * noise_scale
+    # z_p = m_p + torch.randn_like(m_p) * torch.exp(logs_p) * noise_scale
+    z_p = m_p + torch.zeros_like(m_p) * torch.exp(logs_p) * noise_scale
     z = self.flow(z_p, y_mask, g=g, reverse=True)
+    np.save(f'{prefix}_flow_m_p', m_p.to('cpu').numpy())
+    np.save(f'{prefix}_flow_logs_p', logs_p.to('cpu').numpy())
+    np.save(f'{prefix}_flow_z_p', z_p.to('cpu').numpy())
+    np.save(f'{prefix}_flow_z', z.to('cpu').numpy())
+
     o = self.dec((z * y_mask)[:,:,:max_len], g=g)
+    np.save(f'{prefix}_output', o.to('cpu').numpy())
+
     return o, attn, y_mask, (z, z_p, m_p, logs_p)
 
   def voice_conversion(self, y, y_lengths, sid_src, sid_tgt):

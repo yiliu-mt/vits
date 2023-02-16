@@ -2,6 +2,7 @@ __pycache__/
 
 *.wav
 *.spec.pt
+*.npy
 
 logs
 data

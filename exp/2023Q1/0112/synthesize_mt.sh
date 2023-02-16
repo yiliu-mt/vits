@@ -13,4 +13,5 @@ mkdir -p $output_dir
 
 # To test the accuracy
 test_file=exp/2023Q1/0112/test.txt
+output_dir=exp/2023Q1/0112/audio_out/
 CUDA_VISIBLE_DEVICES= python inference_ms.py -c $config -t $test_file -m $model -o $output_dir

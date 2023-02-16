@@ -9,5 +9,6 @@ mkdir -p $output_dir
 
 # numeric accuracy
 test_file=exp/2023Q1/0112/test.txt
-PVR_GPUIDX=4 python inference_ms.py -c $config -t $test_file -m $model -o $output_dir
+output_dir=exp/2023Q1/0112/audio_out/
+PVR_GPUIDX=3 python inference_ms.py -c $config -t $test_file -m $model -o $output_dir
 

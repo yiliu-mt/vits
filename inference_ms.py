@@ -63,6 +63,7 @@ def main():
         for _ in range(args.repeat):
             for audiopath, sid, text in audiopaths_sid_text:
                 print(audiopath)
+                wav_name = audiopath.split("/")[-1]
                 text_norm = cleaned_text_to_sequence(text, hps.data.get("symbol_version", "default"))
                 if hps.data.add_blank:
                     text_norm = commons.intersperse(text_norm, 0)
@@ -72,13 +73,13 @@ def main():
                 sid = torch.LongTensor([int(sid)]).to(device)
 
                 start_time = time.time()
-                audio = net_g.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=.667, noise_scale_w=0.8, length_scale=1)[0][0,0].data.cpu().float().numpy()
+                audio = net_g.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=.667, noise_scale_w=0.8, length_scale=1, prefix=wav_name.rsplit('.', 1)[0])[0][0,0].data.cpu().float().numpy()
+
                 total_used_time += time.time() - start_time
                 total_generated_time += audio.shape[0] / hps.data.sampling_rate
 
                 audio *= 32767 / max(0.01, np.max(np.abs(audio))) * 0.6
                 audio = np.clip(audio, -32767.0, 32767.0)
-                wav_name = audiopath.split("/")[-1]
                 wavfile.write(os.path.join(args.output_dir, wav_name),
                               hps.data.sampling_rate, audio.astype(np.int16))
 

@@ -66,7 +66,7 @@
 66 <speak>目前台湾光学巨头大立光的主要技术优势在于塑料镜头，因此舜宇<phoneme ph="ke2 yi3">可以</phoneme>将技术创新的重点放在玻塑混合镜头、纯玻璃镜头技术研发上。</speak>
 67 <speak>据<phoneme ph="liao2 jie3">了解</phoneme>，目前玻璃镜头的加工甚至要涉及到“晶圆级玻璃技术（WLG）”，通俗的来<phoneme ph="li2 jie3">理解</phoneme>，就是要用做<phoneme ph="ban4 dao2 ti3">半导体</phoneme>晶圆片的工艺来做玻璃镜片，其难度<phoneme ph="ke2 xiang3 er2 zhi1">可想而知</phoneme>。</speak>
 68 <speak>在细分技术领域，我们能够看到舜宇正在对特种镀膜、自由曲面、连续光学变焦、超精密模、新型封装等前沿技术进行积极探索。</speak>
-69 <speak>目前舜宇已经能够通过自研技术实现COB封装、主动对准（AA）以及测试一站式生产及流转，从而提升效率、提高良率。</speak>
+69 <speak>目前舜宇已经能够通过自研技术实现COB封装、主动对准（AA）以及测试<phoneme ph="yi2 zhan4 shi4">一站式</phoneme>生产及流转，从而提升效率、提高良率。</speak>
 70 <speak>当然，面对未来，智能汽车和元宇宙也是避不开的两条关键赛道。</speak>
 71 <speak>随着汽车电动化、智能化，以及高级驾驶辅助系统（ADAS）的加速发展，车载镜头、激光雷达等<phoneme ph="chan2 pin3">产品</phoneme>的市场空间也在快速扩大。</speak>
 72 <speak>对于这些新兴领域，舜宇在年报中提到要加大研发投入，并探索新的技术孵化路径。</speak>
@@ -77,10 +77,10 @@
 77 <speak>当然，面对波诡云谲的消费电子市场，身<phoneme ph="chu3">处</phoneme>危机四伏又充满机遇的果链，舜宇成长的新阶段，或许才刚刚开始。</speak>
 78 <speak>苹果公司创始人史蒂夫·乔布斯曾说，好的<phoneme ph="chan2 pin3">产品</phoneme>是站在科技与人文的十字路口上的。</speak>
 79 <speak>十一年前，苹果iPhone 4开启了智能手机时代，而乔布斯离开十一年后，智能手机的风头正被另<phoneme ph="yi2 lei4">一类</phoneme>快速崛起的<phoneme ph="chan2 pin3">产品</phoneme>抢去，这就是各类VR设备。</speak>
-80 <speak>放眼全球市场，<phoneme ph="duan2 duan3">短短</phoneme>一年内，主流VR厂商发布了十余款新品，而各路VR创企也秀出了不少亮眼技术，<phoneme ph="ke2 yi3">可以</phoneme>说，VR行业似乎已经走到了下一个爆发节点的前夜。</speak>
+80 <speak>放眼全球市场，<phoneme ph="duan2 duan3">短短</phoneme><phoneme ph="yi4 nian2">一年</phoneme>内，主流VR厂商发布了十余款新品，而各路VR创企也秀出了不少亮眼技术，<phoneme ph="ke2 yi3">可以</phoneme>说，VR行业似乎已经走到了下一个爆发节点的前夜。</speak>
 81 <speak>VR赛道杀入国产黑马创企，<phoneme ph="liang3 nian2">2年</phoneme>做出全球首个Pancake VR<phoneme ph="yi4 ti3 ji1">一体机</phoneme></speak>
 82 <speak>做出这款眼镜的，是一家成立不到三年的国内创企YVR，而YVR 2这款采用Pancake方案的VR<phoneme ph="yi4 ti3 ji1">一体机</phoneme>，已经是他们的第二款作品了。</speak>
-83 <speak>全球<phoneme ph="shou2 kuan3">首款</phoneme>Pancake VR一体机背后藏着哪些硬核黑科技，究竟要如何做一款“以人为本”的VR<phoneme ph="chan2 pin3">产品</phoneme>？</speak>
+83 <speak>全球<phoneme ph="shou2 kuan3">首款</phoneme>Pancake VR<phoneme ph="yi4 ti3 ji1">一体机</phoneme>背后藏着哪些硬核黑科技，究竟要如何做一款“以人为本”的VR<phoneme ph="chan2 pin3">产品</phoneme>？</speak>
 84 <speak>而VR产业的发展又是否迎来了新的关键节点？</speak>
 85 <speak>我们从技术和产业的角度对这些问题进行了深入探讨。</speak>
 86 <speak>一、极致体验背后，是对硬核科技钻到细节处的“较真”</speak>
@@ -93,7 +93,7 @@
 93 <speak>除极致清晰的视觉体验，纤薄的机体也极大优化了实际使用体验。</speak>
 94 <speak>既然Pancake方案这么香，为什么直到今天才有玩家能够在VR<phoneme ph="yi4 ti3 ji1">一体机</phoneme>上落地呢？</speak>
 95 <speak>YVR为了实现全球Pancake VR<phoneme ph="yi4 ti3 ji1">一体机</phoneme>的首次落地，解决了诸多业内的核心痛点问题。</speak>
-96 <speak>比如在Pancake的镜片表面，有一种技术极为复杂的纳米级材料光学膜，真空贴合的平整度要求极高，<phoneme ph="xian2 you3">鲜有厂商能做好。</speak>
+96 <speak>比如在Pancake的镜片表面，有一种技术极为复杂的纳米级材料光学膜，真空贴合的平整度要求极高，<phoneme ph="xian2 you3">鲜有</phoneme>厂商能做好。</speak>
 97 <speak>为了攻克这一难题，YVR与光学膜厂商美国三M以及供应链厂商合作，成为了首家量产“曲面贴膜”技术pancake光学方案<phoneme ph="yi4 ti3 ji1">一体机</phoneme>的厂商。</speak>
 98 <speak>要知道，曲面贴膜的难度比平面贴膜要高得多，这其中的科技含量自是<phoneme ph="bu2 bi4">不必</phoneme>赘述了。</speak>
 99 <speak>光贴好还没完，装好也很关键。</speak>

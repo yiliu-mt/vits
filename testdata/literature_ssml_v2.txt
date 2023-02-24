@@ -17,14 +17,14 @@
 17 <speak>地里还有工作的农民，披着蓑戴着笠。他们的房屋，稀稀疏疏的，在<phoneme ph="yu2 li3">雨里</phoneme>静默着。</speak>
 18 <speak>天上风筝渐渐多了，地上孩子也多了。</speak>
 19 <speak>城里乡下，家家户户，<phoneme ph="lao2 lao3 xiao2 xiao3">老老小小</phoneme>，也都<phoneme ph="gan3 tangr4">赶趟儿</phoneme>似的，一个个都出来了。</speak>
-20 <speak>舒活舒活筋骨，抖擞抖擞精神，各做各的<phoneme ph="yi2 fen4">一份</phoneme>事儿去。</speak>
+20 <speak>舒活舒活筋骨，<phoneme ph="dou2 sou3">抖擞</phoneme><phoneme ph="dou2 sou3">抖擞</phoneme>精神，各做各的<phoneme ph="yi2 fen4">一份</phoneme>事儿去。</speak>
 21 <speak>“<phoneme ph="yi4 nian2">一年</phoneme>之计在于春”，刚起头儿，有的是工夫，有的是希望。</speak>
 22 <speak>春天像刚落地的<phoneme ph="wa2 wa5">娃娃</phoneme>，从头到脚都是新的，它生长着。</speak>
 23 <speak>春天像小姑娘，花枝招展的，笑着，走着。</speak>
 24 <speak>春天像健壮的青年，有铁一般的<phoneme ph="ge1 bo5">胳膊</phoneme>和腰脚，他领着我们上前去。</speak>
 25 <speak>我第二次到仙岩的时候，我惊诧于梅雨潭的绿了。</speak>
 26 <speak>梅雨潭是一个瀑布潭。仙岩有三个瀑布，梅雨瀑最低。</speak>
-27 <speak>走到山边，便听见哗哗哗哗的声音；抬起头，镶在两条湿湿的<phoneme ph="hei1 bianr1">黑边儿</phoneme>里的，<phoneme ph="yi2 dai4">一带</phoneme>白而发亮的水便呈现于眼前了。</speak>
+27 <speak>走到山边，便听见哗哗哗哗的声音；抬起头，镶在两条湿湿的黑边儿里的，<phoneme ph="yi2 dai4">一带</phoneme>白而发亮的水便呈现于眼前了。</speak>
 28 <speak>我们先到梅雨亭。梅雨亭正对着那条瀑布；坐在亭边，<phoneme ph="bu2 bi4">不必</phoneme>仰头，便可见它的全体了。</speak>
 29 <speak>亭下深深的便是梅雨潭。这个亭踞在突出的<phoneme ph="yi4 jiao3">一角</phoneme>的岩石上，上下都空空儿的；</speak>
 30 <speak>仿佛一只苍鹰展着翼翅浮在天宇中一般。三面都是山，像半个环儿<phoneme ph="yong1 zhe5">拥着</phoneme>；</speak>
@@ -46,7 +46,7 @@
 46 <speak>站在水边，望到那面，居然觉着有些远呢！</speak>
 47 <speak>这<phoneme ph="ping2 pu1">平铺</phoneme>着，厚积着的绿，<phoneme ph="zhuo2 shi2">着实</phoneme>可爱。</speak>
 48 <speak>她松松的皱缬着，像少妇拖着的裙幅，她轻轻的摆弄着；</speak>
-49 <speak>像跳动的初恋的<phoneme ph="chu2 nv3">处女</phoneme>的心，她滑滑的明亮着，像涂了明油一般，有鸡蛋清那样软，那样嫩，她又不杂些儿尘滓，宛然一块温润的碧玉，只清清的一色，但你却看不透她！</speak>
+49 <speak>像跳动的初恋的<phoneme ph="chu2 nv3">处女</phoneme>的心，她滑滑的明亮着，像涂了明油一般，有鸡蛋清那样软，那样嫩，她又不杂些儿尘滓，宛然一块温润的碧玉，只清清的<phoneme ph="yi2 se4">一色</phoneme>，但你却看不透她！</speak>
 50 <speak>我曾见过北京<phoneme ph="shi2 cha4 hai3">什刹海</phoneme>拂地的绿杨，脱不了鹅黄的底子，似乎太淡了。</speak>
 51 <speak>我又曾见过杭州<phoneme ph="hu2 pao3 si4">虎跑寺</phoneme>旁高峻而深密的绿壁，丛叠着无穷的碧草与绿叶的，那又似乎太浓了。</speak>
 52 <speak>其余呢，西湖的波太<phoneme ph="ming2 le5">明了</phoneme>，秦淮河的水又太暗了。</speak>
@@ -69,7 +69,7 @@
 69 <speak>我们多年聚族而居的老屋，已经公同卖给别姓了，交屋的期限，只在本年，所以必须赶在正月初一以前，永别了熟识的老屋，而且远离了熟识的故乡，搬家到我在谋食的<phoneme ph="yi4 di4">异地</phoneme>去。</speak>
 70 <speak>第二日清早晨我到了我家的门口了。瓦楞上许多枯草的断茎当风抖着，正在说明这老屋难免易主的原因。</speak>
 71 <speak><phoneme ph="ji3 fang2">几房</phoneme>的本家大约已经搬走了，<phoneme ph="suo2 yi3">所以</phoneme>很寂静。</speak>
-72 <speak>我到了自家的房外，我的母亲<phoneme ph="zao2 yi3">早已</phoneme>迎着出来了，接着便飞出了八岁的<phoneme ph="zhi2 er5">侄儿</phoneme>宏儿。</speak>
+72 <speak>我到了自家的房外，我的母亲<phoneme ph="zao2 yi3">早已</phoneme>迎着出来了，接着便飞出了八岁的<phoneme ph="zhi2 er2">侄儿</phoneme>宏儿。</speak>
 73 <speak>我的母亲很高兴，但也藏着许多凄凉的神情，教我坐下，歇息，喝茶，且不谈搬家的事。</speak>
 74 <speak>宏儿没有见过我，<phoneme ph="yuan2 yuan3">远远</phoneme>的对面站着只是看。</speak>
 75 <speak>但我们终于谈到搬家的事。</speak>
@@ -77,8 +77,8 @@
 77 <speak>母亲也说好，而且行李也略已齐集，木器<phoneme ph="bu2 bian4">不便</phoneme>搬运的，也小半卖去了，只是收不起钱来。</speak>
 78 <speak>“你休息一两天，去拜望<phoneme ph="qin1 qi5">亲戚</phoneme>本家<phoneme ph="yi4 hui2">一回</phoneme>，我们便<phoneme ph="ke2 yi3">可以</phoneme>走了。”母亲说。</speak>
 79 <speak>“还有闰土，他每到我家来时，总问起你，<phoneme ph="hen2 xiang3">很想</phoneme>见你<phoneme ph="yi4 hui2">一回</phoneme>面。我已经将你到家的大约日期通知他，他<phoneme ph="ye2 xu3">也许</phoneme>就要来了。”</speak>
-80 <speak>这时候，我的<phoneme ph="nao2 li3">脑里</phoneme>忽然闪出<phoneme ph="yi4 fu2">一幅</phoneme>神异的图画来：深蓝的天空中挂着<phoneme ph="yi4 lun2">一轮</phoneme>金黄的圆月，<phoneme ph="xia4 mian4">下面</phoneme>是海边的沙地，都<phoneme ph="zhong4 zhe4">种着</phoneme>一望无际的碧绿的西瓜，</speak>
-81 <speak>其间有一个十一二岁的少年，项带银圈，手捏一柄钢叉，向一匹猹尽力的刺去，那猹却将身<phoneme ph="yi4 niu3">一扭</phoneme>，反从他的胯下逃走了。</speak>
+80 <speak>这时候，我的<phoneme ph="nao2 li3">脑里</phoneme>忽然闪出<phoneme ph="yi4 fu2">一幅</phoneme>神异的图画来：深蓝的天空中挂着<phoneme ph="yi4 lun2">一轮</phoneme>金黄的圆月，<phoneme ph="xia4 mian4">下面</phoneme>是海边的沙地，都<phoneme ph="zhong4 zhe5">种着</phoneme>一望无际的碧绿的西瓜，</speak>
+81 <speak>其间有一个十一二岁的少年，项带银圈，手捏<phoneme ph="yi4 bing3">一柄</phoneme>钢叉，向一匹猹尽力的刺去，那猹却将身<phoneme ph="yi4 niu3">一扭</phoneme>，反从他的胯下逃走了。</speak>
 82 <speak>这少年便是闰土。我认识他时，也<phoneme ph="bu2 guo4">不过</phoneme>十多岁，离现在将有三十年了;</speak>
 83 <speak>那时我的父亲还在世，家景<phoneme ph="ye2 hao3">也好</phoneme>，我正是一个少爷。</speak>
 84 <speak>那一年，我家是一件大祭祀的值年。</speak>

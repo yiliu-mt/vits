@@ -31,7 +31,7 @@
 31 <speak>工业元宇宙是元宇宙在工业领域的落地与拓展</speak>
 32 <speak>李伯虎强调，工业是国民经济的<phoneme ph="zhu2 ti3">主体</phoneme>，是立国之本、兴国之器、强国之基。</speak>
 33 <speak>因此，工业的发展<phoneme ph="bi4 xu1">必须</phoneme>适应新时代、新态势、新征程。</speak>
-34 <speak>他表示，近五年来，支撑我国工业发展的关键——“工业互联网系统”已经取得显著成绩。</speak>
+34 <speak>他表示，近五年来，支撑我国工业发展的关键——“工业互联网系统”已经<phoneme ph="qu3 de2">取得</phoneme>显著成绩。</speak>
 35 <speak>但是工业互联网系统必须进一步迈上快速发展的新征程，开启“万物智联的智慧工业互联网系统——工业互联网2.0”新阶段。</speak>
 36 <speak>李伯虎指出，工业元宇宙是元宇宙在工业领域的落地与拓展，是新型工业数字空间、新型工业智慧互联网系统、数字经济与实体经济融合发展的新型载体。</speak>
 37 <speak>当前工业元宇宙正成为工业领域科技界对新理念和新技术发展竞相探讨，和产业界对新产业方向思考与实践的热点。</speak>
@@ -50,7 +50,7 @@
 50 <speak>最后，对于工业元宇宙的未来发展，李伯虎从宏观发展层面提出了六个注重。</speak>
 51 <speak>一要注重<phoneme ph="yi2">以</phoneme>企业<phoneme ph="wei2">为</phoneme>中心的“政、产、学、研、金、用”结合的各级技术创新体系的建立。</speak>
 52 <speak>二要注重产业链的完善布局，特别是芯片与工业软件<phoneme ph="chan2 pin3">产品</phoneme>及其服务链的布局。</speak>
-53 <speak>三要注重各类人才培养，特别是跨学科人才的培养。</speak>
+53 <speak>三要注重<phoneme ph="ge4 lei4">各类</phoneme>人才培养，特别是跨学科人才的培养。</speak>
 54 <speak>四要注重国家、地方基础建设，特别是5G/6G网络，未来网络与数据库、模型库、算法库和算力的建设。</speak>
 55 <speak>五要注重国家、地方新政策的<phoneme ph="yin2 dao3">引导</phoneme>与支持，特别是工业元宇宙文化的建设，与对中小企业的财政政策支持等。</speak>
 56 <speak>六要注重数字化、网络化、云化、智能化“技术、应用、产业”的协调发展。</speak>
@@ -80,7 +80,7 @@
 80 <speak>放眼全球市场，<phoneme ph="duan2 duan3">短短</phoneme><phoneme ph="yi4 nian2">一年</phoneme>内，主流VR厂商发布了十余款新品，而各路VR创企也秀出了不少亮眼技术，<phoneme ph="ke2 yi3">可以</phoneme>说，VR行业似乎已经走到了下一个爆发节点的前夜。</speak>
 81 <speak>VR赛道杀入国产黑马创企，<phoneme ph="liang3 nian2">2年</phoneme>做出全球首个Pancake VR<phoneme ph="yi4 ti3 ji1">一体机</phoneme></speak>
 82 <speak>做出这款眼镜的，是一家成立不到三年的国内创企YVR，而YVR 2这款采用Pancake方案的VR<phoneme ph="yi4 ti3 ji1">一体机</phoneme>，已经是他们的第二款作品了。</speak>
-83 <speak>全球<phoneme ph="shou2 kuan3">首款</phoneme>Pancake VR<phoneme ph="yi4 ti3 ji1">一体机</phoneme>背后藏着哪些硬核黑科技，究竟要如何做一款“以人为本”的VR<phoneme ph="chan2 pin3">产品</phoneme>？</speak>
+83 <speak>全球<phoneme ph="shou2 kuan3">首款</phoneme>Pancake VR<phoneme ph="yi4 ti3 ji1">一体机</phoneme>背后藏着哪些硬核黑科技，究竟要如何做<phoneme ph="yi4 kuan3">一款</phoneme>“以人为本”的VR<phoneme ph="chan2 pin3">产品</phoneme>？</speak>
 84 <speak>而VR产业的发展又是否迎来了新的关键节点？</speak>
 85 <speak>我们从技术和产业的角度对这些问题进行了深入探讨。</speak>
 86 <speak>一、极致体验背后，是对硬核科技钻到细节处的“较真”</speak>

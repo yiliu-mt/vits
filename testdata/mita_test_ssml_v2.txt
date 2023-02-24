@@ -27,13 +27,13 @@ SSB3002020032 一二三四五，六七八九零。
 SSB3002020037 零点一二三四五六七。
 SSB3002020040 <speak>在<phoneme ph="chan2 pin3">产品</phoneme>规划、研发、最终生产阶段<break time="sp0"></break>协同合作，统一标准、整合资源、分享技术、<phoneme ph="wei4">为</phoneme>生态伙伴创造更多价值，<phoneme ph="wei4">为</phoneme>用户打造完美体验。</speak>
 SSB3002020042 <speak>使用邮箱登录，验证码会发送到邮箱，如果<phoneme ph="mei2 you3">没有</phoneme>找到，请到其他标签页中查看<break time="sp0"></break>可能被认为是垃圾邮件。</speak>
-SSB3002020043 <speak>例如，供应商都是由集团<phoneme ph="guan2 li3">管理</phoneme><break time="sp0"></break>创建并分配，则只有创建组织<break time="sp0"></break>和使用组织<break time="sp0"></break>都是集团<phoneme ph="guan2 li3">管理</phoneme>的供应商<break time="sp0"></break>反审核后<break time="sp0"></break>才<phoneme ph="ke2 yi3">可以</phoneme>修改。</speak>
+SSB3002020043 <speak>例如，供应商都是由集团<phoneme ph="guan2 li3">管理</phoneme><break time="sp0"></break>创建并分配，则<phoneme ph="zhi2 you3">只有</phoneme>创建组织<break time="sp0"></break>和使用组织<break time="sp0"></break>都是集团<phoneme ph="guan2 li3">管理</phoneme>的供应商<break time="sp0"></break>反审核后<break time="sp0"></break>才<phoneme ph="ke2 yi3">可以</phoneme>修改。</speak>
 SSB3002020044 <speak>通过关联查询<break time="sp1"></break>下查，需要先删除下查的单据，再删除当前单据。</speak>
 SSB3002020053 <speak>星空付款申请单审核后<break time="sp0"></break>自动下推付款单，传递至星瀚系统付款处理。</speak>
 SSB3002020055 点击人人费用，我的单据，找到单据点击打印。
 SSB3002020056 通过点击人人费用，我的单据。找到被驳回的单据后修改。
 SSB3002020057 <speak>金蝶提交报销单据，审核流程结束后打印报销单，贴上纸质发票交由行政寄回总部，就能在每月十号、二十五号<break time="sp0"></break>收到报销款啦。</speak>
-SSB3002020061 发票拍照要清晰。不够清晰的照片。系统无法识别。
+SSB3002020061 <speak>发票拍照要清晰。<phoneme ph="bu2 gou4">不够</phoneme>清晰的照片。系统无法识别。</speak>
 SSB3002020063 在员工报销单中，选择核销借款。
 SSB3002020065 <speak>制度要求必须先提交<phoneme ph="chai1 lv3">差旅</phoneme>申请，<phoneme ph="chai1 lv3">差旅</phoneme>申请审批通过后，在<phoneme ph="chai1 lv3">差旅</phoneme>申请界面下推<phoneme ph="chai1 lv3">差旅</phoneme>报销单。</speak>
 SSB3002020067 <speak>如果已经做了后续操作，且后续单据不可再删除<break time="sp1"></break>例如<break time="sp0"></break>已经提交付款申请<break time="sp0"></break>并付款完成了，则订单无法再修改。</speak>

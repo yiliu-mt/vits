@@ -1,0 +1,100 @@
+0 <speak>我的心随潭水的绿而摇荡。</speak>
+1 <speak>瀑布在襟袖之间；但我的心中已没有瀑布了。</speak>
+2 <speak>好容易到了年末，有<phoneme ph="yi2 ri4">一日</phoneme>，母亲告诉我，闰土来了，我便飞跑的去看。</speak>
+3 <speak>风里带来些新翻的泥土的气息，混着青草<phoneme ph="weir4">味儿</phoneme>，还有各种花的香，都在微微润湿的空气里酝酿。</speak>
+4 <speak>但要我记起他的美丽，说出他的佳处来，却又没有影像，没有言辞了。</speak>
+5 <speak>我又曾见过杭州<phoneme ph="hu2 pao3 si4">虎跑寺</phoneme>旁高峻而深密的绿壁，丛叠着无穷的碧草与绿叶的，那又似乎太浓了。</speak>
+6 <speak><phoneme ph="yi2 qie4">一切</phoneme>都像刚睡醒的样子，欣欣然张开了眼。山朗润起来了，水<phoneme ph="zhang2 qi3 lai2">涨起来</phoneme>了，太阳的脸红起来了。</speak>
+7 <speak><phoneme ph="ji3 fang2">几房</phoneme>的本家大约已经搬走了，<phoneme ph="suo2 yi3">所以</phoneme>很寂静。</speak>
+8 <speak>在乡下，小路上，石桥边，有撑着伞慢慢走着的人;</speak>
+9 <speak>“还有闰土，他每到我家来时，总问起你，<phoneme ph="hen2 xiang3">很想</phoneme>见你<phoneme ph="yi4 hui2">一回</phoneme>面。我已经将你到家的大约日期通知他，他<phoneme ph="ye2 xu3">也许</phoneme>就要来了。”</speak>
+10 <speak>宏儿没有见过我，<phoneme ph="yuan2 yuan3">远远</phoneme>的对面站着只是看。</speak>
+11 <speak>鸟儿将巢安在繁花嫩叶当中，高兴起来了，呼朋引伴<phoneme ph="de5">地</phoneme>卖弄清脆的喉咙，唱出<phoneme ph="wan2 zhuan3">宛转</phoneme>的曲子，跟轻风流水应和着。</speak>
+12 <speak>她必能临风飘举了。</speak>
+13 <speak>我若能挹你以为眼，我将赠给那善歌的盲妹；她必明眸善睐了。</speak>
+14 <speak>我的母亲很高兴，但也藏着许多凄凉的神情，教我坐下，歇息，喝茶，且不谈搬家的事。</speak>
+15 <speak>站在水边，望到那面，居然觉着有些远呢！</speak>
+16 <speak>像跳动的初恋的<phoneme ph="chu2 nv3">处女</phoneme>的心，她滑滑的明亮着，像涂了明油一般，有鸡蛋清那样软，那样嫩，她又不杂些儿尘滓，宛然一块温润的碧玉，只清清的<phoneme ph="yi2 se4">一色</phoneme>，但你却看不透她！</speak>
+17 <speak>他正在厨房里，紫色的圆脸，头戴一顶小毡帽，颈上套一个<phoneme ph="ming2 huang2 huang3">明晃晃</phoneme>的银项圈，这可见他的父亲十分爱他，怕他死去，所以在神佛面前许下愿心，用圈子将他套住了。</speak>
+18 <speak>母亲也说好，而且行李也略已齐集，木器<phoneme ph="bu2 bian4">不便</phoneme>搬运的，也小半卖去了，只是收不起钱来。</speak>
+19 <speak>轻风起来时，<phoneme ph="dian2 dian3">点点</phoneme>随风飘散，那更是杨花了。</speak>
+20 <speak>人如在<phoneme ph="jing2 di3">井底</phoneme>了。这是一个秋季的薄阴的天气。</speak>
+21 <speak>春天像刚落地的<phoneme ph="wa2 wa5">娃娃</phoneme>，从头到脚都是新的，它生长着。</speak>
+22 <speak>而瀑布也似乎分外的响了。那瀑布从上面<phoneme ph="chong1 xia4">冲下</phoneme>，仿佛已被扯成大小的<phoneme ph="ji2 liu3">几绺</phoneme>；</speak>
+23 <speak>阿!闰土的心里有无穷无尽的希奇的事，都是我往常的朋友所不知道的。</speak>
+24 <speak>其间有一个十一二岁的少年，项带银圈，手捏<phoneme ph="yi4 bing3">一柄</phoneme>钢叉，向一匹猹尽力的刺去，那猹却将身<phoneme ph="yi4 niu3">一扭</phoneme>，反从他的胯下逃走了。</speak>
+25 <speak>我曾见过北京<phoneme ph="shi2 cha4 hai3">什刹海</phoneme>拂地的绿杨，脱不了鹅黄的底子，似乎太淡了。</speak>
+26 <speak>那一年，我家是一件大祭祀的值年。</speak>
+27 <speak>走到山边，便听见哗哗哗哗的声音；抬起头，镶在两条湿湿的黑边儿里的，<phoneme ph="yi2 dai4">一带</phoneme>白而发亮的水便呈现于眼前了。</speak>
+28 <speak>按日给人做工的叫短工;</speak>
+29 <speak><phoneme ph="bu2 fu4">不复</phoneme>是一幅整齐而平滑的布。岩上有许多棱角；</speak>
+30 <speak>“吹面不寒杨柳风”，<phoneme ph="bu2 cuo4">不错</phoneme>的，像母亲的手抚摸着你。</speak>
+31 <speak>她松松的皱缬着，像少妇拖着的裙幅，她轻轻的摆弄着；</speak>
+32 <speak>我送你一个名字，我从此叫你“女儿绿”，好么？</speak>
+33 <speak>阿!这不是我二十年来时时<phoneme ph="ji4 de2">记得</phoneme>的故乡?</speak>
+34 <speak>但我们终于谈到搬家的事。</speak>
+35 <speak>我想张开两臂抱住她；但这是怎样一个妄想呀。</speak>
+36 <speak>可惜正月过去了，闰土须回家里去，我急得大哭，他也躲到厨房里，哭着不肯出门，但终于被他父亲带走了。</speak>
+37 <speak>可爱的，我将什么来<phoneme ph="bi2 ni2 ni3">比拟你</phoneme>呢？我怎么比拟得出呢？大约潭是很深的、故能蕴蓄着这样奇异的绿；</speak>
+38 <speak>正月里供祖像，供品很多，祭器<phoneme ph="ye2 hen3">也很</phoneme>讲究，拜的人<phoneme ph="ye2 hen3">也很</phoneme>多，祭器<phoneme ph="ye2 hen3">也很</phoneme>要防偷去。</speak>
+39 <speak>雨是最寻常的，<phoneme ph="yi2 xia4">一下</phoneme>就是三两天。可别恼。</speak>
+40 <speak>据说，这就是梅雨潭之<phoneme ph="suo2 yi3">所以</phoneme>得名了。但我觉得像杨花，格外确切些。</speak>
+41 <speak>春天像健壮的青年，有铁一般的<phoneme ph="ge1 bo5">胳膊</phoneme>和腰脚，他领着我们上前去。</speak>
+42 <speak>梅雨潭<phoneme ph="shan2 shan3">闪闪</phoneme>的绿色招引着我们；我们开始追捉她那离合的神光了。</speak>
+43 <speak>揪着草，攀着乱石，小心探身下去，又鞠躬过了一个石穹门，便到了汪汪<phoneme ph="yi2 bi4">一碧</phoneme>的潭边了。</speak>
+44 <speak>城里乡下，家家户户，<phoneme ph="lao2 lao3 xiao2 xiao3">老老小小</phoneme>，也都<phoneme ph="gan3 tangr4">赶趟儿</phoneme>似的，一个个都出来了。</speak>
+45 <speak>仿佛也就如此。于是我自己解释说：故乡<phoneme ph="ben2 ye3">本也</phoneme>如此，——虽然没有进步，也未必有如我<phoneme ph="suo2 gan3">所感</phoneme>的悲凉，这只是我自己心情的改变罢了，因为我这次回乡，本没有什么好心绪。</speak>
+46 <speak>时候既然是深冬;渐近故乡时，天气又阴晦了，冷风吹进船舱中，呜呜的响，从篷隙向外<phoneme ph="yi2 wang4">一望</phoneme>，苍黄的天底下，远近横着几个萧索的荒村，没有一些活气。</speak>
+47 <speak>我第二次到仙岩的时候，我不禁惊诧于梅雨潭的绿了。</speak>
+48 <speak>野花遍地是:杂样儿，有名字的，没名字的，散在草丛里像眼睛，像<phoneme ph="xing1 xing5">星星</phoneme>，还眨呀眨的。</speak>
+49 <speak>瀑流经过时，作急剧的撞击，便飞花碎玉般乱溅着了。</speak>
+50 <speak>他后来还托他的父亲带给我<phoneme ph="yi4 bao1">一包</phoneme>贝壳和几支<phoneme ph="hen2 hao3 kan4">很好看</phoneme>的鸟毛，我也曾送他一两次<phoneme ph="dong1 xi5">东西</phoneme>，但从此没有再见面。</speak>
+51 <speak>这<phoneme ph="ping2 pu1">平铺</phoneme>着，厚积着的绿，<phoneme ph="zhuo2 shi2">着实</phoneme>可爱。</speak>
+52 <speak><phoneme ph="xiao2 cao3">小草</phoneme>偷偷<phoneme ph="de5">地</phoneme>从土里钻出来，嫩嫩的，绿绿的。园子里，田野里，瞧去<phoneme ph="yi2 da4 pian4">一大片</phoneme><phoneme ph="yi2 da4 pian4">一大片</phoneme>满是的。</speak>
+53 <speak>其余呢，西湖的波太<phoneme ph="ming2 le5">明了</phoneme>，秦淮河的水又太暗了。</speak>
+54 <speak>地里还有工作的农民，披着蓑戴着笠。他们的房屋，稀稀疏疏的，在<phoneme ph="yu2 li3">雨里</phoneme>静默着。</speak>
+55 <speak>这时偶然有<phoneme ph="ji2 dian3">几点</phoneme>送入我们温暖的怀里，便倏的钻了进去，再也寻它<phoneme ph="bu4 zhao2">不着</phoneme>。</speak>
+56 <speak>我又掬你入口，便是吻着她了。</speak>
+57 <speak>我们多年聚族而居的老屋，已经公同卖给别姓了，交屋的期限，只在本年，所以必须赶在正月初一以前，永别了熟识的老屋，而且远离了熟识的故乡，搬家到我在谋食的<phoneme ph="yi4 di4">异地</phoneme>去。</speak>
+58 <speak>春天像小姑娘，花枝招展的，笑着，走着。</speak>
+59 <speak>我的心禁不住悲凉起来了。</speak>
+60 <speak>我第二次到仙岩的时候，我惊诧于梅雨潭的绿了。</speak>
+61 <speak>花里带着<phoneme ph="tian2 weir4">甜味儿</phoneme>;闭了眼，村上仿佛已经满是桃儿、杏儿、梨儿。</speak>
+62 <speak>花下成千成百的蜜蜂嗡嗡<phoneme ph="de5">地</phoneme>闹着，大小的蝴蝶飞来飞去。</speak>
+63 <speak>我这次是专为了别他而来的。</speak>
+64 <speak>那时我的父亲还在世，家景<phoneme ph="ye2 hao3">也好</phoneme>，我正是一个少爷。</speak>
+65 <speak>舒活舒活筋骨，<phoneme ph="dou2 sou3">抖擞</phoneme><phoneme ph="dou2 sou3">抖擞</phoneme>精神，各做各的<phoneme ph="yi2 fen4">一份</phoneme>事儿去。</speak>
+66 <speak>这时候，我的<phoneme ph="nao2 li3">脑里</phoneme>忽然闪出<phoneme ph="yi4 fu2">一幅</phoneme>神异的图画来：深蓝的天空中挂着<phoneme ph="yi4 lun2">一轮</phoneme>金黄的圆月，<phoneme ph="xia4 mian4">下面</phoneme>是海边的沙地，都<phoneme ph="zhong4 zhe5">种着</phoneme>一望无际的碧绿的西瓜，</speak>
+67 <speak>那醉人的绿呀，仿佛一张极大极大的荷叶<phoneme ph="pu1 zhe5">铺着</phoneme>，满是奇异的绿呀。</speak>
+68 <speak>我于是日日盼望新年，新年到，闰土也就到了。</speak>
+69 <speak>“<phoneme ph="yi4 nian2">一年</phoneme>之计在于春”，刚起头儿，有的是工夫，有的是希望。</speak>
+70 <speak>盼望着，盼望着，东风来了，春天脚步近了。</speak>
+71 <speak>“我们沙地里，潮汛要来的时候，就有许多跳鱼儿只是跳，都有青蛙似的两个脚……”</speak>
+72 <speak>我舍不得你；我<phoneme ph="zen2 she3 de2">怎舍得</phoneme>你呢？我用手拍着你，抚摩着你，如同一个十二三岁的小<phoneme ph="gu1 niang5">姑娘</phoneme>。</speak>
+73 <speak>他见人很怕羞，只是<phoneme ph="bu2 pa4">不怕</phoneme>我，没有旁人的时候，便和我说话，于是不到半日，我们便熟识了。</speak>
+74 <speak>仿佛蔚蓝的天融了<phoneme ph="yi2 kuai4">一块</phoneme>在里面似的，这才这般的鲜润呀。</speak>
+75 <speak>我的父亲<phoneme ph="yun2 xu3">允许</phoneme>了;我也很高兴，因为我早听到闰土这名字，而且知道他和我仿佛年纪，闰月生的，五行缺土，所以他的父亲叫他闰土。他是能装弶捉<phoneme ph="xiao2 niao3 que4">小鸟雀</phoneme>的。</speak>
+76 <speak>梅雨潭是一个瀑布潭。仙岩有三个瀑布，梅雨瀑最低。</speak>
+77 <speak>我到了自家的房外，我的母亲<phoneme ph="zao2 yi3">早已</phoneme>迎着出来了，接着便飞出了八岁的<phoneme ph="zhi2 er2">侄儿</phoneme>宏儿。</speak>
+78 <speak>这祭祀，说是三十多年才能轮到<phoneme ph="yi4 hui2">一回</phoneme>，<phoneme ph="suo2 yi3">所以</phoneme>很郑重;</speak>
+79 <speak>“你休息一两天，去拜望<phoneme ph="qin1 qi5">亲戚</phoneme>本家<phoneme ph="yi4 hui2">一回</phoneme>，我们便<phoneme ph="ke2 yi3">可以</phoneme>走了。”母亲说。</speak>
+80 <speak>我所<phoneme ph="ji4 de2">记得</phoneme>的故乡全不如此。我的故乡好得多了。</speak>
+81 <speak>仿佛一只苍鹰展着翼翅浮在天宇中一般。三面都是山，像半个环儿<phoneme ph="yong1 zhe5">拥着</phoneme>；</speak>
+82 <speak>我们先到梅雨亭。梅雨亭正对着那条瀑布；坐在亭边，<phoneme ph="bu2 bi4">不必</phoneme>仰头，便可见它的全体了。</speak>
+83 <speak>自己也种地，只在过年过节以及收租时候来给一定的人家做工的称忙月)，忙不过来，他便对父亲说，<phoneme ph="ke2 yi3">可以</phoneme>叫他儿子闰土来管祭器的。</speak>
+84 <speak>他们不知道一些事，闰土在海边时，他们都和我<phoneme ph="yi2 yang4">一样</phoneme>只看见院子里高墙上的四角的天空。</speak>
+85 <speak>桃树、杏树、梨树，你<phoneme ph="bu2 rang4">不让</phoneme>我，我<phoneme ph="bu2 rang4">不让</phoneme>你，都开满了花<phoneme ph="gan3 tangr4">赶趟儿</phoneme>。红的像火，粉的像霞，白的像雪。</speak>
+86 <speak>那醉人的绿呀！我若能裁你以为带，我将赠给那轻盈的<phoneme ph="wu2 nv3">舞女</phoneme>；</speak>
+87 <speak>我说外间的<phoneme ph="yu4 suo3">寓所</phoneme>已经租定了，又买了几件家具，此外须将家里<phoneme ph="suo2 you3">所有</phoneme>的木器卖去，再去增添。</speak>
+88 <speak>牛背上牧童的短笛，这时候也成天嘹亮<phoneme ph="de5">地</phoneme>响着。</speak>
+89 <speak>第二日清早晨我到了我家的门口了。瓦楞上许多枯草的断茎当风抖着，正在说明这老屋难免易主的原因。</speak>
+90 <speak>我家<phoneme ph="zhi2 you3">只有</phoneme>一个忙月(我们这里给人做工的分三种：整年给一定人家做工的叫长年;</speak>
+91 <speak>看，像牛毛，像花针，像细丝，密密<phoneme ph="de5">地</phoneme>斜织着，人家屋顶上全<phoneme ph="long3 zhe5">笼着</phoneme>一层薄烟。树叶儿却绿得发亮。</speak>
+92 <speak>天上风筝渐渐多了，地上孩子也多了。</speak>
+93 <speak>亭下深深的便是梅雨潭。这个亭踞在突出的<phoneme ph="yi4 jiao3">一角</phoneme>的岩石上，上下都空空儿的；</speak>
+94 <speak>微微的云在我们顶上流着；岩面与草丛都从润湿中透出几分油油的绿意。</speak>
+95 <speak>那溅着的水花，晶莹而多芒；远望去，像<phoneme ph="yi4 duo2 duo3">一朵朵</phoneme><phoneme ph="xiao2 xiao3">小小</phoneme>的白梅，微雨似的纷纷落着。</speak>
+96 <speak>我素不知道天下有这许多新鲜事： 海边有如许五色的贝壳;西瓜有这样危险的经历，我先前单知道他在<phoneme ph="shui2 guo3">水果</phoneme>店里出卖罢了。</speak>
+97 <speak>坐着，躺着，<phoneme ph="da2">打</phoneme>两个滚，踢<phoneme ph="ji2 jiao3">几脚</phoneme>球，赛几趟跑，捉几回迷藏。风轻悄悄的，草软绵绵的。</speak>
+98 <speak><phoneme ph="xiao2 cao3 er2">小草儿</phoneme>也青得逼你的眼。傍晚时候，上灯了，<phoneme ph="yi4 dian2 dian3">一点点</phoneme>黄晕的光，烘托出<phoneme ph="yi2 pian4">一片</phoneme>安静而和平的夜。</speak>
+99 <speak>这少年便是闰土。我认识他时，也<phoneme ph="bu2 guo4">不过</phoneme>十多岁，离现在将有三十年了;</speak>

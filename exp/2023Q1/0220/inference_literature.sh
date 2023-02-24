@@ -5,8 +5,8 @@ model=/nfs1/yi.liu/tts/vits/exp/2023Q1/0112/tuning_mita_bc_chatbot10/G_200000.pt
 lexicon=/nfs1/yi.liu/src/TTS-FastSpeech/lexicon/v1.9/bilingual_serving_dict_er3.txt
 speaker_id=221
 
-test_data=/nfs1/yi.liu/src/TTS-FastSpeech/exp/2023Q1/vits/0220/literature_v2_id.txt
-output_dir=/nfs1/yi.liu/tts/vits/exp/2023Q1/0112/literature_v2
+test_data=/nfs1/yi.liu/src/vits/testdata/literature_ssml_v2_shuffle.txt
+output_dir=/nfs1/yi.liu/tts/vits/exp/2023Q1/0220/literature_v2
 
 export PYTHONPATH=.
 CUDA_VISIBLE_DEVICES=6 python synthesize_v2.py \

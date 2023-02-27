@@ -7,8 +7,8 @@ mkdir -p $output_dir
 # test_file=exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/test_mita.txt
 # PVR_GPUIDX=4 python inference_ms.py --warmup --repeat 10 -c $config -t $test_file -m $model -o $output_dir
 
-# numeric accuracy
-test_file=exp/2023Q1/0112/test.txt
+# To test the accuracy
+test_file=exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/test.txt
 output_dir=exp/2023Q1/0112/audio_out/
-PVR_GPUIDX=3 python inference_ms.py -c $config -t $test_file -m $model -o $output_dir
+PVR_GPUIDX=4 python inference_ms.py -c $config -t $test_file -m $model -o $output_dir
 

@@ -12,6 +12,6 @@ mkdir -p $output_dir
 # CUDA_VISIBLE_DEVICES= python inference_ms.py --warmup --repeat 10 -c $config -t $test_file -m $model -o $output_dir
 
 # To test the accuracy
-test_file=exp/2023Q1/0112/test.txt
+test_file=exp/2023Q1/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/test.txt
 output_dir=exp/2023Q1/0112/audio_out/
 CUDA_VISIBLE_DEVICES= python inference_ms.py -c $config -t $test_file -m $model -o $output_dir

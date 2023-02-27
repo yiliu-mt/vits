@@ -78,24 +78,30 @@ symbols_default = [_pad] + _pause + _initials + [i + j for i in _finals for j in
 _special = "-"
 _punctuation = "!'(),.:;? "
 _letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-_silences = ["sp", "spn", "sil", "#0", "#1", "#2", "#3", "#4"]
-_silences_v2 = ["sp0", "sp1", "sp2", "sp3"]
+
+# _silences = ["sp", "spn", "sil", "#0", "#1", "#2", "#3", "#4"]
+# _silences_v2 = ["sp0", "sp1", "sp2", "sp3"]
+# _arpabet = [s for s in cmudict.valid_symbols]
+# _pinyin = [s for s in pinyin.valid_symbols]
+# _pinyin_v2 = [s for s in pinyin_v2.valid_symbols]
 
 # Prepend "@" to ARPAbet symbols to ensure uniqueness (some are the same as uppercase letters):
-_arpabet = cmudict.valid_symbols
-_pinyin = pinyin.valid_symbols
-_pinyin_v2 = pinyin_v2.valid_symbols
+_silences = ["@sp", "@spn", "@sil", "@#0", "@#1", "@#2", "@#3", "@#4"]
+_silences_v2 = ["@sp0", "@sp1", "@sp2", "@sp3"]
+_arpabet = ["@" + s for s in cmudict.valid_symbols]
+_pinyin = ["@" + s for s in pinyin.valid_symbols]
+_pinyin_v2 = ["@" + s for s in pinyin_v2.valid_symbols]
 
 symbols_v2_1 = (
         [_pad]
         + list(_special)
         + list(_punctuation)
         + list(_letters)
-        + _silences
-        + _silences_v2
         + _arpabet
         + _pinyin
+        + _silences
         + _pinyin_v2
+        + _silences_v2
 )
 
 

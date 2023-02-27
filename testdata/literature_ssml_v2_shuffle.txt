@@ -14,7 +14,7 @@
 13 <speak>我若能挹你以为眼，我将赠给那善歌的盲妹；她必明眸善睐了。</speak>
 14 <speak>我的母亲很高兴，但也藏着许多凄凉的神情，教我坐下，歇息，喝茶，且不谈搬家的事。</speak>
 15 <speak>站在水边，望到那面，居然觉着有些远呢！</speak>
-16 <speak>像跳动的初恋的<phoneme ph="chu2 nv3">处女</phoneme>的心，她滑滑的明亮着，像涂了明油一般，有鸡蛋清那样软，那样嫩，她又不杂些儿尘滓，宛然一块温润的碧玉，只清清的<phoneme ph="yi2 se4">一色</phoneme>，但你却看不透她！</speak>
+16 <speak>像跳动的初恋的<phoneme ph="chu2 nv3">处女</phoneme>的心，她滑滑的明亮着，像涂了明油一般，有鸡蛋清那样软，那样嫩，她又不杂些儿尘滓，宛然一块温润的碧玉，只清清的<phoneme ph="yi2 se4">一色</phoneme>，但你却看<phoneme ph="bu2 tou4">不透</phoneme>她！</speak>
 17 <speak>他正在厨房里，紫色的圆脸，头戴一顶小毡帽，颈上套一个<phoneme ph="ming2 huang2 huang3">明晃晃</phoneme>的银项圈，这可见他的父亲十分爱他，怕他死去，所以在神佛面前许下愿心，用圈子将他套住了。</speak>
 18 <speak>母亲也说好，而且行李也略已齐集，木器<phoneme ph="bu2 bian4">不便</phoneme>搬运的，也小半卖去了，只是收不起钱来。</speak>
 19 <speak>轻风起来时，<phoneme ph="dian2 dian3">点点</phoneme>随风飘散，那更是杨花了。</speak>

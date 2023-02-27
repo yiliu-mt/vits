@@ -46,7 +46,7 @@
 46 <speak>站在水边，望到那面，居然觉着有些远呢！</speak>
 47 <speak>这<phoneme ph="ping2 pu1">平铺</phoneme>着，厚积着的绿，<phoneme ph="zhuo2 shi2">着实</phoneme>可爱。</speak>
 48 <speak>她松松的皱缬着，像少妇拖着的裙幅，她轻轻的摆弄着；</speak>
-49 <speak>像跳动的初恋的<phoneme ph="chu2 nv3">处女</phoneme>的心，她滑滑的明亮着，像涂了明油一般，有鸡蛋清那样软，那样嫩，她又不杂些儿尘滓，宛然一块温润的碧玉，只清清的<phoneme ph="yi2 se4">一色</phoneme>，但你却看不透她！</speak>
+49 <speak>像跳动的初恋的<phoneme ph="chu2 nv3">处女</phoneme>的心，她滑滑的明亮着，像涂了明油一般，有鸡蛋清那样软，那样嫩，她又不杂些儿尘滓，宛然一块温润的碧玉，只清清的<phoneme ph="yi2 se4">一色</phoneme>，但你却看<phoneme ph="bu2 tou4">不透</phoneme>她！</speak>
 50 <speak>我曾见过北京<phoneme ph="shi2 cha4 hai3">什刹海</phoneme>拂地的绿杨，脱不了鹅黄的底子，似乎太淡了。</speak>
 51 <speak>我又曾见过杭州<phoneme ph="hu2 pao3 si4">虎跑寺</phoneme>旁高峻而深密的绿壁，丛叠着无穷的碧草与绿叶的，那又似乎太浓了。</speak>
 52 <speak>其余呢，西湖的波太<phoneme ph="ming2 le5">明了</phoneme>，秦淮河的水又太暗了。</speak>

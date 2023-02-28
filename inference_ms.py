@@ -1,7 +1,6 @@
 import argparse
 import os
 import torch
-import musa_torch_extension
 import numpy as np
 from scipy.io import wavfile
 
@@ -11,7 +10,13 @@ from models import SynthesizerTrn
 from text.symbols import get_symbols
 from text import cleaned_text_to_sequence
 
-device = torch.device("mtgpu")
+try:
+    import musa_torch_extension
+    device = torch.device("mtgpu")
+except Exception:
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    pass
+print("device mode {}".format(device))
 
 
 def main():

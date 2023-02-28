@@ -216,9 +216,15 @@ class MultiHeadAttention(nn.Module):
     x: [b, h, l, 2*l-1]
     ret: [b, h, l, l]
     """
+    is_mtgpu = False
+    if "mtgpu" in str(x.device):
+      is_mtgpu = True
     batch, heads, length, _ = x.size()
     # Concat columns of pad to shift from relative to absolute indexing.
-    x = F.pad(x, commons.convert_pad_shape([[0,0],[0,0],[0,0],[0,1]]))
+    if is_mtgpu:
+      x = F.pad(x.to("cpu"), commons.convert_pad_shape([[0,0],[0,0],[0,0],[0,1]]))
+    else:
+      x = F.pad(x, commons.convert_pad_shape([[0,0],[0,0],[0,0],[0,1]]))
 
     # Concat extra elements so to add up to shape (len+1, 2*len-1).
     x_flat = x.view([batch, heads, length * 2 * length])
@@ -226,13 +232,17 @@ class MultiHeadAttention(nn.Module):
 
     # Reshape and slice out the padded elements.
     x_final = x_flat.view([batch, heads, length+1, 2*length-1])[:, :, :length, length-1:]
-    return x_final
+    if is_mtgpu:
+      return x_final.to("mtgpu")
+    else:
+      return x_final
 
   def _absolute_position_to_relative_position(self, x):
     """
     x: [b, h, l, l]
     ret: [b, h, l, 2*l-1]
     """
+    x = x.to("cpu")
     batch, heads, length, _ = x.size()
     # padd along column
     x = F.pad(x, commons.convert_pad_shape([[0, 0], [0, 0], [0, 0], [0, length-1]]))
@@ -240,7 +250,7 @@ class MultiHeadAttention(nn.Module):
     # add 0's in the beginning that will skew the elements after reshape
     x_flat = F.pad(x_flat, commons.convert_pad_shape([[0, 0], [0, 0], [length, 0]]))
     x_final = x_flat.view([batch, heads, length, 2*length])[:,:,:,1:]
-    return x_final
+    return x_final.to("mtgpu")
 
   def _attention_bias_proximal(self, length):
     """Bias for self-attention to encourage attention to close positions.

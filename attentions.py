@@ -216,7 +216,7 @@ class MultiHeadAttention(nn.Module):
     x: [b, h, l, 2*l-1]
     ret: [b, h, l, l]
     """
-    is_mtgpu = "mtgpu" in str(x.device)
+    is_mtgpu = True if "mtgpu" in str(x.device) else False
     batch, heads, length, _ = x.size()
     # Concat columns of pad to shift from relative to absolute indexing.
     if is_mtgpu:
@@ -237,7 +237,7 @@ class MultiHeadAttention(nn.Module):
     x: [b, h, l, l]
     ret: [b, h, l, 2*l-1]
     """
-    is_mtgpu = "mtgpu" in str(x.device)
+    is_mtgpu = True if "mtgpu" in str(x.device) else False
     if is_mtgpu:
       x = x.to("cpu")
     batch, heads, length, _ = x.size()

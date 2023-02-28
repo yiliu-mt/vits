@@ -739,8 +739,7 @@ class SynthesizerTrn(nn.Module):
     else:
       logw = self.dp(x, x_mask, g=g)
     w = torch.exp(logw) * x_mask * length_scale
-    is_mtgpu = "mtgpu" in str(w.device)
-    w_ceil = torch.ceil(w.to("cpu")).to("mtgpu")
+    w_ceil = torch.ceil(w.to("cpu")).to("mtgpu") if "mtgpu" in str(w.device) else torch.ceil(w)
     y_lengths = torch.clamp_min(torch.sum(w_ceil, [1, 2]), 1).long()
     y_mask = torch.unsqueeze(commons.sequence_mask(y_lengths, None), 1).to(x_mask.dtype)
     attn_mask = torch.unsqueeze(x_mask, 2) * torch.unsqueeze(y_mask, -1)

@@ -11,7 +11,13 @@ from models import SynthesizerTrn
 from text.symbols import get_symbols
 from text import cleaned_text_to_sequence
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+try:
+    import musa_torch_extension
+    device = torch.device("mtgpu")
+except Exception:
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    pass
+print("device mode {}".format(device))
 
 
 def main():
@@ -85,3 +91,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print("success")

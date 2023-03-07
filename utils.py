@@ -263,3 +263,16 @@ class HParams():
 
   def __repr__(self):
     return self.__dict__.__repr__()
+
+
+def waveform_postprocessing(wavs, lengths=None, volume_control=1.0):
+  with torch.inference_mode(mode=True):
+    wavs = (
+      wavs.cpu().numpy() * 32768.0 * volume_control
+    ).astype("int16")
+    wavs = [wav for wav in wavs]
+
+    for i in range(len(wavs)):
+      if lengths is not None:
+        wavs[i] = wavs[i][: lengths[i]]
+  return wavs

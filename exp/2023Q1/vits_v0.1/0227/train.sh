@@ -1,0 +1,6 @@
+# docker run --rm --gpus all --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 -v $PWD:/workspace/vits -v /nfs1:/nfs1 -v /nfs2:/nfs2 -v /nfs1/yichao.hu:/data -v /home/yichao.hu/nltk_data:/root/nltk_data -v /nfs2/yi.liu/data:/data2 -v /nfs1/yi.liu/tts:/data3 -it sh-harbor.mthreads.com/mt-ai/vits:v1.0 bash
+
+# Train the base model
+CUDA_VISIBLE_DEVICES=6 python train_ms.py \
+    -c exp/2023Q1/0227/configs/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/train.json \
+    -m exp/2023Q1/0227/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022

@@ -1,0 +1,37 @@
+a ei1
+b bi4
+c xi1
+d di4
+e yi1
+f er3 fu3
+g ju2
+h ai3 qu3
+i ai2
+j jie2
+k kei4
+l ai2 ou1
+m ai2 mu3
+n en1
+o ou1
+p pi4
+q ke5 you4
+r a4
+s ai2 si3
+t ti4
+u you1
+v wei1
+w da2 bu4 liu1
+x ai2 ke3 si3
+y wai1
+z zei1
+0 ling2
+1 yi1
+2 er4
+3 san1
+4 si4
+5 wu3
+6 liu4
+7 qi1
+8 ba1
+9 jiu3
+10 shi2

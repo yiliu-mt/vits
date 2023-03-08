@@ -181,9 +181,12 @@ def main():
     print("Total num of spks: {}".format(len(spk_dirs)))
 
     if args.use_sid:
-        spk2id = {}
-        for sid, speaker in enumerate(spk_dirs):
-            spk2id[speaker] = sid
+        if "speakers_path" not in preprocess_config["path"]:
+            spk2id = {}
+            for sid, speaker in enumerate(spk_dirs):
+                spk2id[speaker] = sid
+        else:
+            spk2id = json.load(open(preprocess_config["path"]["speakers_path"]))
 
     print(spk2id)
     sos_sil_stat, eos_sil_stat, sil_stat = stats_sil_phones_from_path(preprocess_config["path"]["preprocessed_path"])

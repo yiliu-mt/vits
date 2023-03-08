@@ -25,7 +25,7 @@ def cleaned_text_to_sequence(cleaned_text, symbol_version="default"):
       List of integers corresponding to the symbols in the text
   '''
   _symbol_to_id = get_symbol_to_id(symbol_version)
-  sequence = [_symbol_to_id[symbol] for symbol in cleaned_text.split()]
+  sequence = [_symbol_to_id["@" + symbol] for symbol in cleaned_text.split()]
   return sequence
 
 

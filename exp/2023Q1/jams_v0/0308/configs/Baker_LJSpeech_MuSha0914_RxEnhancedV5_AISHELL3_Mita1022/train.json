@@ -38,9 +38,9 @@
     "add_blank": true
   },
   "model": {
-    "inter_channels": 192,
-    "hidden_channels": 192,
-    "filter_channels": 768,
+    "inter_channels": 384,
+    "hidden_channels": 384,
+    "filter_channels": 1536,
     "n_heads": 2,
     "n_layers": 6,
     "kernel_size": 3,
@@ -53,7 +53,7 @@
     "upsample_kernel_sizes": [16,16,4,4],
     "n_layers_q": 3,
     "use_spectral_norm": false,
-    "gin_channels": 256,
+    "gin_channels": 512,
     "use_sdp": false
   }
 }

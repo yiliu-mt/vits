@@ -17,8 +17,8 @@
     "c_kl": 1.0
   },
   "data": {
-    "training_files":"exp/2023Q1/vits_v0/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/train_val.txt",
-    "validation_files":"exp/2023Q1/vits_v0/0103/preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/val.txt",
+    "training_files":"preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/train_val.txt",
+    "validation_files":"preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/val.txt",
     "symbol_version": "v2.1",
     "num_repeats": 1,
     "max_wav_value": 32768.0,
@@ -31,16 +31,16 @@
     "mel_fmax": null,
     "min_text_len": 1,
     "max_text_len": 600,
-    "bucket_size": [32,300,400,500,600,700,800,900,1000,10000],
+    "bucket_size": [32,300,400,500,600,700,800,900,1000,6000],
     "n_speakers": 223,
     "num_workers": 8,
     "prefetch": 2,
     "add_blank": true
   },
   "model": {
-    "inter_channels": 192,
-    "hidden_channels": 192,
-    "filter_channels": 768,
+    "inter_channels": 384,
+    "hidden_channels": 384,
+    "filter_channels": 1536,
     "n_heads": 2,
     "n_layers": 6,
     "kernel_size": 3,
@@ -53,7 +53,7 @@
     "upsample_kernel_sizes": [16,16,4,4],
     "n_layers_q": 3,
     "use_spectral_norm": false,
-    "gin_channels": 256,
+    "gin_channels": 512,
     "use_sdp": false
   }
 }

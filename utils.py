@@ -276,3 +276,7 @@ def waveform_postprocessing(wavs, lengths=None, volume_control=1.0):
       if lengths is not None:
         wavs[i] = wavs[i][: lengths[i]]
   return wavs
+
+def get_param_num(model):
+    num_param = sum(param.numel() for param in model.parameters())
+    return num_param

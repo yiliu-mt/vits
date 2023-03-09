@@ -19,7 +19,7 @@
   "data": {
     "training_files":"preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/train_mita_chatbot10.txt",
     "validation_files":"preprocessed_data/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/test_mita.txt",
-    "num_repeats": 10,
+    "num_repeats": 8,
 
     "symbol_version": "v2.1",
     "max_wav_value": 32768.0,

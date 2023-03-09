@@ -152,8 +152,11 @@ def get_hparams(init=True):
   
   args = parser.parse_args()
   model_dir = os.path.join("./logs", args.model)
-  pretrain_dir = os.path.join("./logs", args.pretrained) if args.pretrained is not None else None
-
+  if args.pretrained is not None:
+    pretrain_dir = args.pretrained if args.pretrained.startswith('/') else os.path.join("./logs", args.pretrained)
+  else:
+    pretrain_dir = None
+    
   if not os.path.exists(model_dir):
     os.makedirs(model_dir)
 

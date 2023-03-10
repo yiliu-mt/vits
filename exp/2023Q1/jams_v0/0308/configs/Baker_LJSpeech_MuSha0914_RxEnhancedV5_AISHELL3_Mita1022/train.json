@@ -33,14 +33,14 @@
     "max_text_len": 190,
     "bucket_size": [32,300,400,500,600,700,800,900,1000],
     "n_speakers": 223,
-    "num_workers": 16,
+    "num_workers": 4,
     "prefetch": 2,
     "add_blank": true
   },
   "model": {
-    "inter_channels": 384,
-    "hidden_channels": 384,
-    "filter_channels": 1536,
+    "inter_channels": 432,
+    "hidden_channels": 432,
+    "filter_channels": 1728,
     "n_heads": 2,
     "n_layers": 6,
     "kernel_size": 3,

@@ -105,13 +105,13 @@ def run(rank, n_gpus, hps):
         logger.info('Number of parameters used in inference: {}'.format(
             utils.get_param_num(net_g.enc_p) +
             utils.get_param_num(net_g.flow) +
-            utils.get_param_num(net_g.emb_g) +
+            utils.get_param_num(net_g.emb_g) if hps.data.n_speakers > 1 else 0 +
             utils.get_param_num(net_g.dp) +
             utils.get_param_num(net_g.dec)
         ))
         logger.info("encoder_p: {}".format(utils.get_param_num(net_g.enc_p)))
         logger.info("flow: {}".format(utils.get_param_num(net_g.flow)))
-        logger.info("emb_g: {}".format(utils.get_param_num(net_g.emb_g)))
+        logger.info("emb_g: {}".format(utils.get_param_num(net_g.emb_g) if hps.data.n_speakers > 1 else 0))
         logger.info("duration predictor: {}".format(utils.get_param_num(net_g.dp)))
         logger.info("decoder: {}".format(utils.get_param_num(net_g.dec)))
 

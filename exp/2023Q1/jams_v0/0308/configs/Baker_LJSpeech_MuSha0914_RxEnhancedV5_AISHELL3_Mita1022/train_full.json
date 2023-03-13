@@ -33,7 +33,7 @@
     "max_text_len": 600,
     "bucket_size": [32,300,400,500,600,700,800,900,1000,6000],
     "n_speakers": 223,
-    "num_workers": 8,
+    "num_workers": 4,
     "prefetch": 2,
     "add_blank": true
   },

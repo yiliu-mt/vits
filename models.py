@@ -646,6 +646,11 @@ class SynthesizerTrn(nn.Module):
     **kwargs):
 
     super().__init__()
+
+    if n_speakers <= 1:
+      # In a single speaker mode, there is no need to use gin_channels
+      gin_channels = 0
+
     self.n_vocab = n_vocab
     self.spec_channels = spec_channels
     self.inter_channels = inter_channels
@@ -664,7 +669,6 @@ class SynthesizerTrn(nn.Module):
     self.segment_size = segment_size
     self.n_speakers = n_speakers
     self.gin_channels = gin_channels
-
     self.use_sdp = use_sdp
 
     self.enc_p = TextEncoder(n_vocab,
@@ -690,7 +694,7 @@ class SynthesizerTrn(nn.Module):
   def forward(self, x, x_lengths, y, y_lengths, sid=None):
 
     x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
-    if self.n_speakers > 0:
+    if self.n_speakers > 1:
       g = self.emb_g(sid).unsqueeze(-1) # [b, h, 1]
     else:
       g = None
@@ -729,7 +733,7 @@ class SynthesizerTrn(nn.Module):
 
   def infer(self, x, x_lengths, sid=None, noise_scale=1, length_scale=1, noise_scale_w=1., max_len=None):
     x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
-    if self.n_speakers > 0:
+    if self.n_speakers > 1:
       g = self.emb_g(sid).unsqueeze(-1) # [b, h, 1]
     else:
       g = None
@@ -754,7 +758,7 @@ class SynthesizerTrn(nn.Module):
     return o, attn, y_mask, (z, z_p, m_p, logs_p)
 
   def voice_conversion(self, y, y_lengths, sid_src, sid_tgt):
-    assert self.n_speakers > 0, "n_speakers have to be larger than 0."
+    assert self.n_speakers > 1, "n_speakers have to be larger than 0."
     g_src = self.emb_g(sid_src).unsqueeze(-1)
     g_tgt = self.emb_g(sid_tgt).unsqueeze(-1)
     z, m_q, logs_q, y_mask = self.enc_q(y, y_lengths, g=g_src)

@@ -83,9 +83,7 @@ def _symbols_to_sequence(symbols, symbol_to_id):
 
 
 def _arpabet_to_sequence(text, symbol_to_id):
-  # TODO: add @ before the chinese phonemes
-  # return _symbols_to_sequence(["@" + s for s in text.split()], symbol_to_id)
-  return _symbols_to_sequence([s for s in text.split()], symbol_to_id)
+  return _symbols_to_sequence(["@" + s for s in text.split()], symbol_to_id)
 
 
 def _should_keep_symbol(s, symbol_to_id):

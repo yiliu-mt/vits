@@ -30,14 +30,24 @@ def load_checkpoint(checkpoint_path, model, optimizer=None):
   new_state_dict= {}
   for k, v in state_dict.items():
     try:
-      new_state_dict[k] = saved_state_dict[k]
+      if v.shape != saved_state_dict[k].shape:
+        logger.warning("Mismatch shape: {}: {} vs {}".format(
+          k, v.shape, saved_state_dict[k].shape
+        ))
+        # We should have a larger size of the saved one
+        new_state_dict[k] = v
+        new_state_dict[k][
+          :saved_state_dict[k].size(0), :saved_state_dict[k].size(1)
+          ] = saved_state_dict[k]
+      else:
+        new_state_dict[k] = saved_state_dict[k]
     except:
       logger.info("%s is not in the checkpoint" % k)
       new_state_dict[k] = v
   if hasattr(model, 'module'):
-    model.module.load_state_dict(new_state_dict)
+    model.module.load_state_dict(new_state_dict, strict=False)
   else:
-    model.load_state_dict(new_state_dict)
+    model.load_state_dict(new_state_dict, strict=False)
   logger.info("Loaded checkpoint '{}' (iteration {})" .format(
     checkpoint_path, iteration))
   return model, optimizer, learning_rate, iteration

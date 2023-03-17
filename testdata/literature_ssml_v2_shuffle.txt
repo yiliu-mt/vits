@@ -39,7 +39,7 @@
 38 <speak>正月里供祖像，供品很多，祭器<phoneme ph="ye2 hen3">也很</phoneme>讲究，拜的人<phoneme ph="ye2 hen3">也很</phoneme>多，祭器<phoneme ph="ye2 hen3">也很</phoneme>要防偷去。</speak>
 39 <speak>雨是最寻常的，<phoneme ph="yi2 xia4">一下</phoneme>就是三两天。可别恼。</speak>
 40 <speak>据说，这就是梅雨潭之<phoneme ph="suo2 yi3">所以</phoneme>得名了。但我觉得像杨花，格外确切些。</speak>
-41 <speak>春天像健壮的青年，有铁一般的<phoneme ph="ge1 bo5">胳膊</phoneme>和腰脚，他领着我们上前去。</speak>
+41 <speak>春天像健壮的青年，有铁一般的<phoneme ph="ge1 bo2">胳膊</phoneme>和腰脚，他领着我们上前去。</speak>
 42 <speak>梅雨潭<phoneme ph="shan2 shan3">闪闪</phoneme>的绿色招引着我们；我们开始追捉她那离合的神光了。</speak>
 43 <speak>揪着草，攀着乱石，小心探身下去，又鞠躬过了一个石穹门，便到了汪汪<phoneme ph="yi2 bi4">一碧</phoneme>的潭边了。</speak>
 44 <speak>城里乡下，家家户户，<phoneme ph="lao2 lao3 xiao2 xiao3">老老小小</phoneme>，也都<phoneme ph="gan3 tangr4">赶趟儿</phoneme>似的，一个个都出来了。</speak>

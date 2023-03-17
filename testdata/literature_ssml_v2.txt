@@ -21,7 +21,7 @@
 21 <speak>“<phoneme ph="yi4 nian2">一年</phoneme>之计在于春”，刚起头儿，有的是工夫，有的是希望。</speak>
 22 <speak>春天像刚落地的<phoneme ph="wa2 wa5">娃娃</phoneme>，从头到脚都是新的，它生长着。</speak>
 23 <speak>春天像小姑娘，花枝招展的，笑着，走着。</speak>
-24 <speak>春天像健壮的青年，有铁一般的<phoneme ph="ge1 bo5">胳膊</phoneme>和腰脚，他领着我们上前去。</speak>
+24 <speak>春天像健壮的青年，有铁一般的<phoneme ph="ge1 bo2">胳膊</phoneme>和腰脚，他领着我们上前去。</speak>
 25 <speak>我第二次到仙岩的时候，我惊诧于梅雨潭的绿了。</speak>
 26 <speak>梅雨潭是一个瀑布潭。仙岩有三个瀑布，梅雨瀑最低。</speak>
 27 <speak>走到山边，便听见哗哗哗哗的声音；抬起头，镶在两条湿湿的黑边儿里的，<phoneme ph="yi2 dai4">一带</phoneme>白而发亮的水便呈现于眼前了。</speak>

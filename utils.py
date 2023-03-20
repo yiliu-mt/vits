@@ -288,5 +288,18 @@ def waveform_postprocessing(wavs, lengths=None, volume_control=1.0):
   return wavs
 
 def get_param_num(model):
-    num_param = sum(param.numel() for param in model.parameters())
-    return num_param
+  num_param = sum(param.numel() for param in model.parameters())
+  return num_param
+
+def combine_list(nj, filename):
+  fp = [open(f'{filename}.{i}') for i in range(nj)]
+  finished = [False for _ in range(len(fp))]
+  fp_out = open(filename, 'w')
+  index = 0
+  while sum(finished) < len(fp):
+    line = fp[index].readline()
+    if not line:
+      finished[index] = True
+    else:
+      fp_out.write(line)
+    index = (index + 1) % nj

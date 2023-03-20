@@ -177,7 +177,14 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
 
     net_g.train()
     net_d.train()
-    for batch_idx, (x, x_lengths, spec, spec_lengths, y, y_lengths, speakers) in enumerate(train_loader):
+    for batch_idx, data in enumerate(train_loader):
+
+        if hps.model.use_forced_alignment:
+            x, x_lengths, spec, spec_lengths, y, y_lengths, speakers, duration = data
+            duration = duration.cuda(rank, non_blocking=True)
+        else:
+            x, x_lengths, spec, spec_lengths, y, y_lengths, speakers = data
+            duration = None
 
         x, x_lengths = x.cuda(rank, non_blocking=True), x_lengths.cuda(rank, non_blocking=True)
         spec, spec_lengths = spec.cuda(rank, non_blocking=True), spec_lengths.cuda(rank, non_blocking=True)
@@ -186,7 +193,7 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
 
         with autocast(enabled=hps.train.fp16_run):
             y_hat, l_length, attn, ids_slice, x_mask, z_mask,\
-            (z, z_p, m_p, logs_p, m_q, logs_q) = net_g(x, x_lengths, spec, spec_lengths, speakers)
+            (z, z_p, m_p, logs_p, m_q, logs_q) = net_g(x, x_lengths, spec, spec_lengths, speakers, duration=duration)
 
             # real mel
             mel = spec_to_mel_torch(
@@ -288,7 +295,16 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
 def evaluate(hps, generator, eval_loader, writer_eval):
     generator.eval()
     with torch.no_grad():
-        for batch_idx, (x, x_lengths, spec, spec_lengths, y, y_lengths, speakers) in enumerate(eval_loader):
+        for batch_idx, data in enumerate(eval_loader):
+
+            if hps.model.use_forced_alignment:
+                x, x_lengths, spec, spec_lengths, y, y_lengths, speakers, duration = data
+                duration = duration.cuda(0)
+                duration = duration[:1]
+            else:
+                x, x_lengths, spec, spec_lengths, y, y_lengths, speakers = data
+                duration = None
+
             x, x_lengths = x.cuda(0), x_lengths.cuda(0)
             spec, spec_lengths = spec.cuda(0), spec_lengths.cuda(0)
             y, y_lengths = y.cuda(0), y_lengths.cuda(0)

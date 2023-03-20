@@ -1,7 +1,7 @@
 # docker run --rm --gpus all --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 -v $PWD:/workspace/vits -v /home/ubuntu:/home/ubuntu -v /nfs1:/nfs1 -v /nfs2:/nfs2 -it mycrazycracy/vits:v1.0 bash
 
 config=logs/exp/2023Q1/jams_v0/0308/tuning_jams_rx/config.json
-model=logs/exp/2023Q1/jams_v0/0308/tuning_jams_rx/G_40000.pth
+model=logs/exp/2023Q1/jams_v0/0308/tuning_jams_rx/G_100000.pth
 lexicon=lexicon/v1.9/bilingual_serving_dict_er3.txt
 speaker_id=222
 

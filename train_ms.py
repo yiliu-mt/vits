@@ -183,7 +183,7 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
             x, x_lengths, spec, spec_lengths, y, y_lengths, speakers, duration = data
             duration = duration.cuda(rank, non_blocking=True)
         else:
-            x, x_lengths, spec, spec_lengths, y, y_lengths, speakers = data
+            x, x_lengths, spec, spec_lengths, y, y_lengths, speakers = data[:7]
             duration = None
 
         x, x_lengths = x.cuda(rank, non_blocking=True), x_lengths.cuda(rank, non_blocking=True)
@@ -302,7 +302,7 @@ def evaluate(hps, generator, eval_loader, writer_eval):
                 duration = duration.cuda(0)
                 duration = duration[:1]
             else:
-                x, x_lengths, spec, spec_lengths, y, y_lengths, speakers = data
+                x, x_lengths, spec, spec_lengths, y, y_lengths, speakers = data[:7]
                 duration = None
 
             x, x_lengths = x.cuda(0), x_lengths.cuda(0)

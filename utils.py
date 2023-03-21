@@ -182,6 +182,10 @@ def get_hparams(init=True):
   hparams = HParams(**config)
   hparams.model_dir = model_dir
   hparams.pretrain_dir = pretrain_dir
+
+  if hparams.model.use_forced_alignment:
+    assert not hparams.data.add_blank, "If use_forced_alignment=True, add_blank should be False"
+    logger.warning("Use forced alignment rather than self alignment.\n\n\n")
   return hparams
 
 

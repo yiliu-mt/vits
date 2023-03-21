@@ -7,7 +7,8 @@ def read_train_list(filename):
     speaker_map = {}
     with open(filename) as f:
         for line in f:
-            path, id, _ = line.strip().split("|")
+            data = line.strip().split("|")
+            path, id = data[0], data[1]
             speaker_name = os.path.dirname(path).rsplit("/", 1)[-1]
             assert int(id) >= 0
             if speaker_name not in speaker_map:
@@ -20,7 +21,8 @@ def read_train_list(filename):
 def check_val_list(filename, speaker_map):
     with open(filename) as f:
         for line in f:
-            path, id, _ = line.strip().split("|")
+            data = line.strip().split("|")
+            path, id = data[0], data[1]
             speaker_name = os.path.dirname(path).rsplit("/", 1)[-1]
             assert speaker_map[speaker_name] == int(id)
 

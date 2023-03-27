@@ -1,0 +1,1 @@
+preprocessed_data_new/Baker_LJSpeech_MuSha0914_RxEnhancedV5_AISHELL3_Mita1022/jams_rx/Wave/SSB3003/SSB3003990999.wav|222|g an3 x ie4 sp0 m o2 ^ er3 x ian4 ch eng2 d e5 ^ van2 g ong1|6 8 9 29 13 3 3 2 6 8 6 4 3 2 3 5 8 9 19

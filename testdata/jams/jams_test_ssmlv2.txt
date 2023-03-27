@@ -1,0 +1,20 @@
+SSB3003030042 <speak>构建城市数字孪生，是加强<break time="sp1"></break>城市科学治理的重要手段。</speak>
+SSB3003030043 <speak>应急防灾，就是其中的<break time="sp2"></break>最典型的应用<phoneme ph="chang2 jing3">场景</phoneme>。</speak>
+SSB3003030050 <speak>内容生成，在元宇宙中，有着非常广泛的应用。</speak>
+SSB3003030052 <speak>今天，很高兴，我们发布摩尔线程，第一款，AIGC<break time="sp2"></break>内容生成器<break time="sp1"></break>马良。</speak>
+SSB3003030058 <speak>我们<break time="sp1"></break>为艺术家提供端到端的<break time="sp1"></break>算力<break time="sp1"></break>与算法的解决方案。</speak>
+SSB3003030061 <speak>感谢<break time="sp1"></break>云艺的老师和学生，让我们体验<break time="sp2"></break>AI<break time="sp1"></break>和科技的完美融合</speak>
+SSB3003030063 <speak>除了<phoneme ph="chang2 jing3">场景</phoneme>和内容之外<break time="sp2"></break>数字人<break time="sp2"></break>在元宇宙中<break time="sp0"></break>是<phoneme ph="bi4 bu4 ke2 shao3">必不可少</phoneme>的。</speak>
+SSB3003030065 <speak>我们在春天发布的<break time="sp1"></break>digital me<break time="sp1"></break>数字人解决方案，在今天，已经全面升级。</speak>
+SSB3003030069 <speak>女娲数字人生成器<break time="sp2"></break>只需要一张图片<break time="sp1"></break>就<phoneme ph="ke2 yi3">可以</phoneme>对人脸进行三D重建。</speak>
+SSB3003030074 <speak>用户<phoneme ph="ke2 yi3">可以</phoneme>选择自己喜欢的风格<break time="sp2"></break>创造属于自己的数字人。</speak>
+SSB3003030078 <speak>用户<phoneme ph="ke2 yi3">可以</phoneme>使用女娲<break time="sp1"></break>对<phoneme ph="yi2 you3">已有</phoneme>的人物资产<break time="sp1"></break>进行<break time="sp1"></break>质量优化。</speak>
+SSB3003030081 <speak>画皮表情驱动引擎<break time="sp2"></break>仅透过一个视频源<break time="sp2"></break>就可以驱动<break time="sp1"></break>实时驱动。</speak>
+SSB3003030082 <speak>画皮<break time="sp0"></break>目前<break time="sp1"></break>兼容主流渲染引擎<break time="sp2"></break>UE<break time="sp2"></break>和 Rays Engine。</speak>
+SSB3003030089 <speak>随答<break time="sp1"></break>是我们的<break time="sp0"></break>全流程<break time="sp0"></break>数字人<break time="sp0"></break>多轮对话系统。</speak>
+SSB3003030091 <speak>除了语音识别、和自然语言<phoneme ph="chu4 li3">处理</phoneme>外<break time="sp1"></break>还<phoneme ph="ke2 yi3">可以</phoneme>提供<break time="sp1"></break>高品质<phoneme ph="de5">的</phoneme>音色。</speak>
+SSB3003030093 <speak>随答系统<break time="sp1"></break>已经在摩尔线程内部落地。我们基于该系统<break time="sp1"></break>开发的智能客服<phoneme ph="mi2 ta3">米塔</phoneme>，已经在内部<break time="sp1"></break>开始试用。</speak>
+SSB3003030095 <speak>Digital me的四大功能<break time="sp2"></break>有机的把<break time="sp1"></break>AI<break time="sp1"></break>和图形计算<break time="sp1"></break>应用在数字人的构建中，为用户<break time="sp1"></break>提供全流程，数字人解决方案。</speak>
+SSB3003030100 <speak>MCCX<break time="sp2"></break>提供强大的<break time="sp1"></break>而且易用的元计算算力。</speak>
+SSB3003030108 <speak>支持<phoneme ph="yi2">一</phoneme>键式的应用部署和升级，实现元计算算力的<break time="sp1"></break>开箱即用。</speak>
+SSB3003030113 <speak>感谢大家参加，摩尔线程<break time="sp1"></break>二零二二<break time="sp1"></break>秋季产品发布会，我们今天发布会的内容有，春晓，MTT<break time="sp0"></break>S八零，MTT<break time="sp0"></break>S三千。</speak>

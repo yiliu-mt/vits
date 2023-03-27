@@ -50,9 +50,10 @@ class TextAudioLoader(torch.utils.data.Dataset):
         audiopaths_and_text_new = []
         lengths = []
         exclude_paths = []
-        for audiopath, text in self.audiopaths_and_text:
+        for data in self.audiopaths_and_text:
+            audiopath, text = data[0], data[1]
             if self.min_text_len <= len(text) and len(text) <= self.max_text_len:
-                audiopaths_and_text_new.append([audiopath, text])
+                audiopaths_and_text_new.append(data)
                 lengths.append(os.path.getsize(audiopath) // (2 * self.hop_length))
             else:
                 exclude_paths.append(audiopath.rsplit("/", 1)[1].rsplit(".", 1)[0])
@@ -68,6 +69,13 @@ class TextAudioLoader(torch.utils.data.Dataset):
         audiopath, text = audiopath_and_text[0], audiopath_and_text[1]
         text = self.get_text(text)
         spec, wav = self.get_audio(audiopath)
+
+        if len(audiopath_and_text) == 3:
+            duration = audiopath_and_text[2]
+            duration = self.get_duration(duration)
+            assert text.size(0) == duration.size(0), "Text and duration mismatch. Maybe add_blank=True while use_forced_alignment=True?"
+            return (text, spec, wav, duration)
+
         return (text, spec, wav)
 
     def get_audio(self, filename):
@@ -99,6 +107,10 @@ class TextAudioLoader(torch.utils.data.Dataset):
             text_norm = commons.intersperse(text_norm, 0)
         text_norm = torch.LongTensor(text_norm)
         return text_norm
+
+    def get_duration(self, duration):
+        duration = torch.LongTensor([int(d) for d in duration.split()])
+        return duration
 
     def __getitem__(self, index):
         return self.get_audio_text_pair(self.audiopaths_and_text[index])
@@ -135,6 +147,7 @@ class TextAudioCollate():
         text_padded = torch.LongTensor(len(batch), max_text_len)
         spec_padded = torch.FloatTensor(len(batch), batch[0][1].size(0), max_spec_len)
         wav_padded = torch.FloatTensor(len(batch), 1, max_wav_len)
+
         text_padded.zero_()
         spec_padded.zero_()
         wav_padded.zero_()
@@ -152,6 +165,18 @@ class TextAudioCollate():
             wav = row[2]
             wav_padded[i, :, :wav.size(1)] = wav
             wav_lengths[i] = wav.size(1)
+
+        if len(batch[0]) == 4:
+            max_duration_len = max([len(x[-1]) for x in batch])
+            duration_padded = torch.LongTensor(len(batch), max_duration_len)
+            duration_padded.zero_()
+            for i in range(len(ids_sorted_decreasing)):
+                row = batch[ids_sorted_decreasing[i]]
+                duration = row[-1]
+                duration_padded[i, :duration.size(0)] = duration
+            if self.return_ids:
+                return text_padded, text_lengths, spec_padded, spec_lengths, wav_padded, wav_lengths, duration_padded, ids_sorted_decreasing
+            return text_padded, text_lengths, spec_padded, spec_lengths, wav_padded, wav_lengths, duration_padded
 
         if self.return_ids:
             return text_padded, text_lengths, spec_padded, spec_lengths, wav_padded, wav_lengths, ids_sorted_decreasing
@@ -195,9 +220,10 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
         audiopaths_sid_text_new = []
         lengths = []
         exclude_paths = []
-        for audiopath, sid, text in self.audiopaths_sid_text:
+        for data in self.audiopaths_sid_text:
+            audiopath, text = data[0], data[2]
             if self.min_text_len <= len(text) and len(text) <= self.max_text_len:
-                audiopaths_sid_text_new.append([audiopath, sid, text])
+                audiopaths_sid_text_new.append(data)
                 lengths.append(os.path.getsize(audiopath) // (2 * self.hop_length))
             else:
                 exclude_paths.append(audiopath.rsplit("/", 1)[1].rsplit(".", 1)[0])
@@ -214,6 +240,13 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
         text = self.get_text(text)
         spec, wav = self.get_audio(audiopath)
         sid = self.get_sid(sid)
+
+        if len(audiopath_sid_text) == 4:
+            duration = audiopath_sid_text[3]
+            duration = self.get_duration(duration)
+            assert text.size(0) == duration.size(0), "Text and duration mismatch. Maybe add_blank=True while use_forced_alignment=True?"
+            return (text, spec, wav, sid, duration)
+
         return (text, spec, wav, sid)
 
     def get_audio(self, filename):
@@ -249,6 +282,10 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
     def get_sid(self, sid):
         sid = torch.LongTensor([int(sid)])
         return sid
+
+    def get_duration(self, duration):
+        duration = torch.LongTensor([int(d) for d in duration.split()])
+        return duration
 
     def __getitem__(self, index):
         return self.get_audio_text_speaker_pair(self.audiopaths_sid_text[index])
@@ -306,6 +343,18 @@ class TextAudioSpeakerCollate():
 
             sid[i] = row[3]
 
+        if len(batch[0]) == 5:
+            max_duration_len = max([len(x[-1]) for x in batch])
+            duration_padded = torch.LongTensor(len(batch), max_duration_len)
+            duration_padded.zero_()
+            for i in range(len(ids_sorted_decreasing)):
+                row = batch[ids_sorted_decreasing[i]]
+                duration = row[-1]
+                duration_padded[i, :duration.size(0)] = duration
+            if self.return_ids:
+                return text_padded, text_lengths, spec_padded, spec_lengths, wav_padded, wav_lengths, sid, duration_padded, ids_sorted_decreasing
+            return text_padded, text_lengths, spec_padded, spec_lengths, wav_padded, wav_lengths, sid, duration_padded
+
         if self.return_ids:
             return text_padded, text_lengths, spec_padded, spec_lengths, wav_padded, wav_lengths, sid, ids_sorted_decreasing
         return text_padded, text_lengths, spec_padded, spec_lengths, wav_padded, wav_lengths, sid
@@ -351,13 +400,23 @@ class DistributedBucketSampler(torch.utils.data.distributed.DistributedSampler):
             if len(buckets[i]) == 0:
                 buckets.pop(i)
                 self.boundaries.pop(i+1)
-  
+
+        num_samples_per_bucket_org = []
         num_samples_per_bucket = []
         for i in range(len(buckets)):
             len_bucket = len(buckets[i])
+            num_samples_per_bucket_org.append(len_bucket)
             total_batch_size = self.num_replicas * self.batch_size
             rem = (total_batch_size - (len_bucket % total_batch_size)) % total_batch_size
             num_samples_per_bucket.append(len_bucket + rem)
+        if self.rank == 0:
+            logging.warning("#Samples in buckets (before padding): {}".format(
+                ",".join([str(i) for i in num_samples_per_bucket_org])
+            ))
+            logging.warning("#Samples in buckets (after padding): {}".format(
+                ",".join([str(i) for i in num_samples_per_bucket])
+            ))
+
         return buckets, num_samples_per_bucket
   
     def __iter__(self):

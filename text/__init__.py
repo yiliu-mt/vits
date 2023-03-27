@@ -25,7 +25,7 @@ def cleaned_text_to_sequence(cleaned_text, symbol_version="default"):
       List of integers corresponding to the symbols in the text
   '''
   _symbol_to_id = get_symbol_to_id(symbol_version)
-  sequence = [_symbol_to_id[symbol] for symbol in cleaned_text.split()]
+  sequence = [_symbol_to_id["@" + symbol] for symbol in cleaned_text.split()]
   return sequence
 
 
@@ -83,9 +83,7 @@ def _symbols_to_sequence(symbols, symbol_to_id):
 
 
 def _arpabet_to_sequence(text, symbol_to_id):
-  # TODO: add @ before the chinese phonemes
-  # return _symbols_to_sequence(["@" + s for s in text.split()], symbol_to_id)
-  return _symbols_to_sequence([s for s in text.split()], symbol_to_id)
+  return _symbols_to_sequence(["@" + s for s in text.split()], symbol_to_id)
 
 
 def _should_keep_symbol(s, symbol_to_id):

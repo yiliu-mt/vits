@@ -617,6 +617,23 @@ class MultiPeriodDiscriminator(torch.nn.Module):
         return y_d_rs, y_d_gs, fmap_rs, fmap_gs
 
 
+def attention_from_forced_alignment(X):
+  '''
+  Create attention matrix from the input forced alignment
+  '''
+  rows = X.size(0)
+  M = X.sum(dim=1)
+  max_M = M.max().item()
+  cumsum_X = torch.cat(
+    (
+      torch.zeros(rows, 1, dtype=torch.int64, device=X.device), torch.cumsum(X, dim=1)[:, :-1]
+    ), dim=1
+  )
+  depth_indices = torch.arange(max_M, device=X.device)[None, :, None]
+
+  mask = (depth_indices >= cumsum_X[:, None, :]) & (depth_indices < (cumsum_X + X)[:, None, :])
+  return mask.float()
+
 
 class SynthesizerTrn(nn.Module):
   """
@@ -643,9 +660,15 @@ class SynthesizerTrn(nn.Module):
     n_speakers=0,
     gin_channels=0,
     use_sdp=True,
+    use_forced_alignment=False,
     **kwargs):
 
     super().__init__()
+
+    if n_speakers <= 1:
+      # In a single speaker mode, there is no need to use gin_channels
+      gin_channels = 0
+
     self.n_vocab = n_vocab
     self.spec_channels = spec_channels
     self.inter_channels = inter_channels
@@ -664,8 +687,8 @@ class SynthesizerTrn(nn.Module):
     self.segment_size = segment_size
     self.n_speakers = n_speakers
     self.gin_channels = gin_channels
-
     self.use_sdp = use_sdp
+    self.use_forced_alignment = use_forced_alignment
 
     self.enc_p = TextEncoder(n_vocab,
         inter_channels,
@@ -687,10 +710,10 @@ class SynthesizerTrn(nn.Module):
     if n_speakers > 1:
       self.emb_g = nn.Embedding(n_speakers, gin_channels)
 
-  def forward(self, x, x_lengths, y, y_lengths, sid=None):
+  def forward(self, x, x_lengths, y, y_lengths, sid=None, duration=None):
 
     x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
-    if self.n_speakers > 0:
+    if self.n_speakers > 1:
       g = self.emb_g(sid).unsqueeze(-1) # [b, h, 1]
     else:
       g = None
@@ -698,19 +721,25 @@ class SynthesizerTrn(nn.Module):
     z, m_q, logs_q, y_mask = self.enc_q(y, y_lengths, g=g)
     z_p = self.flow(z, y_mask, g=g)
 
-    with torch.no_grad():
-      # negative cross-entropy
-      s_p_sq_r = torch.exp(-2 * logs_p) # [b, d, t]
-      neg_cent1 = torch.sum(-0.5 * math.log(2 * math.pi) - logs_p, [1], keepdim=True) # [b, 1, t_s]
-      neg_cent2 = torch.matmul(-0.5 * (z_p ** 2).transpose(1, 2), s_p_sq_r) # [b, t_t, d] x [b, d, t_s] = [b, t_t, t_s]
-      neg_cent3 = torch.matmul(z_p.transpose(1, 2), (m_p * s_p_sq_r)) # [b, t_t, d] x [b, d, t_s] = [b, t_t, t_s]
-      neg_cent4 = torch.sum(-0.5 * (m_p ** 2) * s_p_sq_r, [1], keepdim=True) # [b, 1, t_s]
-      neg_cent = neg_cent1 + neg_cent2 + neg_cent3 + neg_cent4
+    if self.use_forced_alignment:
+      with torch.no_grad():
+        attn = attention_from_forced_alignment(duration).unsqueeze(1)
+      w = duration.float().unsqueeze(1)
+    else:
+      with torch.no_grad():
+        # negative cross-entropy
+        s_p_sq_r = torch.exp(-2 * logs_p) # [b, d, t]
+        neg_cent1 = torch.sum(-0.5 * math.log(2 * math.pi) - logs_p, [1], keepdim=True) # [b, 1, t_s]
+        neg_cent2 = torch.matmul(-0.5 * (z_p ** 2).transpose(1, 2), s_p_sq_r) # [b, t_t, d] x [b, d, t_s] = [b, t_t, t_s]
+        neg_cent3 = torch.matmul(z_p.transpose(1, 2), (m_p * s_p_sq_r)) # [b, t_t, d] x [b, d, t_s] = [b, t_t, t_s]
+        neg_cent4 = torch.sum(-0.5 * (m_p ** 2) * s_p_sq_r, [1], keepdim=True) # [b, 1, t_s]
+        neg_cent = neg_cent1 + neg_cent2 + neg_cent3 + neg_cent4
 
-      attn_mask = torch.unsqueeze(x_mask, 2) * torch.unsqueeze(y_mask, -1)
-      attn = monotonic_align.maximum_path(neg_cent, attn_mask.squeeze(1)).unsqueeze(1).detach()
+        attn_mask = torch.unsqueeze(x_mask, 2) * torch.unsqueeze(y_mask, -1)
+        attn = monotonic_align.maximum_path(neg_cent, attn_mask.squeeze(1)).unsqueeze(1).detach()
+      # Compute the duration of each phoneme
+      w = attn.sum(2)
 
-    w = attn.sum(2)
     if self.use_sdp:
       l_length = self.dp(x, x_mask, w, g=g)
       l_length = l_length / torch.sum(x_mask)
@@ -729,7 +758,7 @@ class SynthesizerTrn(nn.Module):
 
   def infer(self, x, x_lengths, sid=None, noise_scale=1, length_scale=1, noise_scale_w=1., max_len=None):
     x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
-    if self.n_speakers > 0:
+    if self.n_speakers > 1:
       g = self.emb_g(sid).unsqueeze(-1) # [b, h, 1]
     else:
       g = None
@@ -754,7 +783,7 @@ class SynthesizerTrn(nn.Module):
     return o, attn, y_mask, (z, z_p, m_p, logs_p)
 
   def voice_conversion(self, y, y_lengths, sid_src, sid_tgt):
-    assert self.n_speakers > 0, "n_speakers have to be larger than 0."
+    assert self.n_speakers > 1, "n_speakers have to be larger than 0."
     g_src = self.emb_g(sid_src).unsqueeze(-1)
     g_tgt = self.emb_g(sid_tgt).unsqueeze(-1)
     z, m_q, logs_q, y_mask = self.enc_q(y, y_lengths, g=g_src)

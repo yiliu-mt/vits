@@ -30,14 +30,24 @@ def load_checkpoint(checkpoint_path, model, optimizer=None):
   new_state_dict= {}
   for k, v in state_dict.items():
     try:
-      new_state_dict[k] = saved_state_dict[k]
+      if v.shape != saved_state_dict[k].shape:
+        logger.warning("Mismatch shape: {}: {} vs {}".format(
+          k, v.shape, saved_state_dict[k].shape
+        ))
+        # We should have a larger size of the saved one
+        new_state_dict[k] = v
+        new_state_dict[k][
+          :saved_state_dict[k].size(0), :saved_state_dict[k].size(1)
+          ] = saved_state_dict[k]
+      else:
+        new_state_dict[k] = saved_state_dict[k]
     except:
       logger.info("%s is not in the checkpoint" % k)
       new_state_dict[k] = v
   if hasattr(model, 'module'):
-    model.module.load_state_dict(new_state_dict)
+    model.module.load_state_dict(new_state_dict, strict=False)
   else:
-    model.load_state_dict(new_state_dict)
+    model.load_state_dict(new_state_dict, strict=False)
   logger.info("Loaded checkpoint '{}' (iteration {})" .format(
     checkpoint_path, iteration))
   return model, optimizer, learning_rate, iteration
@@ -172,6 +182,13 @@ def get_hparams(init=True):
   hparams = HParams(**config)
   hparams.model_dir = model_dir
   hparams.pretrain_dir = pretrain_dir
+
+  if "use_forced_alignment" in hparams.model and hparams.model.use_forced_alignment:
+    assert not hparams.data.add_blank, "If use_forced_alignment=True, add_blank should be False"
+    logger.warning("Use forced alignment rather than self alignment.\n\n\n")
+  else:
+    hparams.model["use_forced_alignment"] = False
+    logger.warning("Use self alignment.\n\n\n")
   return hparams
 
 
@@ -276,3 +293,20 @@ def waveform_postprocessing(wavs, lengths=None, volume_control=1.0):
       if lengths is not None:
         wavs[i] = wavs[i][: lengths[i]]
   return wavs
+
+def get_param_num(model):
+  num_param = sum(param.numel() for param in model.parameters())
+  return num_param
+
+def combine_list(nj, filename):
+  fp = [open(f'{filename}.{i}') for i in range(nj)]
+  finished = [False for _ in range(len(fp))]
+  fp_out = open(filename, 'w')
+  index = 0
+  while sum(finished) < len(fp):
+    line = fp[index].readline()
+    if not line:
+      finished[index] = True
+    else:
+      fp_out.write(line)
+    index = (index + 1) % nj

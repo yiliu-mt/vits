@@ -1,0 +1,50 @@
+all_hands_meeting_202109.0_445005_447641 <speak>engineering is for the today's product</speak>
+all_hands_meeting_202109.1_92665_97999 <speak>mentor的制度并不是说，它能够帮你去指导你的工作当中的事情。</speak>
+all_hands_meeting_202109.1_441269_445521 <speak>那我们不想呢，让PD的人呢overlap太多。</speak>
+all_hands_meeting_202109.1_384331_391993 <speak>我有一个理论，我的理论是什么呢，芯片的迭代跟software的迭代是一样快的。</speak>
+all_hands_meeting_202109.1_487719_491673 <speak>software跟上，芯片才能被用户用起来。</speak>
+all_hands_meeting_202109.6_48305_51910 <speak>所有的whatever什么版本，eventually我们都会support它的。</speak>
+all_hands_meeting_202109.6_339181_341787 <speak>没有一个人懂得everything。</speak>
+all_hands_meeting_202109.6_379029_384875 <speak>千万不要去因为你个人的喜好去违反那个decipline。</speak>
+all_hands_meeting_202109.6_400078_402155 <speak>resource management很重要的。</speak>
+all_hands_meeting_202109.6_495916_498669 <speak>我们要研究DV的strategy是什么的。</speak>
+all_hands_meeting_202109.6_498669_501216 <speak>那DV的strategy其实很简单的。</speak>
+all_hands_meeting_202109.7_9439_12937 <speak>FDL，FDL叫feature description list。</speak>
+all_hands_meeting_202109.7_100534_106885 <speak>经常期的去做design review，不是一次哦，没完没了。</speak>
+all_hands_meeting_202111.5_138938_147328 <speak>那在speed of light呢，这个，摩尔线程的速度，这也代表了中国，这个行业今后的速度。</speak>
+all_hands_meeting_202111.6_106310_111970 <speak>第二步，implementation。第三步，就是go to market。</speak>
+all_hands_meeting_202111.6_178056_181452 <speak>那个implementation呢，是更critical的。</speak>
+all_hands_meeting_202111.10_3012_9327 <speak>这个大概就是，这个最传统的CPU的工作，没有GPU support，所以它的性能在这儿。</speak>
+all_hands_meeting_202111.12_270349_275880 <speak>我们公司的purpose是，让伟大的人一起去做伟大的事情。</speak>
+all_hands_meeting_202111.12_283005_287995 <speak>那我们就要聚集在一起，做一件great things。</speak>
+all_hands_meeting_202111.12_304150_311687 <speak>life time work就是你不要考虑跳槽的，也不用考虑退休的，你一辈子就在这。</speak>
+all_hands_meeting_202111.13_152102_153637 <speak>report to the mission。</speak>
+all_hands_meeting_202111.6_52450_61793 <speak>那边的人才非常好，也是我们的这个团队里面非常优秀的GPU architecture的主力的。</speak>
+all_hands_meeting_202202.6_340399_344695 <speak>没有一个人report给某一个人，这个不存在。</speak>
+all_hands_meeting_202202.0_210794_215833 <speak>这个team呢是非常强，无论是在理论上，还是在实际应用上。</speak>
+all_hands_meeting_202202.1_234770_238233 <speak>每个人都有一个mentor，mentor不是你的manager。</speak>
+all_hands_meeting_202202.5_358986_363205 <speak>已经是远远超越一般的 start up。</speak>
+all_hands_meeting_202202.5_372158_378939 <speak>这也是为什么我今天，我可以很 open 地跟大家每一个人去讲我们公司的 strategy。</speak>
+all_hands_meeting_202202.6_36577_44632 <speak>这个GPU，全功能的GPU，实现元计算的功能，这就是future的computing。</speak>
+all_hands_meeting_202202.7_117593_122643 <speak>我们从苏堤当中，苏堤有很多很多的 learning。</speak>
+all_hands_meeting_202202.7_164587_170742 <speak>再一个的话呢，就是我们公司的核心价值，我希望大家 open and direct。</speak>
+all_hands_meeting_202202.9_176435_178465 <speak>另外一个， stay humble</speak>
+all_hands_meeting_202202.9_355038_359574 <speak>stay trust，stay trust 就不光是你要信任别人，</speak>
+all_hands_meeting_202204.0_264336_267680 <speak>但是我觉得every six month呢太慢了。</speak>
+all_hands_meeting_202206.3_188307_195210 <speak>因为他要去无限 cover，所以说，做验证，是 never end，</speak>
+all_hands_meeting_202204.5_80538_86690 <speak>那也正是因为这样呢，我希望我们接下来所有的人要 focus 几个点。</speak>
+all_hands_meeting_202204.6_26479_28789 <speak>所以这是我们 future 的一个 IP 。</speak>
+all_hands_meeting_202204.6_386525_389776 <speak>package 是非常 critical。</speak>
+all_hands_meeting_202204.6_54297_57348 <speak>那 version two呢我希望变成一个 solution。</speak>
+all_hands_meeting_202204.5_172758_180516 <speak>第二个很重要的 objective 就是，我们都知道，苏堤不能满足所有人的用户的需要。</speak>
+all_hands_meeting_202204.1_332223_337410 <speak>架构也是用来解决我们最 fundamental 的 application 的 problem。</speak>
+all_hands_meeting_202204.3_264090_265985 <speak>everybody can feel。</speak>
+all_hands_meeting_202205.6_320548_323215 <speak>那这些 solution 靠谁们去提供呢</speak>
+all_hands_meeting_202206.1_384798_389017 <speak>这个是这一次，上一次 all hands meeting我们是在线上哦。</speak>
+all_hands_meeting_202206.2_35965_38724 <speak>北京的lab，上海的lab，都是一样</speak>
+all_hands_meeting_202206.3_1960_5167 <speak>我们的 software 的 team 其实非常厉害，</speak>
+all_hands_meeting_202206.3_342424_349003 <speak>perfect experience system，既然是要 perfect，要我们把它适配到完美，</speak>
+all_hands_meeting_202206.5_51481_53602 <speak>所以这个是我们的一个 lesson learn了。</speak>
+all_hands_meeting_202206.6_458763_463068 <speak>所以呢，这些accuracy means everything。</speak>
+all_hands_meeting_202206.7_0_3255 <speak>再一个 cloud native。</speak>
+all_hands_meeting_202204.11_399917_405080 <speak>它需要的就是全功能 GPU ，所以你一定要 make sure 全功能一个都不能少。</speak>

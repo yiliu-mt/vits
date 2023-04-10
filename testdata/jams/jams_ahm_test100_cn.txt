@@ -1,0 +1,100 @@
+all_hands_meeting_202109.0_203731_208556 <speak>任何一家企业，做芯片企业，它的核心都是自己的IP的，</speak>
+all_hands_meeting_202109.0_367400_372208 <speak>我希望就是我们尽快把北京的办公室装修好。</speak>
+all_hands_meeting_202109.1_358516_365905 <speak>其中，<phoneme ph="chan2 pin3">产品</phoneme>的上市时间，和具体<break time="sp0"></break>技术研究<break time="sp0"></break>所需要的时间，矛盾比较突出。</speak>
+all_hands_meeting_202109.1_545263_550496 <speak>从来没有一家公司，在芯片还没有出来之前，就已经把它卖掉了。</speak>
+all_hands_meeting_202109.1_67563_70606 <speak>那每一个新来的人怎么能够尽快融入呢？</speak>
+all_hands_meeting_202109.2_30519_36266 <speak>现在项目安排得<phoneme ph="hen2 jin3">很紧</phoneme>，人力资源<phoneme ph="bu1 gou4">不够</phoneme>，公司是否<break time="sp0"></break>多招些实习生？</speak>
+all_hands_meeting_202109.4_204279_212315 <speak><phoneme ph="suo2 yi3">所以</phoneme>我们的口号叫，成功<break time="sp0"></break>源于热爱，你喜欢它，你就愿意去做，你就愿意学习。</speak>
+all_hands_meeting_202109.4_448410_456256 <speak>有的时候我不改，那不改没关系，这个改不了，我们用其他的方法去改。但是一定要知道，你不能说，把这个问题盖掉。</speak>
+all_hands_meeting_202109.5_392086_400203 <speak>我们怎么样去把我们的东西，能送到这个市场里面去呢？所以我希望大家去<phoneme ph="li2 jie3">理解</phoneme>的就是，我们现在做的是，两条路。</speak>
+all_hands_meeting_202109.7_529844_535187 <speak>你知道到今天为止，你们看到的这些公司，成立都比我们早。</speak>
+all_hands_meeting_202111.11_173174_181121 <speak>你们都不知道，可能很多人还不知道，包括我们公司很多员工，可能不知道我们已经是<break time="sp1"></break>国家高新技术企业了。</speak>
+all_hands_meeting_202111.11_214583_218955 <speak>研发速度也都是很快，同时我们也加入了很多这个<break time="sp0"></break>行业联盟。</speak>
+all_hands_meeting_202111.11_89703_93694 <speak>你知道一个游戏公司，他们开发一款游戏<break time="sp0"></break>花<phoneme ph="hen3 chang2">很长</phoneme>时间。</speak>
+all_hands_meeting_202111.13_294657_300417 <speak>你说了算，因为这件事情交<phoneme ph="gei2 ni3">给你</phoneme>了，全公司的人，<phoneme ph="wu2 bai3">五百</phoneme>多个人<break time="sp0"></break>都<phoneme ph="ke2 yi3">可以</phoneme>归你管。</speak>
+all_hands_meeting_202111.13_386049_390280 <speak>因为<break time="sp0"></break>光速是宇宙当中最快的速度，没有人比它再快了。</speak>
+all_hands_meeting_202111.1_241897_248275 <speak>因为除了我们自己的员工之外，我们特别邀请了我们很多好的朋友的。</speak>
+all_hands_meeting_202111.1_389968_399013 <speak>我们都知道每天<break time="sp0"></break>大家的这个用电<break time="sp1"></break>都在<phoneme ph="hen2 jin3 zhang1">很紧张</phoneme>，自然的这个资源<break time="sp0"></break>越来越少。</speak>
+all_hands_meeting_202111.2_334789_341842 <speak>我们都知道物理世界数字化<break time="sp0"></break>第一件事情就要建模对不对，GPU要大量的使用，这就是为什么我们要做GPU。</speak>
+all_hands_meeting_202111.2_397072_405273 <speak>把<phoneme ph="suo2 you3">所有</phoneme>行业当中，我们的物理规律、自然规律，都已经把它系统化，理论化了。</speak>
+all_hands_meeting_202111.5_147675_152227 <speak>如果你不快，你是没有办法去追上<break time="sp0"></break>世界先进水平的。</speak>
+all_hands_meeting_202111.5_2943_6839 <speak>哪些地方我们比它强？哪些地方我们比它弱？</speak>
+all_hands_meeting_202111.5_84098_88018 <speak><phoneme ph="suo2 yi3">所以</phoneme>，第一款芯片的<phoneme ph="qi2 dian3">起点</phoneme><break time="sp0"></break>是非常高的。</speak>
+all_hands_meeting_202111.6_253387_258121 <speak>你们都知道这个<break time="sp0"></break>芯片当中，数字验证是非常重要的。</speak>
+all_hands_meeting_202111.6_280624_287384 <speak>你们都知道，证明一件事情是对的，跟证明这件事情是错的，这个工作是不一样的。</speak>
+all_hands_meeting_202111.6_312902_319130 <speak><phoneme ph="suo2 yi3">所以</phoneme>说你会看到历史上<phoneme ph="suo2 you3">所有</phoneme>的理论<break time="sp0"></break>科学家，从来没有人证明他自己的理论是对的。</speak>
+all_hands_meeting_202111.7_21377_25238 <speak>什么叫完美呢？<phoneme ph="yong2 yuan3">永远</phoneme>不可能会有<break time="sp0"></break>百分之百。</speak>
+all_hands_meeting_202111.7_233112_236931 <speak>我希望你们主动<break time="sp0"></break>把你的名字介绍<phoneme ph="gei2 wo3">给我</phoneme>，这样我能记得住的。</speak>
+all_hands_meeting_202111.7_387980_394471 <speak>如果你用他们那个云服务的设备呢，你就会发现，可能我一个任务，在我们这上面只要做一个小时。</speak>
+all_hands_meeting_202202.0_111309_117817 <speak>那这些科学家呢，他们不光是在这个学术上<break time="sp1"></break>很强，在实际应用当中呢<break time="sp0"></break>也非常强。</speak>
+all_hands_meeting_202202.0_62220_68394 <speak>那如果没有的话呢，那我希望我们的这个元宇宙的这个，这个会议呢，能让大家<break time="sp0"></break>感觉到温暖。</speak>
+all_hands_meeting_202202.1_258780_264426 <speak>那这样呢，新来的人，才<phoneme ph="ke2 yi3">可以</phoneme>很快<phoneme ph="de5">地</phoneme>适应<break time="sp0"></break>这个新的大家庭。</speak>
+all_hands_meeting_202202.1_348630_355733 <speak><phoneme ph="suo2 yi3">所以</phoneme>呢，摩尔线程是一家真正的GPU公司，只要GPU能做的事情，我们一定要把它做好。</speak>
+all_hands_meeting_202202.1_63200_69715 <speak>我们都知道，一个人在职业生涯当中，你最重要的最宝贵的事情是什么？</speak>
+all_hands_meeting_202202.2_345752_354861 <speak><phoneme ph="qu3 yuan4">曲院</phoneme>是我们的下一个<phoneme ph="chan2 pin3">产品</phoneme>，我相信<break time="sp0"></break>比苏堤会做得更好。那怎么叫<break time="sp0"></break>这个<phoneme ph="chan2 pin3">产品</phoneme>做得好，到底好在<phoneme ph="na2 li3">哪里</phoneme>呢。</speak>
+all_hands_meeting_202202.4_146016_157685 <speak>当然在中国，元宇宙又被很多这个<break time="sp0"></break>企业滥用，所以大家导致这个<break time="sp0"></break>对元宇宙的这个概念呢，不是很清楚。</speak>
+all_hands_meeting_202202.6_270116_279226 <speak>你会看到这些<break time="sp0"></break><phoneme ph="suo2 you3">所有</phoneme>的方方面面，无论是技术，还是在市场，中国呢，都会<phoneme ph="yuan2 yuan3">远远</phoneme>超越<break time="sp2"></break>全球的其它国家。</speak>
+all_hands_meeting_202202.6_49957_56774 <speak><phoneme ph="suo2 yi3">所以</phoneme>我希望大家呢<break time="sp0"></break>每个人呢，要真正的喜欢我们做的事情，也<phoneme ph="zhi2 you3">只有</phoneme>这样，我们才能成功。</speak>
+all_hands_meeting_202202.7_102946_107058 <speak>我希望呢，大家<break time="sp0"></break>花点时间<break time="sp0"></break>去做这样的事情。</speak>
+all_hands_meeting_202202.7_218484_225067 <speak>今天的 PPA 一定会<break time="sp0"></break>在他的能力范围之内，在他的工具范围之内<break time="sp0"></break>做得最好。</speak>
+all_hands_meeting_202204.10_5012_10749 <speak>每一个对于摩尔线程有贡献的人，都是我们的，这个非常好的朋友，也是我们的家人。</speak>
+all_hands_meeting_202204.13_266126_270643 <speak>能不能先切换一下，到 VDI， 大家能<break time="sp2"></break>给大家看一看。</speak>
+all_hands_meeting_202204.1_129620_136576 <speak>我们发现了很多定律，规律，但是有很多规律<break time="sp0"></break>定律，我们并没有发现。</speak>
+all_hands_meeting_202204.1_42708_48758 <speak>那既然是元计算，元算力，那他到底是做什么的呢？</speak>
+all_hands_meeting_202204.4_39506_49042 <speak>这就是温水<break time="sp0"></break>煮青蛙的原理。它为什么会死掉，它知道到一定程度它会死掉，但是为什么它就不跳出去呢？</speak>
+all_hands_meeting_202204.7_157784_164065 <speak>板级跟系统的设计，是未来上市，和应用<break time="sp2"></break>市场当中最核心的地方。</speak>
+all_hands_meeting_202204.9_28556_32185 <speak><phoneme ph="suo2 yi3">所以</phoneme>在这些系统当中呢，要充分<phoneme ph="de5">地</phoneme>利用好我们的系统，</speak>
+all_hands_meeting_202204.9_344493_349551 <speak>我们希望在成都，摩尔线程是最牛的，芯片公司</speak>
+all_hands_meeting_202204.9_72199_77616 <speak><phoneme ph="suo2 yi3">所以</phoneme>说大家来了之后，很快<break time="sp0"></break>就<phoneme ph="ke2 yi3">可以</phoneme>学习，各个不同领域的一些专业知识</speak>
+all_hands_meeting_202205.1_179316_184967 <speak>我们就要利用这个最好的机会呢，迅速<phoneme ph="de5">地</phoneme>成为最头部的企业。</speak>
+all_hands_meeting_202205.1_259721_267920 <speak>从我们的<phoneme ph="chan2 pin3">产品</phoneme>研发上，我们就要利用这个机会<break time="sp2"></break>做得比以前更快，做得比以前更好。</speak>
+all_hands_meeting_202205.3_330198_333613 <speak>你知道这个是<break time="sp2"></break>恰恰就是给摩尔线程最好的机会</speak>
+all_hands_meeting_202205.7_266405_272957 <speak><phoneme ph="suo2 yi3">所以</phoneme>在摩尔线程，其实每一个人<break time="sp1"></break>都是<phoneme ph="ling2 dao3">领导</phoneme>者，每一个人<break time="sp1"></break>又都是<phoneme ph="guan2 li3">管理</phoneme>者。</speak>
+all_hands_meeting_202206.10_140417_145672 <speak>还有一个点呢，我希望大家要很清晰<phoneme ph="de5">地</phoneme>去沟通，因为团队的时间效率<break time="sp0"></break>很重要。</speak>
+all_hands_meeting_202206.10_497337_506179 <speak>我们希望呢，我们出去的<phoneme ph="chan2 pin3">产品</phoneme>，用户拿去，就是像傻瓜机一样，打开就能用，什么都不用动。</speak>
+all_hands_meeting_202206.2_512044_517102 <speak>我相信，<phoneme ph="suo2 you3">所有</phoneme>的企业<break time="sp0"></break>跟我们的差距，至少是三到五年</speak>
+all_hands_meeting_202206.3_431217_435406 <speak>最新的系统，最新的硬件、最新的服务、最新的科技，</speak>
+all_hands_meeting_202206.4_551029_558932 <speak>那这些这么多的事情，我们<break time="sp0"></break>要靠什么呢，靠我们的工程师<break time="sp2"></break>帮助别人，去解决问题。</speak>
+all_hands_meeting_202206.5_163322_167834 <speak>第一款，云游戏的软件，我们已经送到客户那边去测试了。</speak>
+all_hands_meeting_202206.7_274295_279848 <speak>是骡子是马，出去溜溜，你能干什么，去跑一跑。</speak>
+all_hands_meeting_202206.7_420250_430161 <speak>芯片设计，一丝不苟，软件代码，全部按标准，不能够<break time="sp1"></break>带着病毒<break time="sp1"></break>上市。</speak>
+all_hands_meeting_202206.8_73113_77913 <speak>没有任何科技含量，没有任何的<break time="sp2"></break>发明创造</speak>
+all_hands_meeting_202206.9_246382_251803 <speak>把企业文化，迅速<phoneme ph="de5">地</phoneme>，传给，每一个这个新来的员工</speak>
+all_hands_meeting_202206.9_401733_405755 <speak>方便沟通，方便合作，方便协调资源</speak>
+all_hands_meeting_202208.0_356077_360431 <speak>因为我们的目标<phoneme ph="zhi2 you3">只有</phoneme>一个，就是要争取，全球第一。</speak>
+all_hands_meeting_202208.1_422935_427070 <speak>你们去看看他们也不想买 NV 的卡， NV 降了价他也不想买。</speak>
+all_hands_meeting_202208.2_371696_381926 <speak>我们的目标是希望在未来的，这个可能是一年<break time="sp0"></break>到两年之内，全部用上我们自己的 IP 的，这个是我们的目标</speak>
+all_hands_meeting_202208.2_68383_74998 <speak>因为这个卡真的很值钱的，<phoneme ph="suo2 yi3">所以</phoneme>免费拿到卡是不可能，但免费拿到门票去买这个卡<break time="sp0"></break>是<phoneme ph="ke2 yi3">可以</phoneme>的</speak>
+all_hands_meeting_202208.3_29086_34657 <speak>但是你们都知道，我曾经跟大家说过，我们不是一个芯片公司，那我们是什么样的公司呢</speak>
+all_hands_meeting_202208.3_386297_392481 <speak>它一个服务器<break time="sp2"></break>可以插四张卡，一张板的可能<phoneme ph="zhi2 you3">只有</phoneme>一千美金，但它一个服务器可能要卖一万美金，</speak>
+jams_allhands_20221230_denoise.0_286434_300682 <speak>那无论是从创业的第一天，还是到今天，几乎公司一切的目标，都在围绕<break time="sp2"></break>这个<break time="sp1"></break>元宇宙计算平台<break time="sp0"></break>而奋斗</speak>
+jams_allhands_20221230_denoise.13_319489_324059 <speak><phoneme ph="qu3 yuan4">曲院</phoneme>一不行<break time="sp0"></break>那就<phoneme ph="qu3 yuan4">曲院</phoneme>二，<phoneme ph="qu3 yuan4">曲院</phoneme>二不行<break time="sp0"></break>那就平湖，平湖不行<break time="sp0"></break>那就是白鲸。</speak>
+jams_allhands_20221230_denoise.13_46764_51477 <speak>那些抗锯齿啊、反锯齿啊很多功能，全球光照很多东西，都没有加上去。</speak>
+jams_allhands_20221230_denoise.13_69267_75923 <speak>每一次驱动<break time="sp0"></break>都比上一次驱动，支持更多的游戏，支持更多的<phoneme ph="zhu2 ban3">主板</phoneme>，支持更多的显示器。</speak>
+jams_allhands_20221230_denoise.1_103311_111056 <speak>那今天的这个大学生呢，这毕业生呢，他们可能更加青睐于<break time="sp2"></break>高科技领域的公司了。</speak>
+jams_allhands_20221230_denoise.1_254194_259869 <speak>你知道这个，我们的<phoneme ph="chan2 pin3">产品</phoneme>，会放在一些关键领域里面的应用。</speak>
+jams_allhands_20221230_denoise.1_337740_341769 <speak>那很多的业务呢，自然而然，被别的公司给分流掉了。</speak>
+jams_allhands_20221230_denoise.3_12417_21578 <speak>因为，性能没有提升太多，价钱反而长了一倍都不止。那对于消费者来讲呢，会进入一个<break time="sp0"></break>观望期。</speak>
+jams_allhands_20221230_denoise.4_128176_145751 <speak>绝大部分<break time="sp1"></break>是国家的，国营企业，央企，国企，运营商，金融。还有，这些各大部门，能源，交通，政府。</speak>
+jams_allhands_20221230_denoise.5_164714_170140 <speak>买的设备，服务器 ，PC，能不能做到七乘二十四小时的工作。</speak>
+jams_allhands_20221230_denoise.7_380821_387836 <speak>换句话讲，我们给我们的用户，提供的是一个全功能GPU，没有任何的<break time="sp0"></break>裁剪。</speak>
+jams_chunxiao_rehearsal_20221221.12_518111_526485 <speak>那基于春晓，我们发布了，第一款<break time="sp1"></break>游戏<phoneme ph="xian2 ka3">显卡</phoneme>。</speak>
+jams_chunxiao_rehearsal_20221221.13_531536_543619 <speak>那自从三月份，我们在北京，发布了摩尔线程<break time="sp2"></break>第一颗GPU苏堤之后，获得了广大<break time="sp0"></break>市场和用户的支持。</speak>
+jams_chunxiao_rehearsal_20221221.14_363265_372126 <speak><phoneme ph="you2 qing3">有请</phoneme>摩尔线程<break time="sp1"></break>超级游戏玩家，超级国潮<phoneme ph="xian2 ka3">显卡</phoneme>爱好者，耿佳先生<phoneme ph="biao2 yan3">表演</phoneme></speak>
+jams_chunxiao_rehearsal_20221221.14_540838_549506 <speak>那PES，控制中心，会随我们的驱动，同时，发放给我们的用户下载</speak>
+jams_chunxiao_rehearsal_20221221.15_32271_38874 <speak>这个，在 GPU 虚拟化的过程当中，你可以任意组合，使用 GPU 的算力，</speak>
+jams_chunxiao_rehearsal_20221221.16_41783_49047 <speak>今天我们发布，摩尔线程基于云原生的 SGPU，虚拟化技术，SGPU一点零。</speak>
+jams_chunxiao_rehearsal_20221221.1_452896_458017 <speak>相比苏堤，在四大引擎方面都有性能的提升。</speak>
+jams_chunxiao_rehearsal_20221221.2_520182_533624 <speak>一点零<break time="sp0"></break>的软件发布，是经过了，摩尔线程<break time="sp2"></break>上千名工程师，一年的辛苦劳动</speak>
+jams_chunxiao_rehearsal_20221221.3_103_10359 <speak>和，<phoneme ph="xian2 ka3">显卡</phoneme>的适配环境下面，经过<break time="sp0"></break>连续经过，十二小时，不间断的，循环测试</speak>
+jams_chunxiao_rehearsal_20221221.3_208347_213414 <speak>自己喜欢的，新国潮的，GPU产品</speak>
+jams_chunxiao_rehearsal_20221221.3_277810_284787 <speak>很多人都喜欢开，赛车，极品飞车，是一款非常经典的游戏，</speak>
+jams_chunxiao_rehearsal_20221221.4_485786_499607 <speak>利用，摩尔线程的<break time="sp0"></break>强大的<break time="sp0"></break>预训练模型库，很快<phoneme ph="de5">地</phoneme>搭建<break time="sp2"></break>自己的计算平台，进行训练，推理。</speak>
+jams_chunxiao_rehearsal_20221221.5_258215_262535 <speak>它可以广泛应用于，高精度推理的需求。</speak>
+jams_chunxiao_rehearsal_20221221.7_157204_161051 <speak>SGPU同时支持，监控<phoneme ph="guan3 li3">管理</phoneme>系统。</speak>
+jams_chunxiao_rehearsal_20221221.7_432604_441769 <speak>能够满足广大的移动用户，真正享受，PC桌面，PC带来的强大性能。</speak>
+jams_chunxiao_rehearsal_20221221.8_176652_192459 <speak>数字孪生，可以广泛的，服务于<break time="sp0"></break>我们今天的<break time="sp0"></break>各行各业，尤其是智慧城市，和，城市<phoneme ph="guan2 li3">管理</phoneme>的，加强城市<phoneme ph="guan2 li3">管理</phoneme>的科学性</speak>
+jams_chunxiao_rehearsal_20221221.9_485203_494250 <speak>基础架构的服务，包括，大数据、训练和推理、图形渲染和物理仿真平台，<phoneme ph="deng2 deng3">等等</phoneme></speak>
+jams_vdirelease_20230110.1_5888_11313 <speak>那咱们国家现在的大势很明确，国产化替代，刻不容缓。</speak>
+jams_vdirelease_20230110.1_62_5758 <speak>但是势能呢，是要借大势，跟我们自己的<break time="sp0"></break>积累。</speak>
+jams_chunxiao_rehearsal_20221221.7_118298_126880 <speak>SGPU一点零，能够支持K八S的生态系统，生态环境</speak>

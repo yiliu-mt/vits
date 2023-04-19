@@ -19,7 +19,7 @@ class TextAudioLoader(torch.utils.data.Dataset):
         2) normalizes text and converts them to sequences of integers
         3) computes spectrograms from audio files.
     """
-    def __init__(self, audiopaths_and_text, hparams, rank=0):
+    def __init__(self, audiopaths_and_text, hparams, rank=0, use_forced_alignment=False):
         self.audiopaths_and_text = load_filepaths_and_text(audiopaths_and_text)
         self.max_wav_value  = hparams.max_wav_value
         self.sampling_rate  = hparams.sampling_rate
@@ -33,6 +33,7 @@ class TextAudioLoader(torch.utils.data.Dataset):
         self.max_text_len = getattr(hparams, "max_text_len", 190)
         self.rank = rank
         self.symbol_version = hparams.get("symbol_version", "default")
+        self.use_forced_alignment = use_forced_alignment
 
         # No need to shuffle. Shuffle is done in the batch sampler
         # random.seed(1234)
@@ -70,7 +71,7 @@ class TextAudioLoader(torch.utils.data.Dataset):
         text = self.get_text(text)
         spec, wav = self.get_audio(audiopath)
 
-        if len(audiopath_and_text) == 3:
+        if self.use_forced_alignment and len(audiopath_and_text) == 3:
             duration = audiopath_and_text[2]
             duration = self.get_duration(duration)
             assert text.size(0) == duration.size(0), "Text and duration mismatch. Maybe add_blank=True while use_forced_alignment=True?"
@@ -190,7 +191,7 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
         2) normalizes text and converts them to sequences of integers
         3) computes spectrograms from audio files.
     """
-    def __init__(self, audiopaths_sid_text, hparams, rank=0):
+    def __init__(self, audiopaths_sid_text, hparams, rank=0, use_forced_alignment=False):
         self.audiopaths_sid_text = load_filepaths_and_text(audiopaths_sid_text)
         self.max_wav_value = hparams.max_wav_value
         self.sampling_rate = hparams.sampling_rate
@@ -204,6 +205,7 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
         self.max_text_len = getattr(hparams, "max_text_len", 190)
         self.rank=rank
         self.symbol_version = hparams.get("symbol_version", "default")
+        self.use_forced_alignment = use_forced_alignment
 
         # random.seed(1234)
         # random.shuffle(self.audiopaths_sid_text)
@@ -241,7 +243,7 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
         spec, wav = self.get_audio(audiopath)
         sid = self.get_sid(sid)
 
-        if len(audiopath_sid_text) == 4:
+        if self.use_forced_alignment and len(audiopath_sid_text) == 4:
             duration = audiopath_sid_text[3]
             duration = self.get_duration(duration)
             assert text.size(0) == duration.size(0), "Text and duration mismatch. Maybe add_blank=True while use_forced_alignment=True?"

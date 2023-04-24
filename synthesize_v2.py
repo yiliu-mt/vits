@@ -14,6 +14,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--speed", type=float, default=1.0, help="speed factor")
     parser.add_argument("-c", "--config", required=True, help="config")
     parser.add_argument("-m", "--model", required=True, help="model")
     parser.add_argument("-t", "--text", required=True, help="text")
@@ -29,7 +30,7 @@ def main():
         audio_data = unary_synthesize_text(
             vits,
             utt_id,
-            GenerationRequest(text=text, format="wav", voice=args.speaker_id),
+            GenerationRequest(text=text, format="wav", voice=args.speaker_id, speed_rate=args.speed),
             max_single_utt_length=1
         )
         wavfile.write(

@@ -60,12 +60,13 @@ class Utterance:
 
 class GenerationRequest:
 
-    def __init__(self, text=None, ssml=None, voice=None, version=None, format="pcm", **_kwargs):
+    def __init__(self, text=None, ssml=None, voice=None, speed_rate=1.0, version=None, format="pcm", **_kwargs):
         self.text = text
         if (not ssml) and text.strip() and text.strip().startswith("<speak>") and text.strip().endswith("</speak>"):
             self.ssml = text.strip()
         else:
             self.ssml = ssml
+        self.speed_rate = speed_rate
         self.voice = voice
         self.version = version
         self.format = format
@@ -109,6 +110,17 @@ class TTS:
     def init_utterance(self, utt_id, text, voice):
         return Utterance(utt_id, text, voice)
     
+    def init_phone_utterance(self, utt_id, text, voice):
+        utterance = Utterance(utt_id, text, voice)
+        # Make a dummy syllable_seq
+        syllable_seq = phone_seq = text.strip().split(" ")
+        phone_id_seq, syllable_seq, phone_seq = preprocess_text_to_sequence(
+            self.__hps, phone_seq, syllable_seq)
+        utterance.phone_id_seq = phone_id_seq
+        utterance.phone_seq = phone_seq
+        utterance.syllable_seq = syllable_seq
+        return utterance
+    
     def preprocess(self, utterance: Utterance):
         # fast match
         logging.info("Raw Text Sequence: {}".format(utterance.text))
@@ -144,7 +156,7 @@ class TTS:
         utterance.phone_seq = phone_seq
         utterance.syllable_seq = syllable_seq
     
-    def synthesize(self, utterances: List[Utterance]):
+    def synthesize(self, utterances: List[Utterance], speed_rate=1.0):
         wav_predictions = []
         wav_lengths = []
         for utt in utterances:
@@ -165,7 +177,7 @@ class TTS:
                     sid=voice_id,
                     noise_scale=.667,
                     noise_scale_w=0.8,
-                    length_scale=1
+                    length_scale=1/speed_rate
                 )[0][0,0].data.cpu().float()
                 wav_predictions.append(wav.expand(1, *wav.shape))
                 wav_lengths.append(wav.shape[0])
@@ -214,13 +226,28 @@ def init_utterances(task_id, gen_req, max_single_utt_length, tts_service, max_su
 def unary_synthesize_text(tts_service: TTS, task_id, gen_req: GenerationRequest, max_single_utt_length=50):
     start = time.time()
     utterances = init_utterances(task_id, gen_req, max_single_utt_length, tts_service, max_sub_utt_length=25)
+    speed_rate = gen_req.speed_rate
 
     for utterance in utterances:
         logging.info("Synthesizing utterance [{}]-[{}] with voice [{}]".format(utterance.utt_id, utterance.text,
                                                                               utterance.voice))
-        tts_service.synthesize([utterance])
+        tts_service.synthesize([utterance], speed_rate)
 
     wav = Utterance.merge_multi_utterances_audio(utterances)
+    logging.info("synthesize for task_id {} cost {} seconds".format(task_id, time.time() - start))
+    return wav
+
+
+def synthesize_phone_seq(tts_service: TTS, task_id, gen_req: GenerationRequest, max_single_utt_length=50):
+    start = time.time()
+    speed_rate = gen_req.speed_rate
+
+    utterance = tts_service.init_phone_utterance("debug", gen_req.text, gen_req.voice)
+    logging.info("Synthesizing utterance [{}]-[{}] with voice [{}]".format(utterance.utt_id, utterance.text,
+                                                                          utterance.voice))
+    tts_service.synthesize([utterance], speed_rate)
+
+    wav = Utterance.merge_multi_utterances_audio([utterance])
     logging.info("synthesize for task_id {} cost {} seconds".format(task_id, time.time() - start))
     return wav
 

@@ -1,1 +1,23 @@
-test1 k e2 ^ i3 z ii4 d ong4 d e5 b a3 ch ang2 j ing3 l ou2 ^ v3 sp0 sh u4 m u4 sp0 d ao4 l u4 s en1 l in2 ^ i4 q i3
+test1 <speak><phoneme ph="ke2 yi3">可以</phoneme>自动<phoneme ph="de5">地</phoneme>把<phoneme ph="chang2 jing3">场景</phoneme>楼宇道路森林树木一起。</speak>
+test2 <speak>助力企业在数字经济时代的高速成长。</speak>
+test3 <speak>十三五以来<break time="sp2"></break>我国机器人产业呈现良好发展势头<break time="sp2"></break>年均复合增长率约百分之十五。</speak>
+test4 <speak>欢迎大家参加<break time="sp2"></break>摩尔线程二零二二春季发布会。</speak>
+test5 <speak>接下来<phoneme ph="wo2">我</phoneme>想进入我们的<break time="sp2"></break>发布会的第二个环节。</speak>
+test6 <speak><phoneme ph="suo2 yi3">所以</phoneme>我们进入发布会的第四个环节<break time="sp2"></break>我们发布摩尔线程元计算解决方案。</speak>
+test7 <speak>十三五以来<break time="sp2"></break>我国机器人产业呈现良好发展势头<break time="sp2"></break>我们发布摩尔线程元计算解决方案。</speak>
+test8 <speak>我国机器人产业呈现良好发展势头<break time="sp2"></break>我们发布摩尔线程元计算解决方案。</speak>
+test8 <speak>我国机器人产业<break time="sp2"></break>我们发布摩尔线程元计算解决方案。</speak>
+test9 <speak>我国机器人<break time="sp2"></break>我们发布摩尔线程元计算解决方案。</speak>
+test10 <speak><phoneme ph="suo2 yi3">所以</phoneme>我们进入发布会的第四个环节<break time="sp2"></break>我们发布<break time="sp2"></break>年均复合增长率约百分之十五。</speak>
+test11 <speak><phoneme ph="suo2 yi3">所以</phoneme>我们进入发布会的第四个环节<break time="sp2"></break>年均复合增长率约百分之十五。</speak>
+test12 <speak><phoneme ph="suo2 yi3">所以</phoneme>我们进入发布会的<break time="sp2"></break>年均复合增长率约百分之十五。</speak>
+test13 <speak>年均复合增长率约百分之十五<break time="sp2"></break><phoneme ph="suo2 yi3">所以</phoneme>我们。</speak>
+test14 <speak>年均复合增长率约百分之十五<break time="sp2"></break><phoneme ph="suo2 yi3">所以</phoneme>我们进入。</speak>
+compare1_1 <speak>大家好<break time="sp2"></break>我是Jams。</speak>
+compare1_2 <speak>欢迎大家参加<break time="sp2"></break>摩尔线程二零二二春季发布会<break time="sp2"></break>大家好<break time="sp2"></break>我是Jams。</speak>
+compare2_1 <speak>蔡猛<phoneme ph="yao1 qing2 wo3">邀请我</phoneme>来参加AI team的双周会。</speak>
+compare2_2 <speak>欢迎大家参加<break time="sp2"></break>摩尔线程二零二二春季发布会<break time="sp2"></break>蔡猛<phoneme ph="yao1 qing2 wo3">邀请我</phoneme>来参加AI team的双周会。</speak>
+compare3_1 <speak>介绍一下我们MT AI speech组的工作。</speak>
+compare3_2 <speak>欢迎大家参加<break time="sp2"></break>摩尔线程二零二二春季发布会<break time="sp2"></break>介绍一下我们MT AI speech组的工作。</speak>
+compare4_1 <speak>那我就给大家讲<phoneme ph="yi5 xia4">一下</phoneme><break time="sp0"></break>最近两周<break time="sp0"></break>speech组在业务落地<break time="sp0"></break>技术项目<break time="sp0"></break>技术研发<break time="sp0"></break>技术探索和数据<break time="sp0"></break>五个方面的进展。</speak>
+compare4_2 <speak>欢迎大家参加<break time="sp2"></break>摩尔线程二零二二春季发布会<break time="sp2"></break>欢迎大家参加<break time="sp2"></break>摩尔线程二零二二春季发布会<break time="sp2"></break>那我就给大家讲<phoneme ph="yi5 xia4">一下</phoneme><break time="sp0"></break>最近两周<break time="sp0"></break>speech组在业务落地<break time="sp0"></break>技术项目<break time="sp0"></break>技术研发<break time="sp0"></break>技术探索和数据<break time="sp0"></break>五个方面的进展。</speak>

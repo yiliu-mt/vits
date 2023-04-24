@@ -159,8 +159,6 @@ def preprocess_text(config, text, lexicon, oov_lexicon):
             pinyins[i] = "sp"
 
     default_sp = "sp" if config.data.symbol_version != "v2.1" else "sp2"
-    import pdb
-    pdb.set_trace()
     phone_seq, syllable_seq = preprocess_syllable_to_phoneme(pinyins, lexicon, oov_lexicon, default_sp=default_sp)
     return preprocess_text_to_sequence(config, phone_seq, syllable_seq)
 

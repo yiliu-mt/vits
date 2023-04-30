@@ -8,7 +8,7 @@ speaker_id=222
 # test_data=testdata/jams/jams_ahm_test100_cn.txt
 # output_dir=/nfs1/yi.liu/tts/vits/exp/2023Q1/jams_v0.1/0317/tuning_jams_rx_full_sdp/jams_ahm_test100_cn
 
-test_data=testdata/jams/jams_test_ssmlv2.txt
+test_data=testdata/jams/keynote_202305_overall.txt
 output_dir=/nfs1/yi.liu/tts/vits/exp/2023Q2/jams_v1/0418/tuning_jams_full_sdp/jams_test_ssmlv2
 
 export PYTHONPATH=.

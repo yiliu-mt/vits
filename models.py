@@ -155,6 +155,7 @@ class TextEncoder(nn.Module):
     self.p_dropout = p_dropout
 
     self.emb = nn.Embedding(n_vocab, hidden_channels)
+    self.prosody_emb = nn.Embedding(5, hidden_channels)
     nn.init.normal_(self.emb.weight, 0.0, hidden_channels**-0.5)
 
     self.encoder = attentions.Encoder(
@@ -166,8 +167,8 @@ class TextEncoder(nn.Module):
       p_dropout)
     self.proj= nn.Conv1d(hidden_channels, out_channels * 2, 1)
 
-  def forward(self, x, x_lengths):
-    x = self.emb(x) * math.sqrt(self.hidden_channels) # [b, t, h]
+  def forward(self, x, x_lengths, prosody=None):
+    x = (self.emb(x) + self.prosody_emb(prosody)) * math.sqrt(self.hidden_channels) # [b, t, h]
     x = torch.transpose(x, 1, -1) # [b, h, t]
     x_mask = torch.unsqueeze(commons.sequence_mask(x_lengths, x.size(2)), 1).to(x.dtype)
 
@@ -710,9 +711,9 @@ class SynthesizerTrn(nn.Module):
     if n_speakers > 1:
       self.emb_g = nn.Embedding(n_speakers, gin_channels)
 
-  def forward(self, x, x_lengths, y, y_lengths, sid=None, duration=None):
+  def forward(self, x, x_lengths, y, y_lengths, sid=None, duration=None, prosody=None):
 
-    x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
+    x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths, prosody=prosody)
     if self.n_speakers > 1:
       g = self.emb_g(sid).unsqueeze(-1) # [b, h, 1]
     else:
@@ -756,8 +757,8 @@ class SynthesizerTrn(nn.Module):
     o = self.dec(z_slice, g=g)
     return o, l_length, attn, ids_slice, x_mask, y_mask, (z, z_p, m_p, logs_p, m_q, logs_q)
 
-  def infer(self, x, x_lengths, sid=None, noise_scale=1, length_scale=1, noise_scale_w=1., max_len=None):
-    x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
+  def infer(self, x, x_lengths, sid=None, noise_scale=1, length_scale=1, noise_scale_w=1., max_len=None, prosody=None):
+    x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths, prosody=prosody)
     if self.n_speakers > 1:
       g = self.emb_g(sid).unsqueeze(-1) # [b, h, 1]
     else:

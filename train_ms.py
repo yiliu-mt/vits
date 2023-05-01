@@ -183,8 +183,11 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
             x, x_lengths, spec, spec_lengths, y, y_lengths, speakers, duration = data
             duration = duration.cuda(rank, non_blocking=True)
         else:
-            x, x_lengths, spec, spec_lengths, y, y_lengths, speakers = data[:7]
-            duration = None
+            if len(data) == 7:
+                x, x_lengths, spec, spec_lengths, y, y_lengths, speakers = data[:7]
+                duration = None
+            elif len(data) == 9:
+                x, x_lengths, spec, spec_lengths, y, y_lengths, speakers, duration, prosody = data
 
         x, x_lengths = x.cuda(rank, non_blocking=True), x_lengths.cuda(rank, non_blocking=True)
         spec, spec_lengths = spec.cuda(rank, non_blocking=True), spec_lengths.cuda(rank, non_blocking=True)
@@ -193,7 +196,7 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
 
         with autocast(enabled=hps.train.fp16_run):
             y_hat, l_length, attn, ids_slice, x_mask, z_mask,\
-            (z, z_p, m_p, logs_p, m_q, logs_q) = net_g(x, x_lengths, spec, spec_lengths, speakers, duration=duration)
+            (z, z_p, m_p, logs_p, m_q, logs_q) = net_g(x, x_lengths, spec, spec_lengths, speakers, duration=duration, prosody=prosody)
 
             # real mel
             mel = spec_to_mel_torch(
@@ -304,6 +307,12 @@ def evaluate(hps, generator, eval_loader, writer_eval):
             else:
                 x, x_lengths, spec, spec_lengths, y, y_lengths, speakers = data[:7]
                 duration = None
+            if len(data) == 7:
+                x, x_lengths, spec, spec_lengths, y, y_lengths, speakers = data[:7]
+            elif len(data) == 9:
+                x, x_lengths, spec, spec_lengths, y, y_lengths, speakers, duration, prosody = data
+                prosody = prosody.cuda(0)
+                prosody = prosody[:1]
 
             x, x_lengths = x.cuda(0), x_lengths.cuda(0)
             spec, spec_lengths = spec.cuda(0), spec_lengths.cuda(0)
@@ -319,7 +328,7 @@ def evaluate(hps, generator, eval_loader, writer_eval):
             y_lengths = y_lengths[:1]
             speakers = speakers[:1]
             break
-        y_hat, attn, mask, *_ = generator.module.infer(x, x_lengths, speakers, max_len=1000)
+        y_hat, attn, mask, *_ = generator.module.infer(x, x_lengths, speakers, max_len=1000, prosody=prosody)
         y_hat_lengths = mask.sum([1,2]).long() * hps.data.hop_length
 
         mel = spec_to_mel_torch(

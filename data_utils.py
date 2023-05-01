@@ -243,11 +243,21 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
         spec, wav = self.get_audio(audiopath)
         sid = self.get_sid(sid)
 
-        if self.use_forced_alignment and len(audiopath_sid_text) == 4:
+        duration = None
+        if self.use_forced_alignment and len(audiopath_sid_text) >= 4:
             duration = audiopath_sid_text[3]
             duration = self.get_duration(duration)
             assert text.size(0) == duration.size(0), "Text and duration mismatch. Maybe add_blank=True while use_forced_alignment=True?"
+        
+        if len(audiopath_sid_text) >= 5:
+            prosody = audiopath_sid_text[4]
+            prosody = self.get_prosody(prosody)
+            assert text.size(0) == prosody.size(0), "Text and prosody mismatch."
+
+        if len(audiopath_sid_text) == 4:
             return (text, spec, wav, sid, duration)
+        elif len(audiopath_sid_text) == 5:
+            return (text, spec, wav, sid, duration, prosody)
 
         return (text, spec, wav, sid)
 
@@ -288,6 +298,14 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
     def get_duration(self, duration):
         duration = torch.LongTensor([int(d) for d in duration.split()])
         return duration
+    
+    def get_prosody(self, prosody):
+        prosody = [int(d) for d in prosody.split()]
+        if self.add_blank:
+            prosody = commons.intersperse(prosody, 0)
+        prosody = torch.LongTensor(prosody)
+        return prosody
+        
 
     def __getitem__(self, index):
         return self.get_audio_text_speaker_pair(self.audiopaths_sid_text[index])
@@ -345,21 +363,38 @@ class TextAudioSpeakerCollate():
 
             sid[i] = row[3]
 
-        if len(batch[0]) == 5:
-            max_duration_len = max([len(x[-1]) for x in batch])
-            duration_padded = torch.LongTensor(len(batch), max_duration_len)
-            duration_padded.zero_()
+        # if len(batch[0]) >= 5:
+        #     max_duration_len = max([len(x[4]) for x in batch])
+        #     duration_padded = torch.LongTensor(len(batch), max_duration_len)
+        #     duration_padded.zero_()
+        #     for i in range(len(ids_sorted_decreasing)):
+        #         row = batch[ids_sorted_decreasing[i]]
+        #         duration = row[4]
+        #         duration_padded[i, :duration.size(0)] = duration
+        duration_padded = None
+            
+        if len(batch[0]) >= 6:
+            max_prosody_len = max([len(x[5]) for x in batch])
+            prosody_padded = torch.LongTensor(len(batch), max_prosody_len)
+            prosody_padded.zero_()
             for i in range(len(ids_sorted_decreasing)):
                 row = batch[ids_sorted_decreasing[i]]
-                duration = row[-1]
-                duration_padded[i, :duration.size(0)] = duration
+                prosody = row[5]
+                prosody_padded[i, :prosody.size(0)] = prosody
+            
+        if len(batch[0]) == 5:
             if self.return_ids:
                 return text_padded, text_lengths, spec_padded, spec_lengths, wav_padded, wav_lengths, sid, duration_padded, ids_sorted_decreasing
             return text_padded, text_lengths, spec_padded, spec_lengths, wav_padded, wav_lengths, sid, duration_padded
-
+        elif len(batch[0]) == 6:
+            if self.return_ids:
+                return text_padded, text_lengths, spec_padded, spec_lengths, wav_padded, wav_lengths, sid, duration_padded, prosody_padded, ids_sorted_decreasing
+            return text_padded, text_lengths, spec_padded, spec_lengths, wav_padded, wav_lengths, sid, duration_padded, prosody_padded
+        
         if self.return_ids:
             return text_padded, text_lengths, spec_padded, spec_lengths, wav_padded, wav_lengths, sid, ids_sorted_decreasing
         return text_padded, text_lengths, spec_padded, spec_lengths, wav_padded, wav_lengths, sid
+
 
 
 class DistributedBucketSampler(torch.utils.data.distributed.DistributedSampler):

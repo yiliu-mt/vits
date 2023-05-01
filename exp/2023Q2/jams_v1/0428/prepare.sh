@@ -35,10 +35,12 @@ cut -d '|' -f 1 /data3/jams_v1.3_0428_prosody/Baker_LJSpeech_MuSha0914_AISHELL3_
 # val_prosody.txt
 # train_jams_all_prosody.txt
 # train_jams_haitian_prosody.txt
+# val_jams_prosody.txt
 grep -f /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train.list /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_val_prosody.txt > /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_prosody.txt
 grep -f /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/val.list /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_val_prosody.txt > /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/val_prosody.txt
 grep -f /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_jams_all.list /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_val_prosody.txt > /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_jams_all_prosody.txt
 grep -f /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_jams_haitian.list /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_val_prosody.txt > /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_jams_haitian_prosody.txt
+head -n 3 /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_jams_haitian_prosody.txt > /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/val_jams_prosody.txt
 
 
 # Prepare the list for fastspeech-like training
@@ -51,7 +53,9 @@ python tools/combine_fastspeech_prosody.py \
 # val_prosody_fastspeech.txt
 # train_jams_all_prosody_fastspeech.txt
 # train_jams_haitian_prosody_fastspeech.txt
+# val_jams_prosody_fastspeech.txt
 grep -f /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train.list /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_val_prosody_fastspeech.txt > /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_prosody_fastspeech.txt
 grep -f /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/val.list /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_val_prosody_fastspeech.txt > /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/val_prosody_fastspeech.txt
 grep -f /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_jams_all.list /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_val_prosody_fastspeech.txt > /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_jams_all_prosody_fastspeech.txt
 grep -f /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_jams_haitian.list /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_val_prosody_fastspeech.txt > /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_jams_haitian_prosody_fastspeech.txt
+head -n 3 /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/train_jams_haitian_prosody_fastspeech.txt > /data3/jams_v1.3_0428_prosody/vits/preprocessed_data/val_jams_prosody_fastspeech.txt

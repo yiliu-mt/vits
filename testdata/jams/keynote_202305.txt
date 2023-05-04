@@ -1,0 +1,47 @@
+1 <speak>首先，<phoneme ph="wo2 xiang3">我想</phoneme>借此机会，感谢<phoneme ph="yi2 lu4 zou3 lai2">一路走来</phoneme><break time="sp0"></break><phoneme ph="bu2 duan4">不断</phoneme>支持摩尔线程的合作伙伴、开发者<break time="sp0"></break>以及玩家，</speak>
+2 <speak>是你们帮助摩尔线程<break time="sp0"></break>快速的推进<phoneme ph="chan2 pin3">产品</phoneme>的开发和适配，鼓励着我们前进。</speak>
+3 <speak>摩尔线程致力于打造<break time="sp0"></break>为下一代互联网提供多元算力的元计算平台。</speak>
+4 <speak>去年，我们发布了两颗GPU芯片<break time="sp0"></break>苏堤和春晓、多款PC<phoneme ph="xian2 ka3">显卡</phoneme>和服务器计算卡、MCCX元计算平台、Alpha Core物理引擎、AIGC马良、Digital Me数字人解决方案等。</speak>
+5 <speak>在近几个月，摩尔线程持续推进生态适配，落地各种<phoneme ph="ying4 yong4 chang2 jing3">应用场景</phoneme>，完成了<phoneme ph="yi2 ge4 ge4">一个个</phoneme>的里程碑，获得了生态伙伴的强烈认可。</speak>
+6 <speak>我们的PES完美体验系统联盟<break time="sp0"></break>也在<phoneme ph="bu2 duan4">不断</phoneme>的增加</speak>
+7 <speak>感谢<phoneme ph="suo2 you3">所有</phoneme>的CPU/OS/OEM/ODM/行业客户/应用开发者，在我们<phoneme ph="chan2 pin3">产品</phoneme>商业化的路上<break time="sp0"></break>配合摩尔线程，为终端用户带来最好的国产化体验。</speak>
+8 <speak>在此，<phoneme ph="wo2 xiang3">我想</phoneme>特别感谢以上合作伙伴，他们在<phoneme ph="mou2 mou3">某某</phoneme>行业<phoneme ph="mou2 mou3">某某</phoneme>方案中与摩尔线程配合，完成了<phoneme ph="mou2 mou3">某某</phoneme><phoneme ph="chan2 pin3">产品</phoneme><phoneme ph="mou2 mou3">某某</phoneme>个订单的落地。</speak>
+9 <speak>下面，我们进入本次发布会的第1部分，我来给大家更新一下<break time="sp0"></break>摩尔线程在国产化替代领域的成果。</speak>
+10 <speak>作为<phoneme ph="yi4 jia1">一家</phoneme>GPU创业公司，摩尔线程过去<phoneme ph="yi4 nian2">一年</phoneme><break time="sp0"></break>一直坚持<phoneme ph="bu2 xie4">不懈努力</phoneme><break time="sp0"></break>优化<phoneme ph="chan2 pin3">产品</phoneme>功能和性能，在国产化替代的路上扎根、做强。</speak>
+11 <speak>今年是摩尔线程<phoneme ph="chan2 pin3">产品</phoneme>落地的关键一年，基于软硬件一体化的高质量开发与交付，我们今年陆续中标了多个大项目，拿下了一系列国产化的订单，落地8大行业</speak>
+12 <speak>正式进入了电信运营商、金融行业、能源行业、教育、石化、交通、水利、医疗等的<break time="sp0"></break>国产化采购名列。</speak>
+13 <speak>我们在此<break time="sp0"></break>感谢帮助摩尔线程进行<phoneme ph="chan2 pin2">产品</phoneme>导入和验证的OEM<break time="sp0"></break>及ODM厂商</speak>
+14 <speak>截止目前，摩尔线程已经和10家ODM厂商<break time="sp0"></break>以及18家国产化PC整机厂商进行合作，共同推出了30余款PC机型，通过摩尔线程全功能GPU来全面提升国产化PC的性能。</speak>
+15 <speak>从3D加速，超高清显示，视频<phoneme ph="bian1 jie2 ma3">编解码</phoneme>，Web GL等各个方面优化用户体验。</speak>
+16 <speak>目前，我们就已经实现了50万加的GPU<phoneme ph="xian2 ka3">显卡</phoneme>出货量。</speak>
+17 <speak>众所周知，国产化环境繁荣发展，组合众多，其中不同CPU与不同OS<phoneme ph="ban2 ben3">版本</phoneme>的组合就达<phoneme ph="shang4 bai2 zhong3">上百种</phoneme></speak>
+18 <speak>对于任何一家新晋GPU厂商，都要面临适配的多元化。</speak>
+19 <speak>如果在驱动开发的过程，<phoneme ph="yi2 ge4">一个</phoneme>组合<phoneme ph="yi2 ge4">一个</phoneme>组合的去适配，不仅工作量大，问题还比较分散，研发投入的时间和资源<break time="sp0"></break>也较多。</speak>
+20 <speak>而摩尔线程的驱动<break time="sp0"></break>从规划之初，就是面向多元化环境进行兼容适配，我们称之为无界/息壤，</speak>
+21 <speak>它的功能是在同样的一个GPU驱动上<break time="sp0"></break>支持多CPU/OS平台组合，动态适配不同OS内核，极大的缩短<phoneme ph="chan2 pin3 hua4">产品化</phoneme>的耗时。</speak>
+22 <speak>当前摩尔线程的驱动支持的CPU有X八六/arm/龙芯等，OS有Windows和Linux，其中Linux包括统信，麒麟，凝思，方德，普华，ubuntu等等</speak>
+23 <speak>这些组合<break time="sp0"></break>都<phoneme ph="ke2 yi3">可以</phoneme>基于摩尔线程同一个GPU驱动成功点亮。</speak>
+24 <speak>近期，摩尔线程与统信、麒麟等OS完成了全面的兼容性认证，让我们来看看这两家公司对我们的评价。</speak>
+25 <speak>感谢麒麟和统信一直以来的支持和帮助。可能有部分人认为<break time="sp0"></break>国产化需求主要是亮机，能办公就行</speak>
+26 <speak>过去的国产化办公领域机型<break time="sp0"></break>搭载的代表性GPU是AMD R五二零等<phoneme ph="xian2 ka3">显卡</phoneme></speak>
+27 <speak>但当前有些客户<break time="sp0"></break>已经开始使用摩尔线程的<phoneme ph="xian2 ka3">显卡</phoneme>，而且体验比AMD的更好</speak>
+28 <speak>在此<break time="sp0"></break><phoneme ph="wo2 xiang3">我想</phoneme>郑重的表示，摩尔线程的<phoneme ph="chan2 pin3">产品</phoneme>目标<break time="sp0"></break>一定不只是亮机</speak>
+29 <speak>而是全面提升国产化体验，赶超国外标准，让每一位用户都能体验到爽快的体验，让摩尔线程的GPU更多的加速咱们国家自主开发的软件应用，真正达到好用、爱用、享用的目标</speak>
+30 <speak>通过<phoneme ph="bu2 duan4">不断</phoneme>优化，摩尔线程的<phoneme ph="xian2 ka3">显卡</phoneme>性能在标准SPEC、GL Mark two和Unix bench等测试中<break time="sp0"></break>比国内外竞品提升2到3倍。</speak>
+31 <speak>在应用体验上，我们也提供了目前最好的应用兼容性，例如视频<phoneme ph="jie2 ma3">解码</phoneme>加速，Web GL等3D应用，</speak>
+32 <speak>这些应用相比国内其他友商来说，我们都遥遥领先。</speak>
+33 <speak>下面是已经通过摩尔线程的GPU加速的应用，他们包括：</speak>
+34 <speak>国产化替代的路<phoneme ph="hen3 chang2">很长</phoneme>，不是一朝一夕就能完成的，</speak>
+35 <speak>向上攀<break time="sp0"></break>总能登顶，我们就是这样<break time="sp0"></break>踏踏实实在优化<phoneme ph="chan2 pin3">产品</phoneme>，<phoneme ph="jin4">尽</phoneme>所能做到业界最好。</speak>
+36 <speak>我们知道<break time="sp0"></break>还有很多客户需要在Windows上进行办公，为了解决用户的需求，我们后续会通过双系统兼容（Linux和Windows）来支持国产应用生态的平滑过度。</speak>
+37 <speak>相信在未来与合作伙伴共同迭代的过程中，我们的<phoneme ph="chan2 pin3">产品</phoneme>和驱动会越来越成熟，通过摩尔线程的GPU加速的应用体验也会越来越好，</speak>
+38 <speak>也希望各位合作伙伴、客户、<phoneme ph="yu2">与</phoneme>我们共同努力，把国产化PC的性能和体验<phoneme ph="juan2 qi3 lai3">卷起来</phoneme>。</speak>
+39 <speak>为了能够帮助国内用户更好的体验和使用摩尔线程的GPU，在此，我们正式发布摩尔线程办公魔盒。</speak>
+40 <speak>摩尔线程办公摩盒是全<phoneme ph="guo2 chan3">国产</phoneme>平台的图形工作站，搭载MTT S五零全功能GPU，基于摩尔线程先进的MUSA架构打造，</speak>
+41 <speak>三维渲染引擎<break time="sp0"></break>为创意工作者提供强劲动力，激发无穷创意，</speak>
+42 <speak>支持CAD工业设计、GIS应用、和数字孪生等丰富的<phoneme ph="chang2 jing3">场景</phoneme> </speak>
+43 <speak>强大的视频<phoneme ph="chu4 li2">处理</phoneme>引擎，提供高清视频互动<phoneme ph="chang2 jing2 ti3 yan4">场景体验</phoneme></speak>
+44 <speak>AI智能引擎加速人工智能<phoneme ph="ying4 yong4">应用</phoneme>，<phoneme ph="xian1 ren2 yi2 bu4">先人一步</phoneme>体验智能PC</speak>
+45 <speak>连接云端<break time="sp0"></break>摩笔马良，<phoneme ph="jin4">尽</phoneme>享最前沿的AI生产力工具<break time="sp0"></break>带来的全新工作流<break time="sp0"></break>和大幅效率提升。</speak>
+46 <speak>关于国产化，摩尔线程不仅在终端做出了<phoneme ph="hen2 hao3">很好</phoneme>的成绩和带头作用，在云端<break time="sp0"></break><phoneme ph="ye2 you3">也有</phoneme>着成熟的方案，</speak>
+47 <speak>下面，我们进入第2部分，云PC。</speak>

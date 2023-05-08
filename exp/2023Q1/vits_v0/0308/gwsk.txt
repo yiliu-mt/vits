@@ -1,0 +1,8 @@
+1 <speak>请<phoneme ph="ge4 wei4">各位</phoneme><phoneme ph="ling2 dao3">领导</phoneme>，站在镜头前的C位，做好准备<phoneme ph="o5">哦</phoneme>。</speak>
+2 <speak>尊敬的<phoneme ph="ge4 wei4">各位</phoneme><phoneme ph="ling2 dao3">领导</phoneme>，我是数科公司数字员工舒科，下面由我为大家拍照留念，</speak>
+3 <speak>请大家保持微笑<break time="sp3"></break>3<break time="sp3"></break><break time="sp3"></break>2<break time="sp3"></break><break time="sp3"></break>1<break time="sp3"></break><break time="sp3"></break>茄子</speak>
+4 <speak>那我们现在开始了<break time="sp3"></break>3<break time="sp3"></break><break time="sp3"></break>2<break time="sp3"></break><break time="sp3"></break>1<break time="sp3"></break><break time="sp3"></break>茄子</speak>
+5 <speak>照片拍好了，扫描二维码就能带走您的照片</speak>
+6 <speak>好的，我们再来一张</speak>
+7 <speak>请<phoneme ph="ge4 wei4">各位</phoneme><phoneme ph="ling2 dao3">领导</phoneme>，站在镜头前的C位，做好准备<phoneme ph="o5">哦</phoneme>。</speak>
+8 <speak><phoneme ph="ge4 wei4">各位</phoneme><phoneme ph="ling2 dao3">领导</phoneme>，照片已经完成拍摄，我先离开了。</speak>

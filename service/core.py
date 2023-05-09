@@ -1,5 +1,7 @@
 import re
 import time
+import json
+import requests
 import copy
 import logging
 import traceback
@@ -34,6 +36,14 @@ class Utterance:
         self.phone_id_seq = None
 
         self.pred_wav = None
+        self.sos_sil = 0.05
+        self.eos_sil = 0.25
+        self.phone_speed_seq = None
+        self.phone_pitch_seq = None
+        self.phone_energy_seq = None
+
+        self.noise_scale = 0.667
+        self.noise_scale_w = 0.8
 
     @staticmethod
     def merge_multi_utterances_audio(utterances):
@@ -50,8 +60,8 @@ class Utterance:
     @property
     def padded_audio_data(self):
         assert self.pred_wav is not None
-        pad_start = 0.05
-        pad_end = 0.25
+        pad_start = self.sos_sil
+        pad_end = self.eos_sil
         audio_data = np.pad(self.pred_wav,
                             pad_width=[int(pad_start * self.sample_rate), int(pad_end * self.sample_rate)],
                             mode='constant')
@@ -60,7 +70,7 @@ class Utterance:
 
 class GenerationRequest:
 
-    def __init__(self, text=None, ssml=None, voice=None, speed_rate=1.0, version=None, format="pcm", **_kwargs):
+    def __init__(self, text=None, ssml=None, voice=None, noise_scale=0.667, noise_scale_w=0.8, speed_rate=1.0, version=None, format="pcm", **_kwargs):
         self.text = text
         if (not ssml) and text.strip() and text.strip().startswith("<speak>") and text.strip().endswith("</speak>"):
             self.ssml = text.strip()
@@ -70,6 +80,8 @@ class GenerationRequest:
         self.voice = voice
         self.version = version
         self.format = format
+        self.noise_scale = noise_scale
+        self.noise_scale_w = noise_scale_w
 
     def __str__(self):
         return str(self.__dict__)
@@ -106,6 +118,10 @@ class TTS:
     @property
     def sample_rate(self):
         return self.__hps.data.sampling_rate
+
+    @property
+    def config(self):
+        return self.__hps
     
     def init_utterance(self, utt_id, text, voice):
         return Utterance(utt_id, text, voice)
@@ -156,7 +172,7 @@ class TTS:
         utterance.phone_seq = phone_seq
         utterance.syllable_seq = syllable_seq
     
-    def synthesize(self, utterances: List[Utterance], speed_rate=1.0):
+    def synthesize(self, utterances: List[Utterance], speed_rate=1.0, noise_scale=0.667, noise_scale_w=0.8):
         wav_predictions = []
         wav_lengths = []
         for utt in utterances:
@@ -164,21 +180,38 @@ class TTS:
 
             phone_id_seq = utt.phone_id_seq
             voice_id = utt.voice
+            phone_speed_seq = utt.phone_speed_seq
             if self.__hps.data.add_blank:
                 phone_id_seq = commons.intersperse(phone_id_seq, 0)
+
+                # TODO (yi.liu): should we insert 1.0 between phones?
+                # phone_speed_seq = commons.intersperse(phone_speed_seq, 1.0) \
+                #     if phone_speed_seq is not None else None
+                phone_speed_seq_new  = [1.0]
+                for s in phone_speed_seq:
+                    phone_speed_seq_new += [s] * 2
+                phone_speed_seq = phone_speed_seq_new
+
             phone_id_seq = torch.LongTensor(phone_id_seq)
             x_tst = phone_id_seq.to(self.__device).unsqueeze(0)
             x_tst_lengths = torch.LongTensor([phone_id_seq.size(0)]).to(self.__device)
             voice_id = torch.LongTensor([voice_id]).to(self.__device)
+
+            phone_speed_seq = torch.FloatTensor(phone_speed_seq).to(self.__device).unsqueeze(0) \
+                if phone_speed_seq is not None else None
+
             with torch.inference_mode(mode=True):
                 wav = self.__model.infer(
                     x_tst,
                     x_tst_lengths,
                     sid=voice_id,
-                    noise_scale=.667,
-                    noise_scale_w=0.8,
-                    length_scale=1/speed_rate
+                    noise_scale=noise_scale,
+                    noise_scale_w=noise_scale_w,
+                    length_scale=1/speed_rate,
+                    length_scale_seq=phone_speed_seq,
                 )[0][0,0].data.cpu().float()
+                    # noise_scale=.667,
+                    # noise_scale_w=0.8,
                 wav_predictions.append(wav.expand(1, *wav.shape))
                 wav_lengths.append(wav.shape[0])
 
@@ -188,6 +221,45 @@ class TTS:
         for i, utt in enumerate(utterances):
             utt.pred_wav = wav_predictions[i]
             utt.sample_rate = self.__hps.data.sampling_rate
+
+    def http_frontend(self, text, voice, speech_rate=0, pitch_rate=0, energy_rate=0, url="http://172.31.208.11:8082/tts/api/v1/frontend"):
+        request_payload = {"text": text, "voice": 'SSB3003',
+                           "format": "wav", "sample_rate": 22050, "volume": 50,
+                           "speech_rate": speech_rate, "pitch_rate": pitch_rate, "energy_rate": energy_rate}
+
+        resp = requests.post(url, json=request_payload)
+        assert resp.status_code == 200, "Error: {}".format(resp.content)
+        utterances = []
+        content = json.loads(resp.content)
+        for i in range(len(content['phone_seqs'])):
+            utterance = Utterance("test", text, voice)
+
+            utterance.phone_seq = content['phone_seqs'][i]
+            utterance.phone_id_seq, _, _ = preprocess_text_to_sequence(self.__hps, utterance.phone_seq, utterance.phone_seq)
+
+            if 'sos_sils' in content:
+                utterance.sos_sil = content['sos_sils'][i]
+            if 'eos_sils' in content:
+                utterance.eos_sil = content['eos_sils'][i]
+
+            if 'phone_speed_seqs' in content:
+                utterance.phone_speed_seq = content['phone_speed_seqs'][i]
+            else:
+                utterance.phone_speed_seq = [1.0] * len(utterance.phone_seq)
+
+            if 'phone_pitch_seqs' in content:
+                utterance.phone_pitch_seq = content['phone_pitch_seqs'][i]
+            else:
+                utterance.phone_pitch_seq = [1.0] * len(utterance.phone_seq)
+
+            if 'phone_energy_seqs' in content:
+                utterance.phone_energy_seq = content['phone_energy_seqs'][i]
+            else:
+                utterance.phone_energy_seq = [1.0] * len(utterance.phone_seq)
+
+            utterances.append(utterance)
+
+        return utterances
 
 
 def init_utterances(task_id, gen_req, max_single_utt_length, tts_service, max_sub_utt_length=25):
@@ -223,15 +295,17 @@ def init_utterances(task_id, gen_req, max_single_utt_length, tts_service, max_su
     return utterances
 
 
-def unary_synthesize_text(tts_service: TTS, task_id, gen_req: GenerationRequest, max_single_utt_length=50):
+def unary_synthesize_text(tts_service: TTS, task_id, gen_req: GenerationRequest, max_single_utt_length=50, use_http_frontend=False):
     start = time.time()
-    utterances = init_utterances(task_id, gen_req, max_single_utt_length, tts_service, max_sub_utt_length=25)
-    speed_rate = gen_req.speed_rate
+    if use_http_frontend:
+        utterances = tts_service.http_frontend(gen_req.text, voice=gen_req.voice)
+    else:
+        utterances = init_utterances(task_id, gen_req, max_single_utt_length, tts_service, max_sub_utt_length=25)
 
     for utterance in utterances:
         logging.info("Synthesizing utterance [{}]-[{}] with voice [{}]".format(utterance.utt_id, utterance.text,
                                                                               utterance.voice))
-        tts_service.synthesize([utterance], speed_rate)
+        tts_service.synthesize([utterance], gen_req.speed_rate, gen_req.noise_scale, gen_req.noise_scale_w)
 
     wav = Utterance.merge_multi_utterances_audio(utterances)
     logging.info("synthesize for task_id {} cost {} seconds".format(task_id, time.time() - start))

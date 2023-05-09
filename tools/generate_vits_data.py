@@ -348,9 +348,26 @@ def main():
     sos_sil_stat, eos_sil_stat, sil_stat = stats_sil_phones_from_path(preprocess_config["path"]["preprocessed_path"])
     spk2pause_stats = dict()
     for spk in sos_sil_stat.keys():
-        print("====={}".format(spk))
-        pos_stats = pd.Series(sil_stat[spk]).describe(percentiles=[.3, .6, .8, .99])
-        spk2pause_stats[spk] = [pos_stats["30%"], pos_stats["60%"], pos_stats["80%"]]
+        if spk == 'SSB3003':
+            print("====={}".format(spk))
+            print("\t====={} SOS".format(spk))
+            print(pd.Series(sos_sil_stat[spk]).describe(percentiles=[.1, .3, .75, .99]))
+            print("\t====={} EOS".format(spk))
+            print(pd.Series(eos_sil_stat[spk]).describe(percentiles=[.1, .3, .75, .99]))
+            print("\t====={}".format(spk))
+            pos_stats = pd.Series(sil_stat[spk]).describe(percentiles=[.1, .3, .75, .99])
+            print(pos_stats)
+            spk2pause_stats[spk] = [pos_stats["10%"], pos_stats["30%"], pos_stats["75%"]]
+        else:
+            print("====={}".format(spk))
+            print("\t====={} SOS".format(spk))
+            print(pd.Series(sos_sil_stat[spk]).describe(percentiles=[.3, .6, .8, .99]))
+            print("\t====={} EOS".format(spk))
+            print(pd.Series(eos_sil_stat[spk]).describe(percentiles=[.3, .6, .8, .99]))
+            print("\t====={}".format(spk))
+            pos_stats = pd.Series(sil_stat[spk]).describe(percentiles=[.3, .6, .8, .99])
+            print(pos_stats)
+            spk2pause_stats[spk] = [pos_stats["30%"], pos_stats["60%"], pos_stats["80%"]]
 
     if args.use_sid:
         with open(os.path.join(output_list_dir, "speakers.json"), 'w') as f:

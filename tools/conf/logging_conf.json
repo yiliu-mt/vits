@@ -1,0 +1,7 @@
+{
+  "log_filename": "server.log",
+  "log_backup_count": 10,
+  "log_keep_size": 20971520,
+  "log_format": "%(asctime)s.%(msecs)03d | %(name)s | %(levelname)s | %(module)s | %(process)d | %(thread)d | %(funcName)s | %(lineno)d | %(message)s",
+  "log_date_fmt": "%Y-%m-%d %H:%M:%S"
+}

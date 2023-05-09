@@ -1,3 +1,4 @@
+import os
 import copy
 import math
 import torch
@@ -15,6 +16,11 @@ from commons import init_weights, get_padding
 from pqmf import PQMF
 from stft import TorchSTFT
 
+freeze_duration_predictor = os.environ.get("FREEZE_DURATION_PREDICTOR")
+# if freeze_duration_predictor == "1":
+#     print("WARNING: FREEZE_DURATION_PREDICTOR is ON")
+
+train_only_duration_predictor = os.environ.get("TRAIN_ONLY_DURATION_PREDICTOR")
 
 class StochasticDurationPredictor(nn.Module):
   def __init__(self, in_channels, filter_channels, kernel_size, p_dropout, n_flows=4, gin_channels=0):
@@ -710,6 +716,24 @@ class SynthesizerTrn(nn.Module):
     if n_speakers > 1:
       self.emb_g = nn.Embedding(n_speakers, gin_channels)
 
+    if freeze_duration_predictor == "1":
+      print("FREEZE_DURATION_PREDICTOR is ON")
+      for param in self.dp.parameters():
+        param.requires_grad_(False)
+
+    if train_only_duration_predictor == "1":
+      print("TRAIN_ONLY_DURATION_PREDICTOR is ON")
+      for param in self.enc_p.parameters():
+        param.requires_grad_(False)
+      for param in self.dec.parameters():
+        param.requires_grad_(False)
+      for param in self.enc_q.parameters():
+        param.requires_grad_(False)
+      for param in self.flow.parameters():
+        param.requires_grad_(False)
+      for param in self.emb_g.parameters():
+        param.requires_grad_(False)
+
   def forward(self, x, x_lengths, y, y_lengths, sid=None, duration=None):
 
     x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
@@ -756,7 +780,7 @@ class SynthesizerTrn(nn.Module):
     o = self.dec(z_slice, g=g)
     return o, l_length, attn, ids_slice, x_mask, y_mask, (z, z_p, m_p, logs_p, m_q, logs_q)
 
-  def infer(self, x, x_lengths, sid=None, noise_scale=1, length_scale=1, noise_scale_w=1., max_len=None):
+  def infer(self, x, x_lengths, sid=None, noise_scale=1, length_scale=1, noise_scale_w=1., max_len=None, length_scale_seq=None):
     x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
     if self.n_speakers > 1:
       g = self.emb_g(sid).unsqueeze(-1) # [b, h, 1]
@@ -768,6 +792,9 @@ class SynthesizerTrn(nn.Module):
     else:
       logw = self.dp(x, x_mask, g=g)
     w = torch.exp(logw) * x_mask * length_scale
+    if length_scale_seq is not None:
+      w = w * length_scale_seq.unsqueeze(1)
+
     w_ceil = torch.ceil(w.to("cpu")).to("mtgpu") if "mtgpu" in str(w.device) else torch.ceil(w)
     y_lengths = torch.clamp_min(torch.sum(w_ceil, [1, 2]), 1).long()
     y_mask = torch.unsqueeze(commons.sequence_mask(y_lengths, None), 1).to(x_mask.dtype)

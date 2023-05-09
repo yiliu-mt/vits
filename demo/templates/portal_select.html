@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Simple TTS</title>
+  </head>
+  <body>
+        <div class="container">
+                <h1><img src="/static/img/MTLogo-Horiz.png" alt="..." height="45"> Simple TTS Demo</h1>
+                <p>Select one speaker, adjust voice controls, then add text and hit generate</p>
+        </div>
+
+      <div class="container">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="speaker_selection">Speaker</label>
+              </div>
+              <select class="custom-select" id="speaker_selection">
+                {% for s_id, s_name in speaker_table.items() %}
+                  <option {% if s_id == default_speaker_id %}
+                            selected
+                          {% endif %}       
+                          value="{{s_id}}">{{s_name[2]}} | {{s_name[0]}} - {{s_name[1]}}</option>
+                {% endfor %}
+              </select>
+        </div>
+          <div class="row">
+              <div class="col">
+                      <label for="pitch_range" class="form-label">Pitch</label>
+                    <input type="range" class="form-range" min="0" max="2" step="0.05" value="1.0"id="pitch_range"
+                           oninput="pitch_amount.value=pitch_range.value">
+                   <output id="pitch_amount" name="pitch_amount" for="pitch_range">1.0</output>
+              </div>
+              <input type='hidden' value='{{ version }}' name='version' id='version'/>
+              <div class="col">
+                  <label for="pitch_range" class="form-label">Energy</label>
+                    <input type="range" class="form-range" min="0" max="2" step="0.05" value="1.0"id="energy_range"
+                           oninput="energy_amount.value=energy_range.value">
+                   <output id="energy_amount" name="energy_amount" for="energy_range">1.0</output>
+              </div>
+              <div class="col">
+                  <label for="duration_range" class="form-label">Speed</label>
+                    <input type="range" class="form-range" min="0" max="2" step="0.05" value="1.0"id="duration_range"
+                           oninput="duration_amount.value=duration_range.value">
+                   <output id="duration_amount" name="duration_amount" for="duration_range">1.0</output>
+              </div>
+              <div class="col">
+                  <label for="volume_range" class="form-label">Volume</label>
+                  <input type="range" class="form-range" min="0" max="2" step="0.05" value="1.0" id="volume_range"
+                         oninput="volume_amount.value=volume_range.value">
+                  <output id="volume_amount" name="volume_amount" for="volume_range">1.0</output>
+              </div>
+          </div>
+          <hr class="mt-2 mb-3"/>
+          <div class="form-group">
+            <label for="tts_text">Text to Generate Voice from</label>
+            <textarea class="form-control" id="tts_text" rows="4" >在这里输入文字</textarea>
+          </div>
+          <div class="row">
+              <div class="col">
+              <button type="button" class="btn btn-primary" id="generate_action">Generate!</button>
+              </div>
+          </div>
+          
+          <br>
+          <div class="alert alert-success alert-dismissible collapse"  id='success_alert'>
+                <strong>Success!</strong> Voice is generated. Use the player below to listen to the voice. Or click "Download" to save the WAV file.
+            </div>
+          
+          <!-- Error Alert -->
+            <div class="alert alert-danger alert-dismissible collapse" id='fail_alert'>
+                <strong>Error!</strong> Server cannot generate voice. Have you put your text in the box above?
+            </div>
+          
+          
+          <div class="row">
+              <div class="col">
+                  <h4 id="info"></h4>
+               <audio controls hidden=true id='audio_play' preload="none">
+                      <source id="audio_source" type="audio/wav" src="">
+                      Your browser does not support the audio tag.
+                </audio>
+              </div>
+          </div>
+          
+          <div class="row">
+              <div class="col">
+              <button type="button" class="btn btn-primary collapse" id="download_action">Download</button>
+              </div>
+          </div>
+          <hr class="mt-2 mb-3"/>
+          <div class="row">
+              <div class="col">
+                  <p class='text-secondary'> Copyright © Moore Threads, Inc., 2021 </p>
+              </div>
+          </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/static/js/main-v3.js"></script>
+  </body>
+</html>

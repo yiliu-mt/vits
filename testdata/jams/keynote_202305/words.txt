@@ -1,0 +1,11 @@
+p1.txt 56
+p8.txt 817
+p2.txt 218
+p11.txt 139
+p10.txt 560
+p9.txt 1325
+p3.txt 946
+p4.txt 1056
+p7.txt 1721
+p5.txt 1123
+p6.txt 789

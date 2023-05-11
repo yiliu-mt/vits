@@ -1,4 +1,5 @@
 import os
+import json
 import argparse
 import uuid
 import torch
@@ -6,7 +7,7 @@ from flask import Flask
 from flask import send_file, request, abort, Response
 from scipy.io import wavfile
 from tools.logger_util import LOGGER
-from service import TTS, GenerationRequest, unary_synthesize_text
+from service import TTS, GenerationRequest, unary_synthesize_text, init_tts_resources
 
 app = Flask(__name__, static_url_path='/static')
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
@@ -50,6 +51,7 @@ def generate_audio(methods=['POST']):
         gen_req,
         max_single_utt_length=1,
         use_http_frontend=app.config['use_http_frontend'],
+        service_config=app.config['service_config']
     )
     audio_fpath = dump_wav(audio_data, vits_service.sample_rate, task_id)
     LOGGER.info("Return audio fpath [{}]".format(audio_fpath))
@@ -67,12 +69,19 @@ if __name__ == '__main__':
     parser.add_argument("--model")
     parser.add_argument("--lexicon")
     parser.add_argument("--speaker_id", type=int, default=222)
+    parser.add_argument("--service_config", type=None, default=None)
     args = parser.parse_args()
 
     vits_service = TTS(args.config, args.model, args.lexicon, device)
     app.config["vits_service"] = vits_service
     app.config["use_http_frontend"] = args.use_http_frontend
     app.config["speaker_id"] = args.speaker_id
+
+    if args.service_config is not None:
+        app.config["service_config"] = json.load(open(args.service_config, 'r'))
+        init_tts_resources(app.config["service_config"], vits_service.config)
+    else:
+        app.config["service_config"] = None
 
     LOGGER.info("starting http server...")
     app.run(host='0.0.0.0', debug=False, port=args.port)

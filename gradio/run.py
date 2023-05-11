@@ -1,10 +1,11 @@
 import argparse
+import json
 import yaml
 import torch
 import gradio as gr
 import numpy as np
 from gradio.inputs import Textbox
-from service import TTS, GenerationRequest, unary_synthesize_text
+from service import TTS, GenerationRequest, unary_synthesize_text, init_tts_resources
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -17,6 +18,7 @@ class GradioInfer:
         model,
         lexicon,
         speaker_id,
+        service_config,
         title,
         description,
         article,
@@ -33,6 +35,12 @@ class GradioInfer:
         self.port = port
         self.use_http_frontend = use_http_frontend
         self.vits = TTS(self.config, self.model, self.lexicon, device)
+        if service_config is not None:
+            self.service_config = json.load(open(service_config, "r"))
+            init_tts_resources(self.service_config, self.vits.config)
+        else:
+            self.service_config = None
+
     
     def greet(self, noise_scale, noise_scale_w, text):
         # Synthesize with long sentence and SSML support
@@ -41,7 +49,8 @@ class GradioInfer:
             "test",
             GenerationRequest(text=text, format="wav", voice=self.speaker_id, noise_scale=float(noise_scale), noise_scale_w=float(noise_scale_w)),
             max_single_utt_length=1,
-            use_http_frontend=self.use_http_frontend
+            use_http_frontend=self.use_http_frontend,
+            service_config=self.service_config
         )
         return self.vits.sample_rate, audio_data.astype(np.int16)
 
@@ -72,6 +81,7 @@ if __name__ == '__main__':
     parser.add_argument("--model")
     parser.add_argument("--lexicon")
     parser.add_argument("--speaker_id", type=int, default=222)
+    parser.add_argument("--service_config", type=str, default=None)
     args = parser.parse_args()
     gradio_config = yaml.safe_load(open('gradio/config/gradio_settings.yaml'))
     g = GradioInfer(
@@ -81,5 +91,6 @@ if __name__ == '__main__':
         model=args.model,
         lexicon=args.lexicon,
         speaker_id=args.speaker_id,
+        service_config=args.service_config,
         **gradio_config)
     g.run()

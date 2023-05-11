@@ -46,25 +46,40 @@ class Utterance:
         self.noise_scale_w = 0.8
 
     @staticmethod
-    def merge_multi_utterances_audio(utterances):
+    def merge_multi_utterances_audio(utterances, recording_resource_map=None):
         assert len(utterances) > 0
         audio_data_list = []
         sample_rate = utterances[0].sample_rate
         for utt in utterances:
             assert isinstance(utt, Utterance)
             assert sample_rate == utt.sample_rate
-            audio_data_list.append(utt.padded_audio_data)
+            audio_data_list.append(utt.get_padded_audio_data(recording_resource_map))
         audio_data = np.concatenate(audio_data_list, axis=-1).astype(np.int16)
         return audio_data
     
-    @property
-    def padded_audio_data(self):
+    def get_padded_audio_data(self, recording_resource_dict=None):
         assert self.pred_wav is not None
-        pad_start = self.sos_sil
-        pad_end = self.eos_sil
-        audio_data = np.pad(self.pred_wav,
-                            pad_width=[int(pad_start * self.sample_rate), int(pad_end * self.sample_rate)],
-                            mode='constant')
+        pad_start_sil = self.sos_sil
+        pad_end_sil = self.eos_sil
+
+        if recording_resource_dict is None or "SIL" not in recording_resource_dict:
+            audio_data = np.pad(self.pred_wav,
+                                pad_width=[int(pad_start_sil * self.sample_rate), int(pad_end_sil * self.sample_rate)],
+                                mode='constant')
+        else:
+            padded_data = []
+            sil_audio_data = recording_resource_dict["SIL"]
+
+            # TODO (yi.liu): the postion of the noise
+            def _slice_or_slice_after_tile_recording_audio(data, n):
+                if len(data) >= n:
+                    return data[:n]
+                else:
+                    return np.tile(data, n//len(data) + 1)[:n]
+            padded_data.append(_slice_or_slice_after_tile_recording_audio(sil_audio_data, int(pad_start_sil * self.sample_rate)))
+            padded_data.append(self.pred_wav)
+            padded_data.append(_slice_or_slice_after_tile_recording_audio(sil_audio_data, int(pad_end_sil * self.sample_rate)))
+            audio_data = np.concatenate(padded_data)
         return audio_data
 
 
@@ -187,10 +202,11 @@ class TTS:
                 # TODO (yi.liu): should we insert 1.0 between phones?
                 # phone_speed_seq = commons.intersperse(phone_speed_seq, 1.0) \
                 #     if phone_speed_seq is not None else None
-                phone_speed_seq_new  = [1.0]
-                for s in phone_speed_seq:
-                    phone_speed_seq_new += [s] * 2
-                phone_speed_seq = phone_speed_seq_new
+                if phone_speed_seq is not None:
+                    phone_speed_seq_new  = [1.0]
+                    for s in phone_speed_seq:
+                        phone_speed_seq_new += [s] * 2
+                    phone_speed_seq = phone_speed_seq_new
 
             phone_id_seq = torch.LongTensor(phone_id_seq)
             x_tst = phone_id_seq.to(self.__device).unsqueeze(0)
@@ -295,7 +311,14 @@ def init_utterances(task_id, gen_req, max_single_utt_length, tts_service, max_su
     return utterances
 
 
-def unary_synthesize_text(tts_service: TTS, task_id, gen_req: GenerationRequest, max_single_utt_length=50, use_http_frontend=False):
+def unary_synthesize_text(
+    tts_service: TTS,
+    task_id,
+    gen_req: GenerationRequest,
+    max_single_utt_length=50,
+    use_http_frontend=False,
+    service_config=None
+):
     start = time.time()
     if use_http_frontend:
         utterances = tts_service.http_frontend(gen_req.text, voice=gen_req.voice)
@@ -307,7 +330,10 @@ def unary_synthesize_text(tts_service: TTS, task_id, gen_req: GenerationRequest,
                                                                               utterance.voice))
         tts_service.synthesize([utterance], gen_req.speed_rate, gen_req.noise_scale, gen_req.noise_scale_w)
 
-    wav = Utterance.merge_multi_utterances_audio(utterances)
+    wav = Utterance.merge_multi_utterances_audio(
+        utterances,
+        service_config.get("recording_resource_map", None) if service_config is not None else None
+    )
     logging.info("synthesize for task_id {} cost {} seconds".format(task_id, time.time() - start))
     return wav
 

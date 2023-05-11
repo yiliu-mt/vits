@@ -7,6 +7,7 @@ import json
 import subprocess
 import numpy as np
 from scipy.io.wavfile import read
+import librosa
 import torch
 
 MATPLOTLIB_FLAG = False
@@ -144,6 +145,18 @@ def load_wav_to_torch(full_path):
   sampling_rate, data = read(full_path)
   return torch.FloatTensor(data.astype(np.float32)), sampling_rate
 
+def read_wav(full_path, sample_rate=None, max_value=32768., return_numpy=True):
+  '''read wav file and return int16 audio data
+  '''
+  org_sample_rate, data = read(full_path)
+  if sample_rate is not None and org_sample_rate != sample_rate:
+    data = data / max_value
+    data = librosa.resample(data, orig_sr=org_sample_rate, target_sr=sample_rate)
+    data = data * max_value
+  data = data.astype("int16")
+  if return_numpy:
+    return data, sample_rate
+  return None, None
 
 def load_filepaths_and_text(filename, split="|"):
   with open(filename, encoding='utf-8') as f:

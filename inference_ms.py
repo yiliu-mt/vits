@@ -2,7 +2,7 @@ import argparse
 import os
 import time
 import torch
-import musa_torch_extension
+import torch_musa
 import numpy as np
 from scipy.io import wavfile
 
@@ -16,7 +16,7 @@ from text import cleaned_text_to_sequence
 #from perfmax.benchmark.pytorch_benchmark import PyTorchCustomBenchmark
 #from perfmax.data import BenchmarkConfig
 
-device = torch.device("mtgpu")
+device = torch.device("musa")
 
 
 def main():
@@ -39,8 +39,8 @@ def main():
         n_speakers=hps.data.n_speakers,
         **hps.model).to(device)
     _ = net_g.eval()
-    _ = utils.load_checkpoint(args.model, net_g, None)
-    print(f"Loaded model from {args.model}")
+    # _ = utils.load_checkpoint(args.model, net_g, None)
+    # print(f"Loaded model from {args.model}")
 
     audiopaths_sid_text = utils.load_filepaths_and_text(args.test_file)
 

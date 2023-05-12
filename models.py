@@ -744,8 +744,8 @@ class SynthesizerTrn(nn.Module):
     else:
       logw = self.dp(x, x_mask, g=g)
     w = torch.exp(logw) * x_mask * length_scale
-    w_ceil = torch.ceil(w.to("cpu")).to("mtgpu")
-    y_lengths = torch.clamp_min(torch.sum(w_ceil, [1, 2]), 1).long()
+    w_ceil = torch.ceil(w)
+    y_lengths = torch.clamp_min(torch.sum(w_ceil, [1, 2]).to("cpu"), 1).to("musa").long()
     y_mask = torch.unsqueeze(commons.sequence_mask(y_lengths, None), 1).to(x_mask.dtype)
     attn_mask = torch.unsqueeze(x_mask, 2) * torch.unsqueeze(y_mask, -1)
     attn = commons.generate_path(w_ceil, attn_mask)
@@ -758,7 +758,7 @@ class SynthesizerTrn(nn.Module):
     logs_p = torch.matmul(attn.squeeze(1), logs_p.transpose(1, 2)).transpose(1, 2) # [b, t', t], [b, t, d] -> [b, d, t']
 
     # z_p = m_p + torch.randn_like(m_p) * torch.exp(logs_p) * noise_scale
-    z_p = m_p + torch.zeros_like(m_p.to('cpu')).to('mtgpu') * torch.exp(logs_p) * noise_scale
+    z_p = m_p + torch.zeros_like(m_p) * torch.exp(logs_p) * noise_scale
     z = self.flow(z_p, y_mask, g=g, reverse=True)
     np.save(f'{prefix}_flow_m_p', m_p.to('cpu').numpy())
     np.save(f'{prefix}_flow_logs_p', logs_p.to('cpu').numpy())

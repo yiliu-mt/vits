@@ -11,6 +11,7 @@ import utils
 from models import SynthesizerTrn
 from text.symbols import get_symbols
 from text import cleaned_text_to_sequence
+import random
 
 #from perfmax.benchmark import run_benchmark
 #from perfmax.benchmark.pytorch_benchmark import PyTorchCustomBenchmark
@@ -18,6 +19,17 @@ from text import cleaned_text_to_sequence
 
 device = torch.device("musa")
 
+def set_seed(seed=1029):
+    random.seed(seed)
+    os.environ['PYTHONHASHSEED'] = str(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+set_seed()
 
 def main():
     parser = argparse.ArgumentParser()
@@ -27,11 +39,15 @@ def main():
     parser.add_argument("-t", "--test_file", help="test file")
     parser.add_argument("-m", "--model", help="model file")
     parser.add_argument("-o", "--output_dir", help="output directory")
+    parser.add_argument("-d", "--device", help="output directory")
     args = parser.parse_args()
+    global device
+    device = torch.device(args.device)
 
     hps = utils.get_hparams_from_file(args.config)
     os.makedirs(args.output_dir, exist_ok=True)
 
+    print(f"Loading model from {args.device}")
     net_g = SynthesizerTrn(
         len(get_symbols(hps.data.get("symbol_version", "default"))),
         hps.data.filter_length // 2 + 1,
@@ -74,12 +90,14 @@ def main():
 
                 start_time = time.time()
                 audio = net_g.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=.667, noise_scale_w=0.8, length_scale=1, prefix=wav_name.rsplit('.', 1)[0])[0][0,0].data.cpu().float().numpy()
+                print(f"wzx debug audio:{audio}")
 
                 total_used_time += time.time() - start_time
                 total_generated_time += audio.shape[0] / hps.data.sampling_rate
 
                 audio *= 32767 / max(0.01, np.max(np.abs(audio))) * 0.6
                 audio = np.clip(audio, -32767.0, 32767.0)
+                print(f"wzx debug clip_audio:{audio}")
                 wavfile.write(os.path.join(args.output_dir, wav_name),
                               hps.data.sampling_rate, audio.astype(np.int16))
 
